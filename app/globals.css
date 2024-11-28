@@ -258,15 +258,3 @@ body {
 [data-modal-active="open"] {
   transform: translateY(calc(-50vh - 50%));
 }
-
-@keyframes pulse {
-
-  0%,
-  100% {
-    transform: scale(110%)
-  }
-
-  50% {
-    transform: scale(110%);
-  }
-}
