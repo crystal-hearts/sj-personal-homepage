@@ -30,19 +30,6 @@
   --theme-color:var(--ube);
   --theme-color-light:var(--ube-light);
   --theme-color-dark:var(--ube-dark);
-
-  /* Page colors are set according to theme */
-  --background-tiles: var(--theme-color);
-
-  --border-light: var(--theme-color-light);
-  --background-light: var(--theme-color-light);
-  --fill-light: var(--theme-color-light);
-  --text-light: var(--theme-color-light);
-
-  --border-dark: var(--theme-color-dark);
-  --background-dark: var(--theme-color-dark);
-  --fill-dark: var(--theme-color-dark);
-  --text-dark: var(--theme-color-dark);
 }
 
 @media (prefers-color-scheme: dark) {}
@@ -60,44 +47,42 @@ body {
   }
 }
 
+.background {
+  background: var(--theme-color);
+  transition: background-color 400ms linear;
+}
+
 .border-light {
-  border-color: var(--border-light);
+  border-color: var(--theme-color-light);
 }
 
 .bg-light {
-  background-color: var(--background-light);
+  background-color: var(--theme-color-light);
   /* transition: background-color 400ms linear; */
 }
 
 .fill-light {
-  fill: var(--fill-light);
+  fill: var(--theme-color-light);
 }
 
 .text-light {
-  color: var(--text-light);
+  color: var(--theme-color-light);
 }
 
 .border-dark {
-  border-color: var(--border-dark);
+  border-color: var(--theme-color-dark);
 }
 
 .bg-dark {
-  background-color: var(--background-dark);
-  transition: background-color 400ms linear;
+  background-color: var(--theme-color-dark);
 }
 
 .fill-dark {
-  fill: var(--fill-dark);
+  fill: var(--theme-color-dark);
 }
 
 .text-dark {
-  color: var(--text-dark);
-}
-
-.background {
-  background: var(--background-tiles);
-  transition: background-color 400ms linear;
-
+  color: var(--theme-color-dark);
 }
 
 @keyframes bg-scroll-animation {
