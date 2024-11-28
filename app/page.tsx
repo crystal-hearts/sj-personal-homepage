@@ -42,7 +42,7 @@ function Footer() {
           <button id="pause-button" title="Pause animations" className="pause-button w-8 h-8 p-1 fill-neutral-900 bg-neutral-100 hover:scale-110 active:scale-110 transition duration-150 rounded shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] border-solid border-2 border-neutral-800" onClick={() => handlePauseButton('paused')}>
             <PauseIcon />
           </button>
-          <button id="play-button" title="Play animations" className="play-button w-8 h-8 p-1 fill-neutral-900 bg-neutral-100 hover:scale-110 active:scale-110 transition duration-150 rounded shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] border-solid border-2 border-neutral-800" onClick={() => handlePlayButton('running')}>
+          <button id="play-button" title="Play animations" className="play-button hidden w-8 h-8 p-1 fill-neutral-900 bg-neutral-100 hover:scale-110 active:scale-110 transition duration-150 rounded shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] border-solid border-2 border-neutral-800" onClick={() => handlePlayButton('running')}>
             <PlayIcon />
           </button>
         </div>
@@ -80,8 +80,8 @@ function handlePlayButton(animationPlayState: string) {
   var playButton = document.getElementById('play-button');
   var pauseButton = document.getElementById('pause-button');
 
-  playButton ? playButton.style.display = "none" : playButton;
-  pauseButton ? pauseButton.style.display = "block" : pauseButton;
+  playButton ? playButton.classList.add("hidden") : playButton;
+  pauseButton ? pauseButton.classList.remove("hidden") : pauseButton;
 
   pauseButton ? pauseButton.focus() : null;
 
@@ -91,8 +91,8 @@ function handlePauseButton(animationPlayState: string) {
   var playButton = document.getElementById('play-button');
   var pauseButton = document.getElementById('pause-button');
 
-  playButton ? playButton.style.display = "block" : playButton;
-  pauseButton ? pauseButton.style.display = "none" : pauseButton;
+  pauseButton ? pauseButton.classList.add("hidden") : pauseButton;
+  playButton ? playButton.classList.remove("hidden") : playButton;
 
   playButton ? playButton.focus() : null;
 
