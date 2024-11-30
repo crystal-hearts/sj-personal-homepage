@@ -48,6 +48,10 @@ module.exports = {
           },
         },
       },
+      width: {
+        '75-vw': '75vw',
+        '80-vw': '80vw',
+      },
     },
   },
   plugins: [

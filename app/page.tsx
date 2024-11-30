@@ -122,10 +122,10 @@ export default function Home() {
         <div className="section-container flex flex-row w-full min-h-48 items-center">
           <div className="section-contents flex flex-col items-center mx-auto">
             <h1>
-              <div className="logo-desktop hidden sm:block mt-20">
+              <div className="logo-desktop hidden sm:block w-75-vw mt-20">
                 <LogoDesktop />
               </div>
-              <div className="logo-mobile block sm:hidden mt-20">
+              <div className="logo-mobile block sm:hidden w-80-vw mt-20">
                 <LogoMobile />
               </div>
             </h1>
