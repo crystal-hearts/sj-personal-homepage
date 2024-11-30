@@ -50,8 +50,6 @@
   --theme-color-500: var(--ube-500);
   --theme-color-700: var(--ube-700);
   --theme-color-900: var(--ube-900);
-
-  --delay-step-increment: 0.25s;
 }
 
 @layer utilities {
@@ -99,6 +97,7 @@
 
 @layer components {
   g[class*="logo-letter"] {
+    --delay-step-increment: 0.25s;
     animation: wave-y-5 3s ease-in-out infinite;
     animation-delay: calc(
       var(--delay-step-increment) * (var(--nth-child-index) * -1)
