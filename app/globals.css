@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  /* Colors are defined in globals.css instead of Tailwind config */
+  /* This allows for color transitions by adjusting the --theme-color variables instead of adjusting the DOM */
 
   --black: #171717;
 
@@ -42,7 +44,6 @@
   --mint-700: #244a4a;
   --mint-900: #0f2525;
 
-
   /* Initial default is ube */
   --theme-color-100: var(--ube-100);
   --theme-color-300: var(--ube-300);
@@ -51,71 +52,10 @@
   --theme-color-900: var(--ube-900);
 }
 
-@media (prefers-color-scheme: dark) {}
-
-body {
-  color: var(--foreground);
-  /* background: var(--background); */
-  font-family: var(--font-rubik);
-}
-
-
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  [data-animation-play-state="paused"] {
+    animation-play-state: paused;
   }
-}
-
-.background {
-  -webkit-transition: background-color 400ms linear;
-  transition: background-color 400ms linear;
-}
-
-@keyframes bg-scroll-animation {
-  0% {
-    background-position: 250px -150px;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
-}
-
-/* .scrolling-bg {
-  border-width: 1em;
-  animation: bg-scroll-animation 12s linear infinite;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 2 2"><path d="m1.837.042-.142.235a.83.83 0 0 0-.418 0L1.14.045C.916.464.98.73 1.15.861v.001a1.692 1.692 0 0 0-.08.054C.355.346-.287.988.134 1.56h.004a.55.55 0 0 0 .257.213c.133.05.27.036.405.017.135-.02.267-.043.393-.034a.508.508 0 0 1 .368.167c.078.086.19-.007.096-.098a.683.683 0 0 0-.444-.203c-.15-.01-.293.019-.422.037-.13.019-.245.027-.344-.01a.372.372 0 0 1-.134-.089h1.464c.07-.244.076-.503-.002-.666.236-.123.331-.414.062-.853z" style="stroke-width:.0650453"/></svg>');
-  background-size: 50px 50px;
-} */
-.scrolling-bg {
-  border-width: 1em;
-  animation: bg-scroll-animation 12s linear infinite;
-  background-image:
-    linear-gradient(135deg, var(--black) 25%, transparent 25%),
-    linear-gradient(45deg, var(--black) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, var(--black) 75%),
-    linear-gradient(135deg, transparent 75%, var(--black) 75%);
-  background-size: 50px 50px;
-}
-
-@keyframes text-wave-desktop {
-
-  0%,
-  100% {
-    transform: translateY(-5px);
-  }
-
-  50% {
-    transform: translateY(5px);
-  }
-}
-
-.logo-desktop svg {
-  width: 75vw;
-}
-
-.logo-desktop_svg__letter {
-  animation: text-wave-desktop 3s ease-in-out infinite;
 }
 
 .logo-desktop_svg__g1 {
@@ -166,26 +106,6 @@ body {
   animation-delay: 0s;
 }
 
-@keyframes text-wave-mobile {
-
-  0%,
-  100% {
-    transform: translatey(-3px);
-  }
-
-  50% {
-    transform: translateY(3px);
-  }
-}
-
-.logo-mobile svg {
-  width: 80vw;
-}
-
-.logo-mobile_svg__letter {
-  animation: text-wave-mobile 3s ease-in-out infinite;
-}
-
 .logo-mobile_svg__g1 {
   animation-delay: -1.25s;
 }
@@ -232,16 +152,4 @@ body {
 
 .logo-mobile_svg__g12 {
   animation-delay: 0s;
-}
-
-[data-animation-play-state="running"] {
-  animation-play-state: running;
-}
-
-[data-animation-play-state="paused"] {
-  animation-play-state: paused;
-}
-
-[data-modal-active="open"] {
-  transform: translateY(calc(-100% - 1.5em));
 }

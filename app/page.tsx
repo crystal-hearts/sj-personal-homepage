@@ -53,7 +53,7 @@ function Footer() {
 
 function TextBubbles() {
   return (
-    <div className="text-bubbles flex flex-row text-[var(--theme-color-700)] text-sm font-[family-name:var(--font-rubik)] font-black">
+    <div className="text-bubbles flex flex-row text-[var(--theme-color-700)] text-sm font-black">
       <button className="text-bubble mr-2 px-2 py-1 text-center rounded bg-[var(--theme-color-100)] shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] bg-[var(--theme-color-100)] border-solid border-2 border-opacity-80 border-[var(--theme-color-500)] hover:scale-110 active:scale-105 transition duration-150">
         about me
       </button>
@@ -114,51 +114,69 @@ function closeModal(modalID: string) {
 
 export default function Home() {
   return (
-    <div id="page">
-      <div id="background" className="background fixed w-full min-h-screen pb-10 bg-[var(--theme-color-500)]" />
-      <div id="scrolling-bg" className="scrolling-bg fixed w-full h-full border-solid border-8 border-opacity-80 border-[var(--theme-color-100)] opacity-20" data-animation-play-state="running" />
+    <div id="page" className="font-[family-name:var(--font-rubik)]">
+      <div id="background" className="background fixed w-full min-h-screen pb-10 bg-[var(--theme-color-500)] transition-colors duration-500" />
+      <div id="scrolling-bg" className="bg-checkerboard-45 animate-scrolling-background bg-50 fixed w-full h-full border-solid border-16 border-opacity-80 border-[var(--theme-color-100)] opacity-20" data-animation-play-state="running" />
       <Header />
       <main className="relative w-full">
         <div className="section-container flex flex-row w-full min-h-48 items-center">
           <div className="section-contents flex flex-col items-center mx-auto">
             <h1>
-              <div className="logo logo-desktop hidden sm:block mt-20">
+              <div className="logo-desktop hidden sm:block mt-20">
                 <LogoDesktop />
               </div>
-              <div className="logo logo-mobile block sm:hidden mt-20">
+              <div className="logo-mobile block sm:hidden mt-20">
                 <LogoMobile />
               </div>
             </h1>
           </div>
         </div>
-        <div id="settings-modal" className="settings-modal fixed overflow-hidden z-20 top-full left-4 transition-transform duration-500 rounded-xl bg-[var(--theme-color-100)] shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] border-solid border-2 border-opacity-80 border-[var(--theme-color-500)]" data-modal-active="closed">
+        <div id="settings-modal" className="settings-modal fixed overflow-hidden z-20 top-full left-4 transition-transform duration-500 rounded bg-[var(--theme-color-100)] shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] border-solid border-2 border-opacity-80 border-[var(--theme-color-500)] modal-open:-translate-y-full" data-modal-active="closed">
           <div className="modal-contents flex flex-col">
-            <div className="modal-header flex flex-row justify-between items-center px-2 py-1 border-solid border-b-2 border-opacity-80 border-[var(--theme-color-500)] bg-[var(--theme-color-700)]">
-              <h2 className="modal-heading text-[var(--theme-color-100)] text-sm font-[family-name:var(--font-rubik)] font-bold select-none" tabIndex="-1">site flavor</h2>
+            <div className="modal-header flex flex-row justify-between items-center pl-4 pr-3 py-1 border-solid border-b-2 border-opacity-80 border-[var(--theme-color-500)] bg-[var(--theme-color-700)]">
+              <h2 className="modal-heading text-[var(--theme-color-100)] text-sm font-bold select-none" tabIndex="-1">site flavor</h2>
               <button className="modal-close w-4 h-4 fill-[var(--theme-color-100)]" onClick={() => closeModal('settings-modal')}>
                 <CloseIcon />
               </button>
             </div>
             <div className="modal-contents h-full px-1 py-2">
-              <div className="flavor-buttons text-center text-sm font-[family-name:var(--font-rubik)] font-black">
-                <button className="flavor-button h-8 mx-2 mb-3 px-2 py-1 bg-[var(--ube-500)] text-[var(--ube-900)] border-opacity-80 border-[var(--ube-500)] hover:scale-105 active:scale-105 transition duration-150 rounded-xl shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('ube')}>
-                  ube
-                </button>
-                <button className="flavor-button h-8 mx-2 mb-3 px-2 py-1 bg-[var(--raspberry-500)] text-[var(--raspberry-900)] border-opacity-80 border-[var(--raspberry-500)] hover:scale-105 active:scale-105 transition duration-150 rounded-xl shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('raspberry')}>
-                  raspberry
-                </button>
-                <button className="flavor-button h-8 mx-2 mb-3 px-2 py-1 bg-[var(--strawberry-500)] text-[var(--strawberry-900)] border-opacity-80 border-[var(--strawberry-500)] hover:scale-105 active:scale-105 transition duration-150 rounded-xl shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('strawberry')}>
-                  strawberry
-                </button>
-                <button className="flavor-button h-8 mx-2 mb-3 px-2 py-1 bg-[var(--lemon-500)] text-[var(--lemon-900)] border-opacity-80 border-[var(--lemon-500)] hover:scale-105 active:scale-105 transition duration-150 rounded-xl shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('lemon')}>
-                  lemon
-                </button>
-                <button className="flavor-button h-8 mx-2 mb-3 px-2 py-1 bg-[var(--lime-500)] text-[var(--lime-900)] border-opacity-80 border-[var(--lime-500)] hover:scale-105 active:scale-105 transition duration-150 rounded-xl shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('lime')}>
-                  lime
-                </button>
-                <button className="flavor-button h-8 mx-2 mb-3 px-2 py-1 bg-[var(--mint-500)] text-[var(--mint-900)] border-opacity-80 border-[var(--mint-500)] hover:scale-105 active:scale-105 transition duration-150 rounded-xl shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('mint')}>
-                  mint
-                </button>
+              <div className="flavor-buttons flex flex-row">
+                <div className="flavor-button-container flex flex-col items-center min-w-16 mx-2">
+                  <button className="flavor-button w-8 h-8 mb-1 px-2 py-1 bg-[var(--ube-500)] text-[var(--ube-900)] border-opacity-80 border-[var(--ube-500)] hover:scale-105 active:scale-105 transition duration-150 rounded shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('ube')} />
+                  <span className="flavor-button-label w-full ml-1 text-xs font-semibold text-center">
+                    ube
+                  </span>
+                </div>
+                <div className="flavor-button-container flex flex-col items-center min-w-16 mx-2">
+                  <button className="flavor-button w-8 h-8 mb-1 px-2 py-1 bg-[var(--raspberry-500)] text-[var(--raspberry-900)] border-opacity-80 border-[var(--raspberry-500)] hover:scale-105 active:scale-105 transition duration-150 rounded shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('raspberry')} />
+                  <span className="flavor-button-label w-full ml-1 text-xs font-semibold text-center">
+                    raspberry
+                  </span>
+                </div>
+                <div className="flavor-button-container flex flex-col items-center min-w-16 mx-2">
+                  <button className="flavor-button w-8 h-8 mb-1 px-2 py-1 bg-[var(--strawberry-500)] text-[var(--strawberry-900)] border-opacity-80 border-[var(--strawberry-500)] hover:scale-105 active:scale-105 transition duration-150 rounded shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('strawberry')} />
+                  <span className="flavor-button-label w-full ml-1 text-xs font-semibold text-center">
+                    strawberry
+                  </span>
+                </div>
+                <div className="flavor-button-container flex flex-col items-center min-w-16 mx-2">
+                  <button className="flavor-button w-8 h-8 mb-1 px-2 py-1 bg-[var(--lemon-500)] text-[var(--lemon-900)] border-opacity-80 border-[var(--lemon-500)] hover:scale-105 active:scale-105 transition duration-150 rounded shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('lemon')} />
+                  <span className="flavor-button-label w-full ml-1 text-xs font-semibold text-center">
+                    lemon
+                  </span>
+                </div>
+                <div className="flavor-button-container flex flex-col items-center min-w-16 mx-2">
+                  <button className="flavor-button w-8 h-8 mb-1 px-2 py-1 bg-[var(--lime-500)] text-[var(--lime-900)] border-opacity-80 border-[var(--lime-500)] hover:scale-105 active:scale-105 transition duration-150 rounded shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('lime')} />
+                  <span className="flavor-button-label w-full ml-1 text-xs font-semibold text-center">
+                    lime
+                  </span>
+                </div>
+                <div className="flavor-button-container flex flex-col items-center min-w-16 mx-2">
+                  <button className="flavor-button w-8 h-8 mb-1 px-2 py-1 bg-[var(--mint-500)] text-[var(--mint-900)] border-opacity-80 border-[var(--mint-500)] hover:scale-105 active:scale-105 transition duration-150 rounded shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] border-solid border-2" onClick={() => changeThemeColor('mint')} />
+                  <span className="flavor-button-label w-full ml-1 text-xs font-semibold text-center">
+                    mint
+                  </span>
+                </div>
               </div>
             </div>
           </div>
