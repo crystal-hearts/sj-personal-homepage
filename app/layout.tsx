@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="font-[family-name:var(--font-rubik)]">
+    <html lang="en">
       <body
         className={`${rubik.variable} ${rubikMonoOne.variable} antialiased`}
       >
