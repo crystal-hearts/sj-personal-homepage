@@ -114,7 +114,7 @@ function closeModal(modalID: string) {
 
 export default function Home() {
   return (
-    <div id="page" className="font-[family-name:var(--font-rubik)]">
+    <div id="page">
       <div id="background" className="background fixed w-full min-h-screen pb-10 bg-[var(--theme-color-500)] transition-colors duration-500" />
       <div id="scrolling-bg" className="bg-checkerboard-45 animate-scrolling-background bg-50 fixed w-full h-full border-solid border-16 border-opacity-80 border-[var(--theme-color-100)] opacity-20" data-animation-play-state="running" />
       <Header />
