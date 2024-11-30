@@ -1,5 +1,7 @@
 "use client";
 
+import React, { useEffect } from 'react'
+
 import GearIcon from "./images/gear-svgrepo-com.svg";
 import CloseIcon from "./images/close-svgrepo-com.svg";
 import PauseIcon from "./images/pause-svgrepo-com.svg";
@@ -18,7 +20,7 @@ function Header() {
         <div className="header-icons flex space-x-2">
           <a
             title="LinkedIn"
-            className="header-icon h-8 w-8 rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
             href="https://www.linkedin.com/in/sarah-c-jacques/"
             target="_"
           >
@@ -26,7 +28,7 @@ function Header() {
           </a>
           <a
             title="Bluesky"
-            className="header-icon h-8 w-8 rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
             href="https://bsky.app/"
             target="_"
           >
@@ -34,7 +36,7 @@ function Header() {
           </a>
           <a
             title="Github"
-            className="header-icon h-8 w-8 rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
             href="https://github.com/crystal-hearts/"
             target="_"
           >
@@ -48,14 +50,14 @@ function Header() {
 
 function Footer() {
   return (
-    <header
+    <footer
       id="footer"
       className="footer fixed bottom-0 left-0 z-10 w-full p-4"
     >
       <nav className="flex flex-row justify-between px-2 py-2">
         <div className="header-icons flex space-x-2">
           <button
-            className="header-icon h-8 w-8 rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
             onClick={() => openModal("settings-modal")}
           >
             <GearIcon />
@@ -63,7 +65,7 @@ function Footer() {
           <button
             id="pause-button"
             title="Pause animations"
-            className="pause-button h-8 w-8 rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="pause-button h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
             onClick={() => handlePauseButton("paused")}
           >
             <PauseIcon />
@@ -71,27 +73,27 @@ function Footer() {
           <button
             id="play-button"
             title="Play animations"
-            className="play-button hidden h-8 w-8 rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="play-button hidden h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
             onClick={() => handlePlayButton("running")}
           >
             <PlayIcon />
           </button>
         </div>
       </nav>
-    </header>
+    </footer>
   );
 }
 
 function TextBubbles() {
   return (
     <div className="text-bubbles flex flex-row text-sm font-black text-[var(--theme-color-700)]">
-      <button className="text-bubble mr-2 rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-105">
+      <button className="text-bubble mr-2 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-105">
         about me
       </button>
-      <button className="text-bubble mr-2 rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-105">
+      <button className="text-bubble mr-2 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-105">
         contact
       </button>
-      <button className="text-bubble mr-2 rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-105">
+      <button className="text-bubble mr-2 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-105">
         about my cat
       </button>
     </div>
@@ -165,16 +167,18 @@ function closeModal(modalID: string) {
     : null;
 }
 
+// function add
+
 export default function Home() {
   return (
-    <div id="page">
+    <div id="page" className="font-[family-name:var(--font-rubik)]">
       <div
         id="background"
         className="background fixed min-h-screen w-full bg-[var(--theme-color-500)] pb-10 transition-colors duration-500"
       />
       <div
-        id="scrolling-bg"
-        className="fixed h-full w-full animate-scrolling-background border-16 border-solid border-[var(--theme-color-100)] border-opacity-80 bg-checkerboard-45 bg-50 opacity-20"
+        id="bg-scrolling"
+        className="fixed h-full w-full animate-bg-scrolling-12 border-0 border-solid border-[var(--theme-color-100)] border-opacity-80 bg-checkerboard-45 bg-50 opacity-20"
         data-animation-play-state="running"
       />
       <Header />
@@ -182,10 +186,10 @@ export default function Home() {
         <div className="section-container flex min-h-48 w-full flex-row items-center">
           <div className="section-contents mx-auto flex flex-col items-center">
             <h1>
-              <div className="logo-desktop mt-20 hidden w-75-vw sm:block">
+              <div className="logo logo-desktop mt-20 hidden w-75-vw sm:block">
                 <LogoDesktop />
               </div>
-              <div className="logo-mobile mt-20 block w-80-vw sm:hidden">
+              <div className="logo logo-mobile mt-20 block w-80-vw sm:hidden">
                 <LogoMobile />
               </div>
             </h1>
@@ -193,10 +197,10 @@ export default function Home() {
         </div>
         <div
           id="settings-modal"
-          className="settings-modal fixed left-4 top-full z-20 overflow-hidden rounded border-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition-transform duration-500 modal-open:-translate-y-full"
+          className="settings-modal fixed left-4 top-full z-20 overflow-hidden rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition-transform duration-500 modal-open:-translate-y-full"
           data-modal-active="closed"
         >
-          <div className="modal-contents flex flex-col">
+          <div className="modal-contents">
             <div className="modal-header flex flex-row items-center justify-between border-b-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-700)] py-1 pl-4 pr-3">
               <h2
                 className="modal-heading select-none text-sm font-bold text-[var(--theme-color-100)]"
@@ -212,55 +216,55 @@ export default function Home() {
               </button>
             </div>
             <div className="modal-contents h-full px-1 py-2">
-              <div className="flavor-buttons flex flex-row">
-                <div className="flavor-button-container mx-2 flex min-w-16 flex-col items-center">
+              <div className="flavor-buttons flex flex-row flex-wrap">
+                <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
                   <button
-                    className="flavor-button mb-1 h-8 w-8 rounded border-2 border-solid border-[var(--ube-500)] border-opacity-80 bg-[var(--ube-500)] px-2 py-1 text-[var(--ube-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
+                    className="flavor-button mb-1 h-8 w-8 rounded border-1 border-solid border-[var(--ube-500)] border-opacity-80 bg-[var(--ube-500)] px-2 py-1 text-[var(--ube-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
                     onClick={() => changeThemeColor("ube")}
                   />
                   <span className="flavor-button-label ml-1 w-full text-center text-xs font-semibold">
                     ube
                   </span>
                 </div>
-                <div className="flavor-button-container mx-2 flex min-w-16 flex-col items-center">
+                <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
                   <button
-                    className="flavor-button mb-1 h-8 w-8 rounded border-2 border-solid border-[var(--raspberry-500)] border-opacity-80 bg-[var(--raspberry-500)] px-2 py-1 text-[var(--raspberry-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
+                    className="flavor-button mb-1 h-8 w-8 rounded border-1 border-solid border-[var(--raspberry-500)] border-opacity-80 bg-[var(--raspberry-500)] px-2 py-1 text-[var(--raspberry-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
                     onClick={() => changeThemeColor("raspberry")}
                   />
                   <span className="flavor-button-label ml-1 w-full text-center text-xs font-semibold">
                     raspberry
                   </span>
                 </div>
-                <div className="flavor-button-container mx-2 flex min-w-16 flex-col items-center">
+                <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
                   <button
-                    className="flavor-button mb-1 h-8 w-8 rounded border-2 border-solid border-[var(--strawberry-500)] border-opacity-80 bg-[var(--strawberry-500)] px-2 py-1 text-[var(--strawberry-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
+                    className="flavor-button mb-1 h-8 w-8 rounded border-1 border-solid border-[var(--strawberry-500)] border-opacity-80 bg-[var(--strawberry-500)] px-2 py-1 text-[var(--strawberry-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
                     onClick={() => changeThemeColor("strawberry")}
                   />
                   <span className="flavor-button-label ml-1 w-full text-center text-xs font-semibold">
                     strawberry
                   </span>
                 </div>
-                <div className="flavor-button-container mx-2 flex min-w-16 flex-col items-center">
+                <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
                   <button
-                    className="flavor-button mb-1 h-8 w-8 rounded border-2 border-solid border-[var(--lemon-500)] border-opacity-80 bg-[var(--lemon-500)] px-2 py-1 text-[var(--lemon-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
+                    className="flavor-button mb-1 h-8 w-8 rounded border-1 border-solid border-[var(--lemon-500)] border-opacity-80 bg-[var(--lemon-500)] px-2 py-1 text-[var(--lemon-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
                     onClick={() => changeThemeColor("lemon")}
                   />
                   <span className="flavor-button-label ml-1 w-full text-center text-xs font-semibold">
                     lemon
                   </span>
                 </div>
-                <div className="flavor-button-container mx-2 flex min-w-16 flex-col items-center">
+                <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
                   <button
-                    className="flavor-button mb-1 h-8 w-8 rounded border-2 border-solid border-[var(--lime-500)] border-opacity-80 bg-[var(--lime-500)] px-2 py-1 text-[var(--lime-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
+                    className="flavor-button mb-1 h-8 w-8 rounded border-1 border-solid border-[var(--lime-500)] border-opacity-80 bg-[var(--lime-500)] px-2 py-1 text-[var(--lime-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
                     onClick={() => changeThemeColor("lime")}
                   />
                   <span className="flavor-button-label ml-1 w-full text-center text-xs font-semibold">
                     lime
                   </span>
                 </div>
-                <div className="flavor-button-container mx-2 flex min-w-16 flex-col items-center">
+                <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
                   <button
-                    className="flavor-button mb-1 h-8 w-8 rounded border-2 border-solid border-[var(--mint-500)] border-opacity-80 bg-[var(--mint-500)] px-2 py-1 text-[var(--mint-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
+                    className="flavor-button mb-1 h-8 w-8 rounded border-1 border-solid border-[var(--mint-500)] border-opacity-80 bg-[var(--mint-500)] px-2 py-1 text-[var(--mint-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105"
                     onClick={() => changeThemeColor("mint")}
                   />
                   <span className="flavor-button-label ml-1 w-full text-center text-xs font-semibold">
@@ -276,3 +280,4 @@ export default function Home() {
     </div>
   );
 }
+

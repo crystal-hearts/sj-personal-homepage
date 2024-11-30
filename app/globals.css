@@ -50,106 +50,58 @@
   --theme-color-500: var(--ube-500);
   --theme-color-700: var(--ube-700);
   --theme-color-900: var(--ube-900);
+
+  --delay-step-increment: 0.25s;
 }
 
 @layer utilities {
   [data-animation-play-state="paused"] {
     animation-play-state: paused;
   }
+  /* Setting the value of --nth-child-index to match nth-child allows it to be used in calc() */
+  :nth-child(1) {
+    --nth-child-index: 1;
+  }
+  :nth-child(2) {
+    --nth-child-index: 2;
+  }
+  :nth-child(3) {
+    --nth-child-index: 3;
+  }
+  :nth-child(4) {
+    --nth-child-index: 4;
+  }
+  :nth-child(5) {
+    --nth-child-index: 5;
+  }
+  :nth-child(6) {
+    --nth-child-index: 6;
+  }
+  :nth-child(7) {
+    --nth-child-index: 7;
+  }
+  :nth-child(8) {
+    --nth-child-index: 8;
+  }
+  :nth-child(9) {
+    --nth-child-index: 9;
+  }
+  :nth-child(10) {
+    --nth-child-index: 10;
+  }
+  :nth-child(11) {
+    --nth-child-index: 11;
+  }
+  :nth-child(12) {
+    --nth-child-index: 12;
+  }
 }
 
-.logo-desktop_svg__g1 {
-  animation-delay: -2.75s;
-}
-
-.logo-desktop_svg__g2 {
-  animation-delay: -2.5s;
-}
-
-.logo-desktop_svg__g3 {
-  animation-delay: -2.25s;
-}
-
-.logo-desktop_svg__g4 {
-  animation-delay: -2s;
-}
-
-.logo-desktop_svg__g5 {
-  animation-delay: -1.75s;
-}
-
-.logo-desktop_svg__g6 {
-  animation-delay: -1.5s;
-}
-
-.logo-desktop_svg__g7 {
-  animation-delay: -1.25s;
-}
-
-.logo-desktop_svg__g8 {
-  animation-delay: -1s;
-}
-
-.logo-desktop_svg__g9 {
-  animation-delay: -0.75s;
-}
-
-.logo-desktop_svg__g10 {
-  animation-delay: -0.5s;
-}
-
-.logo-desktop_svg__g11 {
-  animation-delay: -0.25s;
-}
-
-.logo-desktop_svg__g12 {
-  animation-delay: 0s;
-}
-
-.logo-mobile_svg__g1 {
-  animation-delay: -1.25s;
-}
-
-.logo-mobile_svg__g2 {
-  animation-delay: -1s;
-}
-
-.logo-mobile_svg__g3 {
-  animation-delay: -0.75s;
-}
-
-.logo-mobile_svg__g4 {
-  animation-delay: -0.5s;
-}
-
-.logo-mobile_svg__g5 {
-  animation-delay: -0.25s;
-}
-
-.logo-mobile_svg__g6 {
-  animation-delay: -1.5s;
-}
-
-.logo-mobile_svg__g7 {
-  animation-delay: -1.25s;
-}
-
-.logo-mobile_svg__g8 {
-  animation-delay: -1s;
-}
-
-.logo-mobile_svg__g9 {
-  animation-delay: -0.75s;
-}
-
-.logo-mobile_svg__g10 {
-  animation-delay: -0.5s;
-}
-
-.logo-mobile_svg__g11 {
-  animation-delay: -0.25s;
-}
-
-.logo-mobile_svg__g12 {
-  animation-delay: 0s;
+@layer components {
+  g[class*="logo-letter"] {
+    animation: wave-y-5 3s ease-in-out infinite;
+    animation-delay: calc(
+      var(--delay-step-increment) * (var(--nth-child-index) * -1)
+    );
+  }
 }

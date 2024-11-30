@@ -4,10 +4,11 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
+  safelist: ["animate-wave-y-3", "animate-wave-y-5"],
   theme: {
     extend: {
       animation: {
-        "scrolling-background": "scrolling-background 12s linear infinite",
+        "bg-scrolling-12": "bg-scrolling 12s linear infinite",
         "wave-y-3": "wave-y-3 3s ease-in-out infinite",
         "wave-y-5": "wave-y-5 3s ease-in-out infinite",
       },
@@ -19,22 +20,23 @@ module.exports = {
         50: "50px 50px",
       },
       borderWidth: {
+        1: "1px",
         16: "16px",
       },
       keyframes: {
-        "scrolling-background": {
+        "bg-scrolling": {
           "0%": {
-            "background-position": "250px -150px",
+            "background-position": "250px -200px",
           },
           "100%": {
-            "background-position": "0",
+            "background-position": "0 0",
           },
         },
         "wave-y-3": {
           "0%,100%": {
             transform: "translateY(-3px)",
           },
-          "100%": {
+          "50%": {
             transform: "translateY(3px)",
           },
         },
@@ -42,7 +44,7 @@ module.exports = {
           "0%,100%": {
             transform: "translateY(-5px)",
           },
-          "100%": {
+          "50%": {
             transform: "translateY(5px)",
           },
         },
