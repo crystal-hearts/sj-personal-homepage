@@ -54,7 +54,7 @@
 
 @layer utilities {
   [data-animation-play-state="paused"] {
-    animation-play-state: paused;
+    animation-play-state: paused !important;
   }
   /* Setting the value of --nth-child-index to match nth-child allows it to be used in calc() */
   :nth-child(1) {
@@ -95,7 +95,7 @@
   }
 }
 
-@layer components {
+@layer base {
   g[class*="logo-letter"] {
     --delay-step-increment: 0.25s;
     --animation-length: 3s;
