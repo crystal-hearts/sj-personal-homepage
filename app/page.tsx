@@ -84,13 +84,9 @@ function Footer() {
 
 function FlavorButton({ flavor }: { flavor: string }) {
   const buttonClasses =
-    "flavor-button mb-1 h-8 w-8 rounded border-1 border-solid border-[var(--" +
+    "flavor-button mb-1 h-8 w-8 rounded bg-[var(--" +
     flavor +
-    "-500)] border-opacity-80 bg-[var(--" +
-    flavor +
-    "-500)] px-2 py-1 text-[var(--" +
-    flavor +
-    "-900)] shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105";
+    "-500)] px-2 py-1 shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105";
 
   return (
     <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
