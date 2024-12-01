@@ -1,6 +1,6 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
 
 :root {
   /* Colors are defined in globals.css instead of Tailwind config */
@@ -98,7 +98,8 @@
 @layer components {
   g[class*="logo-letter"] {
     --delay-step-increment: 0.25s;
-    animation: wave-y-5 3s ease-in-out infinite;
+    --animation-length: 3s;
+    animation: wave-y-5 var(--animation-length) ease-in-out infinite;
     animation-delay: calc(
       var(--delay-step-increment) * (var(--nth-child-index) * -1)
     );

@@ -1,7 +1,5 @@
 "use client";
 
-import React, { useEffect } from 'react'
-
 import GearIcon from "./images/gear-svgrepo-com.svg";
 import CloseIcon from "./images/close-svgrepo-com.svg";
 import PauseIcon from "./images/pause-svgrepo-com.svg";
@@ -55,9 +53,9 @@ function Footer() {
       className="footer fixed bottom-0 left-0 z-10 w-full p-4"
     >
       <nav className="flex flex-row justify-between px-2 py-2">
-        <div className="header-icons flex space-x-2">
+        <div className="footer-icons flex space-x-2">
           <button
-            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="settings-button h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
             onClick={() => openModal("settings-modal")}
           >
             <GearIcon />
@@ -120,24 +118,30 @@ function changeThemeColor(colorName: string) {
 }
 
 function handlePlayButton(animationPlayState: string) {
-  var playButton = document.getElementById("play-button");
-  var pauseButton = document.getElementById("pause-button");
+  const playButton = document.getElementById("play-button");
+  const pauseButton = document.getElementById("pause-button");
 
-  playButton ? playButton.classList.add("hidden") : playButton;
-  pauseButton ? pauseButton.classList.remove("hidden") : pauseButton;
-
-  pauseButton ? pauseButton.focus() : null;
+  if (playButton) {
+    playButton.classList.add("hidden");
+  }
+  if (pauseButton) {
+    pauseButton.classList.remove("hidden");
+    pauseButton.focus();
+  }
 
   toggleAnimations(animationPlayState);
 }
 function handlePauseButton(animationPlayState: string) {
-  var playButton = document.getElementById("play-button");
-  var pauseButton = document.getElementById("pause-button");
+  const playButton = document.getElementById("play-button");
+  const pauseButton = document.getElementById("pause-button");
 
-  pauseButton ? pauseButton.classList.add("hidden") : pauseButton;
-  playButton ? playButton.classList.remove("hidden") : playButton;
-
-  playButton ? playButton.focus() : null;
+  if (pauseButton) {
+    pauseButton.classList.add("hidden");
+  }
+  if (playButton) {
+    playButton.classList.remove("hidden");
+    playButton.focus();
+  }
 
   toggleAnimations(animationPlayState);
 }
@@ -151,23 +155,23 @@ function toggleAnimations(playState: string) {
 }
 
 function openModal(modalID: string) {
-  var settingsModalElement = document.getElementById(modalID);
-  settingsModalElement
-    ? settingsModalElement.setAttribute("data-modal-active", "open")
-    : null;
-  settingsModalElement
-    ? settingsModalElement.getElementsByClassName("modal-heading")[0].focus()
-    : null;
+  const settingsModalElement = document.getElementById(modalID);
+  if (settingsModalElement) {
+    settingsModalElement.setAttribute("data-modal-active", "open");
+    settingsModalElement.getElementsByClassName("modal-heading")[0].focus();
+  }
 }
 
-function closeModal(modalID: string) {
-  var settingsModalElement = document.getElementById(modalID);
-  settingsModalElement
-    ? settingsModalElement.setAttribute("data-modal-active", "closed")
-    : null;
+function closeModal(modalID: string, returnID: string) {
+  const settingsModalElement = document.getElementById(modalID);
+  const returnElement = document.getElementById(returnID);
+  if (settingsModalElement) {
+    settingsModalElement.setAttribute("data-modal-active", "closed");
+  }
+  if (returnElement) {
+    returnElement.focus();
+  }
 }
-
-// function add
 
 export default function Home() {
   return (
@@ -210,7 +214,7 @@ export default function Home() {
               </h2>
               <button
                 className="modal-close h-4 w-4 fill-[var(--theme-color-100)]"
-                onClick={() => closeModal("settings-modal")}
+                onClick={() => closeModal("settings-modal", "settings-button")}
               >
                 <CloseIcon />
               </button>
@@ -280,4 +284,3 @@ export default function Home() {
     </div>
   );
 }
-
