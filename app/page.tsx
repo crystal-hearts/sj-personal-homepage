@@ -18,7 +18,7 @@ function Header() {
         <div className="header-icons flex space-x-2">
           <a
             title="LinkedIn"
-            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
             href="https://www.linkedin.com/in/sarah-c-jacques/"
             target="_"
           >
@@ -26,7 +26,7 @@ function Header() {
           </a>
           <a
             title="Bluesky"
-            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
             href="https://bsky.app/"
             target="_"
           >
@@ -34,7 +34,7 @@ function Header() {
           </a>
           <a
             title="Github"
-            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="header-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
             href="https://github.com/crystal-hearts/"
             target="_"
           >
@@ -55,7 +55,7 @@ function Footer() {
       <nav className="flex flex-row justify-between px-2 py-2">
         <div className="footer-icons flex space-x-2">
           <button
-            className="settings-button h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="settings-button h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
             onClick={() => openModal("settings-modal")}
           >
             <GearIcon />
@@ -63,7 +63,7 @@ function Footer() {
           <button
             id="pause-button"
             title="Pause animations"
-            className="pause-button h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="pause-button h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
             onClick={() => handlePauseButton("paused")}
           >
             <PauseIcon />
@@ -71,7 +71,7 @@ function Footer() {
           <button
             id="play-button"
             title="Play animations"
-            className="play-button hidden h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-110"
+            className="play-button hidden h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
             onClick={() => handlePlayButton("running")}
           >
             <PlayIcon />
@@ -86,7 +86,7 @@ function FlavorButton({ flavor }: { flavor: string }) {
   const buttonClasses =
     "flavor-button mb-1 h-8 w-8 rounded bg-[var(--" +
     flavor +
-    "-500)] px-2 py-1 shadow-[rgba(0,0,0.5,0.5)_3px_3px_3px_0px] transition duration-150 hover:scale-105 active:scale-105";
+    "-500)] px-2 py-1 shadow-drop-3 transition duration-150 hover:scale-105 active:scale-105";
 
   return (
     <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
@@ -104,13 +104,13 @@ function FlavorButton({ flavor }: { flavor: string }) {
 function TextBubbles() {
   return (
     <div className="text-bubbles flex flex-row text-sm font-black text-[var(--theme-color-700)]">
-      <button className="text-bubble mr-2 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-105">
+      <button className="text-bubble mr-2 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-drop-5 transition duration-150 hover:scale-110 active:scale-105">
         about me
       </button>
-      <button className="text-bubble mr-2 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-105">
+      <button className="text-bubble mr-2 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-drop-5 transition duration-150 hover:scale-110 active:scale-105">
         contact
       </button>
-      <button className="text-bubble mr-2 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition duration-150 hover:scale-110 active:scale-105">
+      <button className="text-bubble mr-2 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] px-2 py-1 text-center shadow-drop-5 transition duration-150 hover:scale-110 active:scale-105">
         about my cat
       </button>
     </div>
@@ -121,7 +121,7 @@ function SettingsModal() {
   return (
     <div
       id="settings-modal"
-      className="settings-modal fixed left-4 top-full z-20 overflow-hidden rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] shadow-[rgba(0,0,0.5,0.5)_5px_5px_5px_0px] transition-transform duration-500 modal-open:-translate-y-full"
+      className="settings-modal fixed left-4 top-full z-20 overflow-hidden rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] shadow-drop-5 transition-transform duration-500 modal-open:-translate-y-full"
       data-modal-active="closed"
     >
       <div className="modal-contents">

@@ -32,6 +32,10 @@ module.exports = {
         1: "1px",
         16: "16px",
       },
+      boxShadow: {
+        "drop-3": "3px 3px 3px 0px rgba(0, 0, 0.5, 0.5)",
+        "drop-5": "5px 5px 5px 0px rgba(0, 0, 0.5, 0.5)",
+      },
       keyframes: {
         "bg-scrolling": {
           "0%": {
