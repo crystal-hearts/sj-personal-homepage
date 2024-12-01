@@ -1,6 +1,6 @@
 @tailwind base;
-@tailwind utilities;
 @tailwind components;
+@tailwind utilities;
 
 :root {
   /* Colors are defined in globals.css instead of Tailwind config */
@@ -54,7 +54,7 @@
 
 @layer utilities {
   [data-animation-play-state="paused"] {
-    animation-play-state: paused !important;
+    animation-play-state: paused;
   }
   /* Setting the value of --nth-child-index to match nth-child allows it to be used in calc() */
   :nth-child(1) {
@@ -95,8 +95,8 @@
   }
 }
 
-@layer base {
-  g[class*="logo-letter"] {
+@layer components {
+  [class*="logo-letter"] {
     --delay-step-increment: 0.25s;
     --animation-length: 3s;
     animation: wave-y-5 var(--animation-length) ease-in-out infinite;
