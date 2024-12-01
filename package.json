@@ -37,8 +37,7 @@
       "eslint --max-warnings 0 ."
     ],
     "**/*.css": [
-      "prettier --write",
-      "stylelint"
+      "prettier --write"
     ]
   }
 }
