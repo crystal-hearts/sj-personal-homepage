@@ -4,7 +4,16 @@ import plugin from "tailwindcss/plugin";
 
 module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
-  safelist: ["animate-wave-y-3", "animate-wave-y-5"],
+  safelist: [
+    "animate-wave-y-3",
+    "animate-wave-y-5",
+    "bg-[var(--ube-500)]",
+    "bg-[var(--raspberry-500)]",
+    "bg-[var(--strawberry-500)]",
+    "bg-[var(--lemon-500)]",
+    "bg-[var(--lime-500)]",
+    "bg-[var(--mint-500)]",
+  ],
   theme: {
     extend: {
       animation: {
