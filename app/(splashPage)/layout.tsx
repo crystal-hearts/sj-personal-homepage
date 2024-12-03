@@ -29,12 +29,12 @@ export default function SplashPageLayout({
         <SocialIcons />
       </Header>
       {children}
+      {/* <AboutMeModal /> */}
+      <SettingsModal />
       <FixedFooter>
         <SettingsButton />
         <PausePlayButton />
       </FixedFooter>
-      {/* <AboutMeModal /> */}
-      <SettingsModal />
     </div>
   );
 }
