@@ -1,37 +1,37 @@
 import PauseIcon from "../images/pause-svgrepo-com.svg";
 import PlayIcon from "../images/play-svgrepo-com.svg";
 
+import { Button } from "./button";
+
 export function PausePlayButton() {
   const playButtonID = "play-button";
   const pauseButtonID = "pause-button";
 
-  function handlePlayButton(animationPlayState: string) {
+  const animationPlayStateRunning = "running";
+  const animationPlayStatePaused = "paused";
+
+  function handlePlayButton() {
     const playButton = document.getElementById(playButtonID);
     const pauseButton = document.getElementById(pauseButtonID);
 
-    if (playButton) {
+    if (playButton && pauseButton) {
       playButton.classList.add("hidden");
-    }
-    if (pauseButton) {
       pauseButton.classList.remove("hidden");
       pauseButton.focus();
     }
-
-    toggleAnimationPlayState(animationPlayState);
+    toggleAnimationPlayState(animationPlayStateRunning);
   }
-  function handlePauseButton(animationPlayState: string) {
+
+  function handlePauseButton() {
     const playButton = document.getElementById(playButtonID);
     const pauseButton = document.getElementById(pauseButtonID);
 
-    if (pauseButton) {
+    if (playButton && pauseButton) {
       pauseButton.classList.add("hidden");
-    }
-    if (playButton) {
       playButton.classList.remove("hidden");
-      playButton.focus();
+      pauseButton.focus();
     }
-
-    toggleAnimationPlayState(animationPlayState);
+    toggleAnimationPlayState(animationPlayStatePaused);
   }
 
   function toggleAnimationPlayState(playState: string) {
@@ -44,22 +44,26 @@ export function PausePlayButton() {
 
   return (
     <div className="pause-play-button">
-      <button
-        id={pauseButtonID}
+      <Button
+        buttonID="pause-button"
+        buttonClass="pause-button"
         title="Pause animations"
-        className="pause-button h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
-        onClick={() => handlePauseButton("paused")}
+        displayHidden={false}
+        iconButton={true}
+        clickHandler={() => handlePauseButton()}
       >
         <PauseIcon />
-      </button>
-      <button
-        id={playButtonID}
+      </Button>
+      <Button
+        buttonID="play-button"
+        buttonClass="play-button"
         title="Play animations"
-        className="play-button hidden h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
-        onClick={() => handlePlayButton("running")}
+        displayHidden={true}
+        iconButton={true}
+        clickHandler={() => handlePlayButton()}
       >
         <PlayIcon />
-      </button>
+      </Button>
     </div>
   );
 }
