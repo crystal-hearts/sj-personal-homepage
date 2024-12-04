@@ -1,3 +1,5 @@
+import { Button } from "./button";
+
 import GithubIcon from "../images/github.svg";
 import LinkedInIcon from "../images/linkedin.svg";
 import BlueskyIcon from "../images/bluesky.svg";
@@ -5,30 +7,33 @@ import BlueskyIcon from "../images/bluesky.svg";
 export function SocialIcons() {
   return (
     <div className="social-icons flex space-x-2">
-      <a
+      <Button
         title="LinkedIn"
-        className="linkedin-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
-        href="https://www.linkedin.com/in/sarah-c-jacques/"
+        isLink={true}
+        iconButton={true}
         target="_"
+        href="https://www.linkedin.com/in/sarah-c-jacques"
       >
         <LinkedInIcon />
-      </a>
-      <a
+      </Button>
+      <Button
         title="Bluesky"
-        className="bluesky-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
-        href="https://bsky.app/"
+        isLink={true}
+        iconButton={true}
         target="_"
+        href="https://bsky.app/profile/sarahjacques.bsky.social"
       >
         <BlueskyIcon />
-      </a>
-      <a
+      </Button>
+      <Button
         title="Github"
-        className="github-icon h-8 w-8 rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] fill-[var(--theme-color-700)] p-1 shadow-drop-5 transition duration-150 hover:scale-110 active:scale-110"
-        href="https://github.com/crystal-hearts/"
+        isLink={true}
+        iconButton={true}
         target="_"
+        href="https://github.com/crystal-hearts/sj-personal-homepage"
       >
         <GithubIcon />
-      </a>
+      </Button>
     </div>
   );
 }
