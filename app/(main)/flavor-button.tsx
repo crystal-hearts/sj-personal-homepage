@@ -13,6 +13,7 @@ export function FlavorButton({ flavor }: { flavor: string }) {
     <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
       <Button
         iconButton={true}
+        title={flavor}
         smallShadow={true}
         flavor={flavor}
         clickHandler={() => changeThemeColor(flavor)}

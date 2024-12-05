@@ -8,7 +8,7 @@ export function FastForwardButton() {
   return (
     <Button
       buttonID="fast-forward-button"
-      buttonClass="fast-forward-button"
+      className="fast-forward-button"
       title="Fast forward animations"
       iconButton={true}
       mouseDownHandler={() => handleMouseDown()}

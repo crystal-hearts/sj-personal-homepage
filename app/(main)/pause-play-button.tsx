@@ -5,7 +5,11 @@ import { SITE_CONSTANTS } from "../constants/site-constants";
 import PauseIcon from "../images/pause-svgrepo-com.svg";
 import PlayIcon from "../images/play-svgrepo-com.svg";
 
-export function PausePlayButton() {
+export function PausePlayButton({
+  inverseIcon = false,
+}: {
+  inverseIcon?: boolean;
+}) {
   function handlePlayPauseButton(playState: string) {
     toggleAnimationPlayState(playState);
     togglePlayPauseButtons(playState);
@@ -42,6 +46,7 @@ export function PausePlayButton() {
         title={SITE_CONSTANTS.PAUSE_BUTTON_TITLE}
         displayHidden={false}
         iconButton={true}
+        inverseIcon={inverseIcon}
         clickHandler={() =>
           handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_PAUSED)
         }
@@ -53,6 +58,7 @@ export function PausePlayButton() {
         title={SITE_CONSTANTS.PLAY_BUTTON_TITLE}
         displayHidden={true}
         iconButton={true}
+        inverseIcon={inverseIcon}
         clickHandler={() =>
           handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_RUNNING)
         }

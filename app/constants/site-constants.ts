@@ -10,6 +10,7 @@ export const SITE_CONSTANTS = {
   DEFAULT_ANIMATION_PLAY_STATE: "running",
   GITHUB_TITLE: "settings-modal",
   GITHUB_URL: "https://github.com/crystal-hearts/sj-personal-homepage",
+  HOME_TITLE: "home",
   LINKEDIN_TITLE: "settings-modal",
   LINKEDIN_URL: "https://www.linkedin.com/in/sarah-c-jacques",
   PAGE_ID: "page",
