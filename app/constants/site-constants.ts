@@ -1,13 +1,10 @@
 export const SITE_CONSTANTS = {
-  ABOUT_ME_ID: "about-me",
   ABOUT_ME_TITLE: "about me",
-  ABOUT_MY_CAT_ID: "about-my-cat",
   ABOUT_MY_CAT_TITLE: "about my cat",
   ANIMATION_PLAY_STATE_PAUSED: "paused",
   ANIMATION_PLAY_STATE_RUNNING: "running",
   BLUESKY_TITLE: "settings-modal",
   BLUESKY_URL: "https://bsky.app/profile/sarahjacques.bsky.social",
-  CONTACT_ID: "contact",
   CONTACT_TITLE: "contact me",
   DEFAULT_SITE_THEME: "ube",
   DEFAULT_ANIMATION_PLAY_STATE: "running",
