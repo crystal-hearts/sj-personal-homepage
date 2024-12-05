@@ -10,6 +10,7 @@ export const SITE_CONSTANTS = {
   CONTACT_ID: "contact",
   CONTACT_TITLE: "contact me",
   DEFAULT_SITE_THEME: "ube",
+  DEFAULT_ANIMATION_PLAY_STATE: "running",
   GITHUB_TITLE: "settings-modal",
   GITHUB_URL: "https://github.com/crystal-hearts/sj-personal-homepage",
   LINKEDIN_TITLE: "settings-modal",

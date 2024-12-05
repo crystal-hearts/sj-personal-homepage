@@ -21,10 +21,10 @@ export default function SplashPageLayout({
 }) {
   return (
     <div
-      id="page"
+      id={SITE_CONSTANTS.PAGE_ID}
       className="font-[family-name:var(--font-rubik)]"
       data-theme-color={SITE_CONSTANTS.DEFAULT_SITE_THEME}
-      data-animation-play-state="running"
+      data-animation-play-state={SITE_CONSTANTS.DEFAULT_ANIMATION_PLAY_STATE}
     >
       <Background />
       <Header>
