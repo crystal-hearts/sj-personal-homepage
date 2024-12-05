@@ -1,6 +1,6 @@
-import { Logo } from "./logo";
-import { MainSection } from "./main";
-import { Section } from "./section";
+import { Logo } from "@/components/logo";
+import { MainSection } from "@/components/main";
+import { Section } from "@/components/section";
 
 export default function Page() {
   return (

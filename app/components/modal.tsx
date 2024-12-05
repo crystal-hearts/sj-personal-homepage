@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ModalHeader } from "./modal-header";
+import { ModalHeader } from "@/components/modal-header";
 
 export function Modal({
   modalID,

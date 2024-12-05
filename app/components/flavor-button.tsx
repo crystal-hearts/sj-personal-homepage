@@ -1,6 +1,6 @@
-import { Button } from "./button";
+import { Button } from "@/components/button";
 
-import { SITE_CONSTANTS } from "../constants/site-constants";
+import { SITE_CONSTANTS } from "@/constants/site-constants";
 
 export function FlavorButton({ flavor }: { flavor: string }) {
   function changeThemeColor(flavor: string) {

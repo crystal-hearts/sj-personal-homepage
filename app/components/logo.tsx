@@ -1,5 +1,5 @@
-import LogoDesktop from "../images/logo-desktop.svg";
-import LogoMobile from "../images/logo-mobile.svg";
+import LogoDesktop from "@/images/logo-desktop.svg";
+import LogoMobile from "@/images/logo-mobile.svg";
 
 export function Logo() {
   return (

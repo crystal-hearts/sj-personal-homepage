@@ -1,8 +1,8 @@
-import { Button } from "./button";
+import { Button } from "@/components/button";
 
-import { SITE_CONSTANTS } from "../constants/site-constants";
+import { SITE_CONSTANTS } from "@/constants/site-constants";
 
-import HomeIcon from "../images/home-icon-svgrepo-com.svg";
+import HomeIcon from "@/images/home-icon-svgrepo-com.svg";
 
 export function HomeButton({ inverseIcon = false }: { inverseIcon?: boolean }) {
   return (

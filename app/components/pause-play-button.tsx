@@ -1,9 +1,9 @@
-import { Button } from "./button";
+import { Button } from "@/components/button";
 
-import { SITE_CONSTANTS } from "../constants/site-constants";
+import { SITE_CONSTANTS } from "@/constants/site-constants";
 
-import PauseIcon from "../images/pause-svgrepo-com.svg";
-import PlayIcon from "../images/play-svgrepo-com.svg";
+import PauseIcon from "@/images/pause-svgrepo-com.svg";
+import PlayIcon from "@/images/play-svgrepo-com.svg";
 
 export function PausePlayButton({
   inverseIcon = false,

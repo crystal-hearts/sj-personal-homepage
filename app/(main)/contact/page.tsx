@@ -1,7 +1,7 @@
-import { MainSection } from "../main";
-import { Section } from "../section";
+import { MainSection } from "@/components/main";
+import { Section } from "@/components/section";
 
-import CloseIcon from "../../images/close-svgrepo-com.svg";
+import CloseIcon from "@/images/close-svgrepo-com.svg";
 
 export default function Page() {
   return (

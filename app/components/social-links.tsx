@@ -1,10 +1,10 @@
-import { Button } from "./button";
+import { Button } from "@/components/button";
 
-import { SITE_CONSTANTS } from "../constants/site-constants";
+import { SITE_CONSTANTS } from "@/constants/site-constants";
 
-import GithubIcon from "../images/github.svg";
-import LinkedInIcon from "../images/linkedin.svg";
-import BlueskyIcon from "../images/bluesky.svg";
+import GithubIcon from "@/images/github.svg";
+import LinkedInIcon from "@/images/linkedin.svg";
+import BlueskyIcon from "@/images/bluesky.svg";
 
 export function SocialLinks() {
   return (
