@@ -160,7 +160,7 @@
 }
 
 @layer components {
-  [class*="logo-letter"] {
+  [class*="logo-letter-animated"] {
     --delay-step-increment: 0.25s;
     --animation-length: 3s;
     animation: wave-y-5 var(--animation-length) ease-in-out infinite;

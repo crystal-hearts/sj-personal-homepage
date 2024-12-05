@@ -1,15 +1,28 @@
+import React from "react";
+
 import { Button } from "./button";
 
 export function HeaderMenuItem({
-  itemLabel,
+  title,
   href,
+  iconButton,
+  inverseIcon,
+  children,
 }: {
-  itemLabel: string;
+  title: string;
   href: string;
+  iconButton?: boolean;
+  inverseIcon?: boolean;
+  children: React.ReactNode;
 }) {
   return (
-    <Button title={itemLabel} href={href}>
-      {itemLabel}
+    <Button
+      title={title}
+      href={href}
+      iconButton={iconButton}
+      inverseIcon={inverseIcon}
+    >
+      <div className="flex h-full w-full flex-row items-center">{children}</div>
     </Button>
   );
 }

@@ -29,18 +29,24 @@ export default function MainPageLayout({
       <Background />
       <Header>
         <HeaderMenu>
+          <HeaderMenuItem title={SITE_CONSTANTS.HOME_TITLE} href="/">
+            {SITE_CONSTANTS.HOME_TITLE}
+          </HeaderMenuItem>
           <HeaderMenuItem
-            itemLabel={SITE_CONSTANTS.ABOUT_ME_TITLE}
+            title={SITE_CONSTANTS.ABOUT_ME_TITLE}
             href="/about-me"
-          />
+          >
+            {SITE_CONSTANTS.ABOUT_ME_TITLE}
+          </HeaderMenuItem>
+          <HeaderMenuItem title={SITE_CONSTANTS.CONTACT_TITLE} href="/contact">
+            {SITE_CONSTANTS.CONTACT_TITLE}
+          </HeaderMenuItem>
           <HeaderMenuItem
-            itemLabel={SITE_CONSTANTS.CONTACT_TITLE}
-            href="/contact"
-          />
-          <HeaderMenuItem
-            itemLabel={SITE_CONSTANTS.ABOUT_MY_CAT_TITLE}
+            title={SITE_CONSTANTS.ABOUT_MY_CAT_TITLE}
             href="/about-my-cat"
-          />
+          >
+            {SITE_CONSTANTS.ABOUT_MY_CAT_TITLE}
+          </HeaderMenuItem>
         </HeaderMenu>
         <SocialIcons />
       </Header>
