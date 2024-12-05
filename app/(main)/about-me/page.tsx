@@ -9,7 +9,7 @@ export default function Page() {
       <Section>
         <div
           id="about-me-modal"
-          className="about-me-modal modal fixed w-full overflow-hidden rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] shadow-drop-5 transition-transform duration-500 modal-open:w-48"
+          className="about-me-modal modal w-full overflow-hidden rounded border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] shadow-drop-5 transition-transform duration-500 modal-open:w-48"
           data-modal-active="closed"
         >
           <div className="modal-contents">
@@ -27,22 +27,7 @@ export default function Page() {
             <div className="modal-contents h-full px-5 py-2">
               <div className="modal-text-section flex flex-col">
                 <span className="font-semibold">Hi!</span>
-                <span className="mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer faucibus auctor maximus. Donec nec urna rhoncus,
-                  blandit magna eleifend, dictum erat. In ullamcorper commodo
-                  elit, non tristique quam vulputate vitae. Aenean tincidunt eu
-                  mauris ac dignissim. Nam a libero efficitur, molestie orci
-                  non, suscipit nibh. Suspendisse ornare feugiat nibh eu
-                  laoreet. Aliquam malesuada dolor sed euismod tincidunt.
-                  Quisque neque eros, sollicitudin ut arcu eget, posuere
-                  eleifend ipsum. Etiam libero mi, semper cursus ullamcorper
-                  interdum, vulputate eu sem. Curabitur vulputate erat ex, eget
-                  aliquet metus feugiat dapibus. Quisque at volutpat felis, sit
-                  amet commodo nisl. Nulla facilisi. Sed pretium, felis sit amet
-                  egestas tempus, lacus est vehicula magna, nec pharetra dui dui
-                  sagittis augue.
-                </span>
+                <span className="mt-2">Lorem ipsum dolor sit amet.</span>
               </div>
             </div>
           </div>
