@@ -13,6 +13,7 @@ export function SettingsButton({
   return (
     <Button
       buttonID={SITE_CONSTANTS.SETTINGS_MODAL_ID}
+      title={SITE_CONSTANTS.SETTINGS_BUTTON_TITLE}
       iconButton={true}
       inverseIcon={inverseIcon}
       clickHandler={() => openModal(SITE_CONSTANTS.SETTINGS_MODAL_ID)}

@@ -7,12 +7,12 @@ import { SITE_CONSTANTS } from "../constants/site-constants";
 import { Background } from "./background";
 import { FixedFooter } from "./fixed-footer";
 import { Header } from "./header";
-import { HeaderMenu } from "./header-menu";
-import { HeaderMenuItem } from "./header-menu-item";
+import { Badge } from "./badge";
+import { Menu } from "./menu";
 import { PausePlayButton } from "./pause-play-button";
 import { SettingsButton } from "./settings-button";
 import { SettingsModal } from "./settings-modal";
-import { SocialIcons } from "./social-icons";
+import { SocialLinks } from "./social-links";
 
 export default function MainPageLayout({
   children,
@@ -28,27 +28,9 @@ export default function MainPageLayout({
     >
       <Background />
       <Header>
-        <HeaderMenu>
-          <HeaderMenuItem title={SITE_CONSTANTS.HOME_TITLE} href="/">
-            {SITE_CONSTANTS.HOME_TITLE}
-          </HeaderMenuItem>
-          <HeaderMenuItem
-            title={SITE_CONSTANTS.ABOUT_ME_TITLE}
-            href="/about-me"
-          >
-            {SITE_CONSTANTS.ABOUT_ME_TITLE}
-          </HeaderMenuItem>
-          <HeaderMenuItem title={SITE_CONSTANTS.CONTACT_TITLE} href="/contact">
-            {SITE_CONSTANTS.CONTACT_TITLE}
-          </HeaderMenuItem>
-          <HeaderMenuItem
-            title={SITE_CONSTANTS.ABOUT_MY_CAT_TITLE}
-            href="/about-my-cat"
-          >
-            {SITE_CONSTANTS.ABOUT_MY_CAT_TITLE}
-          </HeaderMenuItem>
-        </HeaderMenu>
-        <SocialIcons />
+        <Badge />
+        <Menu />
+        <SocialLinks />
       </Header>
       {children}
       <SettingsModal />

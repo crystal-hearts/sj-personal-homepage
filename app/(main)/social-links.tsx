@@ -6,9 +6,9 @@ import GithubIcon from "../images/github.svg";
 import LinkedInIcon from "../images/linkedin.svg";
 import BlueskyIcon from "../images/bluesky.svg";
 
-export function SocialIcons() {
+export function SocialLinks() {
   return (
-    <div className="social-icons flex space-x-2">
+    <div className="social-links flex space-x-2">
       <Button
         title={SITE_CONSTANTS.LINKEDIN_TITLE}
         iconButton={true}
