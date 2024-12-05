@@ -1,6 +1,6 @@
-import CloseIcon from "../images/close-svgrepo-com.svg";
-
 import { closeModal } from "../helpers/helpers";
+
+import CloseIcon from "../images/close-svgrepo-com.svg";
 
 export function ModalHeader({
   modalID,

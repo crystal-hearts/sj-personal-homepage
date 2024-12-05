@@ -1,66 +1,61 @@
+import { Button } from "./button";
+
+import { SITE_CONSTANTS } from "../constants/site-constants";
+
 import PauseIcon from "../images/pause-svgrepo-com.svg";
 import PlayIcon from "../images/play-svgrepo-com.svg";
 
-import { Button } from "./button";
-
 export function PausePlayButton() {
-  const playButtonID = "play-button";
-  const pauseButtonID = "pause-button";
-
-  const animationPlayStateRunning = "running";
-  const animationPlayStatePaused = "paused";
-
-  function handlePlayButton() {
-    const playButton = document.getElementById(playButtonID);
-    const pauseButton = document.getElementById(pauseButtonID);
-
-    if (playButton && pauseButton) {
-      playButton.classList.add("hidden");
-      pauseButton.classList.remove("hidden");
-      pauseButton.focus();
-    }
-    toggleAnimationPlayState(animationPlayStateRunning);
+  function handlePlayPauseButton(playState: string) {
+    toggleAnimationPlayState(playState);
+    togglePlayPauseButtons(playState);
   }
 
-  function handlePauseButton() {
-    const playButton = document.getElementById(playButtonID);
-    const pauseButton = document.getElementById(pauseButtonID);
+  function togglePlayPauseButtons(playState: string) {
+    const playButton = document.getElementById(SITE_CONSTANTS.PLAY_BUTTON_ID);
+    const pauseButton = document.getElementById(SITE_CONSTANTS.PAUSE_BUTTON_ID);
 
-    if (playButton && pauseButton) {
-      pauseButton.classList.add("hidden");
-      playButton.classList.remove("hidden");
-      pauseButton.focus();
+    if (playButton && pauseButton && playState) {
+      if (playState === SITE_CONSTANTS.ANIMATION_PLAY_STATE_RUNNING) {
+        playButton.classList.add("hidden");
+        pauseButton.classList.remove("hidden");
+        playButton.focus();
+      } else if (playState === SITE_CONSTANTS.ANIMATION_PLAY_STATE_PAUSED) {
+        pauseButton.classList.add("hidden");
+        playButton.classList.remove("hidden");
+        pauseButton.focus();
+      }
     }
-    toggleAnimationPlayState(animationPlayStatePaused);
   }
 
   function toggleAnimationPlayState(playState: string) {
-    document
-      .querySelectorAll("[data-animation-play-state]")
-      .forEach((element) => {
-        element.setAttribute("data-animation-play-state", playState);
-      });
+    const pageElement = document.getElementById(SITE_CONSTANTS.PAGE_ID);
+    if (pageElement && playState) {
+      pageElement.setAttribute("data-animation-play-state", playState);
+    }
   }
 
   return (
     <div className="pause-play-button">
       <Button
-        buttonID="pause-button"
-        buttonClass="pause-button"
-        title="Pause animations"
+        buttonID={SITE_CONSTANTS.PAUSE_BUTTON_ID}
+        title={SITE_CONSTANTS.PAUSE_BUTTON_TITLE}
         displayHidden={false}
         iconButton={true}
-        clickHandler={() => handlePauseButton()}
+        clickHandler={() =>
+          handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_PAUSED)
+        }
       >
         <PauseIcon />
       </Button>
       <Button
-        buttonID="play-button"
-        buttonClass="play-button"
-        title="Play animations"
+        buttonID={SITE_CONSTANTS.PLAY_BUTTON_ID}
+        title={SITE_CONSTANTS.PLAY_BUTTON_TITLE}
         displayHidden={true}
         iconButton={true}
-        clickHandler={() => handlePlayButton()}
+        clickHandler={() =>
+          handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_RUNNING)
+        }
       >
         <PlayIcon />
       </Button>

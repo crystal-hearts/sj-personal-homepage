@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import { SITE_CONSTANTS } from "../constants/site-constants";
+
 import { Background } from "./background";
 import { FixedFooter } from "./fixed-footer";
 import { Header } from "./header";
@@ -18,18 +20,31 @@ export default function SplashPageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div id="page" className="font-[family-name:var(--font-rubik)]">
+    <div
+      id={SITE_CONSTANTS.PAGE_ID}
+      className="font-[family-name:var(--font-rubik)]"
+      data-theme-color={SITE_CONSTANTS.DEFAULT_SITE_THEME}
+      data-animation-play-state={SITE_CONSTANTS.DEFAULT_ANIMATION_PLAY_STATE}
+    >
       <Background />
       <Header>
         <HeaderMenu>
-          <HeaderMenuItem itemID="about-me" itemLabel="about me" />
-          <HeaderMenuItem itemID="contact" itemLabel="contact" />
-          <HeaderMenuItem itemID="about-my-cat" itemLabel="about my cat" />
+          <HeaderMenuItem
+            itemID={SITE_CONSTANTS.ABOUT_ME_ID}
+            itemLabel={SITE_CONSTANTS.ABOUT_ME_TITLE}
+          />
+          <HeaderMenuItem
+            itemID={SITE_CONSTANTS.CONTACT_ID}
+            itemLabel={SITE_CONSTANTS.CONTACT_TITLE}
+          />
+          <HeaderMenuItem
+            itemID={SITE_CONSTANTS.ABOUT_MY_CAT_ID}
+            itemLabel={SITE_CONSTANTS.ABOUT_MY_CAT_TITLE}
+          />
         </HeaderMenu>
         <SocialIcons />
       </Header>
       {children}
-      {/* <AboutMeModal /> */}
       <SettingsModal />
       <FixedFooter>
         <SettingsButton />

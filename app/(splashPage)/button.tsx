@@ -8,6 +8,7 @@ export function Button({
   isLink = false,
   target = "",
   flavor = "theme-color",
+  smallShadow = false,
   iconButton = false,
   displayHidden = false,
   clickHandler = () => {
@@ -15,16 +16,17 @@ export function Button({
   },
   children,
 }: {
-  buttonID: string;
-  buttonClass: string;
-  title: string;
-  href: string;
-  isLink: boolean;
-  target: string;
-  flavor: string;
-  iconButton: boolean;
-  displayHidden: boolean;
-  clickHandler: () => void;
+  buttonID?: string;
+  buttonClass?: string;
+  title?: string;
+  href?: string;
+  isLink?: boolean;
+  target?: string;
+  flavor?: string;
+  smallShadow?: boolean;
+  iconButton?: boolean;
+  displayHidden?: boolean;
+  clickHandler?: () => void;
   children: React.ReactNode;
 }) {
   const classNames = [
@@ -38,7 +40,7 @@ export function Button({
       : "bg-[var(--" + flavor + "-100)]",
     "fill-[var(--theme-color-700)]",
     "p-1",
-    "shadow-drop-5",
+    smallShadow ? "shadow-drop-3" : "shadow-drop-5",
     "transition",
     "duration-150",
     "hover:scale-110",

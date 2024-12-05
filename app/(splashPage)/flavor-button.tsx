@@ -1,29 +1,19 @@
 import { Button } from "./button";
 
-export function FlavorButton({ flavor }: { flavor: string }) {
-  function changeThemeColor(colorName: string) {
-    document.documentElement.style.setProperty(
-      "--theme-color-100",
-      "var(--" + colorName + "-100)",
-    );
-    document.documentElement.style.setProperty(
-      "--theme-color-500",
-      "var(--" + colorName + "-500)",
-    );
-    document.documentElement.style.setProperty(
-      "--theme-color-700",
-      "var(--" + colorName + "-700)",
-    );
-    document.documentElement.style.setProperty(
-      "--theme-color-900",
-      "var(--" + colorName + "-900)",
-    );
-  }
+import { SITE_CONSTANTS } from "../constants/site-constants";
 
+export function FlavorButton({ flavor }: { flavor: string }) {
+  function changeThemeColor(flavor: string) {
+    const pageElement = document.getElementById(SITE_CONSTANTS.PAGE_ID);
+    if (pageElement && flavor) {
+      pageElement.setAttribute("data-theme-color", flavor);
+    }
+  }
   return (
     <div className="flavor-button-container mb-2 mr-4 flex min-w-14 flex-col items-center">
       <Button
         iconButton={true}
+        smallShadow={true}
         flavor={flavor}
         clickHandler={() => changeThemeColor(flavor)}
       />

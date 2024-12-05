@@ -1,5 +1,7 @@
 import { Button } from "./button";
 
+import { SITE_CONSTANTS } from "../constants/site-constants";
+
 import GithubIcon from "../images/github.svg";
 import LinkedInIcon from "../images/linkedin.svg";
 import BlueskyIcon from "../images/bluesky.svg";
@@ -8,29 +10,29 @@ export function SocialIcons() {
   return (
     <div className="social-icons flex space-x-2">
       <Button
-        title="LinkedIn"
+        title={SITE_CONSTANTS.LINKEDIN_TITLE}
         isLink={true}
         iconButton={true}
         target="_"
-        href="https://www.linkedin.com/in/sarah-c-jacques"
+        href={SITE_CONSTANTS.LINKEDIN_URL}
       >
         <LinkedInIcon />
       </Button>
       <Button
-        title="Bluesky"
+        title={SITE_CONSTANTS.BLUESKY_TITLE}
         isLink={true}
         iconButton={true}
         target="_"
-        href="https://bsky.app/profile/sarahjacques.bsky.social"
+        href={SITE_CONSTANTS.BLUESKY_URL}
       >
         <BlueskyIcon />
       </Button>
       <Button
-        title="Github"
+        title={SITE_CONSTANTS.GITHUB_TITLE}
         isLink={true}
         iconButton={true}
         target="_"
-        href="https://github.com/crystal-hearts/sj-personal-homepage"
+        href={SITE_CONSTANTS.GITHUB_URL}
       >
         <GithubIcon />
       </Button>
