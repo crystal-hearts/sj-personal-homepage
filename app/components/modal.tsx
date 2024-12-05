@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ModalHeader } from "./modal-header";
+import { ModalHeader } from "@/components/modal-header";
 
 export function Modal({
   modalID,
@@ -21,8 +21,7 @@ export function Modal({
     "fixed",
     "z-20",
     "overflow-hidden",
-    "rounded",
-    "border-1",
+    "rounded-t-xl",
     "border-solid",
     "border-[var(--theme-color-500)]",
     "border-opacity-80",

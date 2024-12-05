@@ -1,7 +1,7 @@
 import React from "react";
 
-import { SITE_CONSTANTS } from "../constants/site-constants";
-import { MenuItem } from "./menu-item";
+import { SITE_CONSTANTS } from "@/constants/site-constants";
+import { MenuItem } from "@/components/menu-item";
 
 export function Badge() {
   return (

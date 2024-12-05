@@ -1,7 +1,7 @@
-import { Modal } from "./modal";
-import { FlavorButton } from "./flavor-button";
+import { Modal } from "@/components/modal";
+import { FlavorButton } from "@/components/flavor-button";
 
-import { SITE_CONSTANTS } from "../constants/site-constants";
+import { SITE_CONSTANTS } from "@/constants/site-constants";
 
 export function SettingsModal() {
   return (

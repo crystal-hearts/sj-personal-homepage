@@ -1,9 +1,9 @@
-import { Button } from "./button";
-import { openModal } from "../helpers/helpers";
+import { Button } from "@/components/button";
+import { openModal } from "@/helpers/helpers";
 
-import { SITE_CONSTANTS } from "../constants/site-constants";
+import { SITE_CONSTANTS } from "@/constants/site-constants";
 
-import GearIcon from "../images/gear-svgrepo-com.svg";
+import GearIcon from "@/images/gear-svgrepo-com.svg";
 
 export function SettingsButton({
   inverseIcon = false,

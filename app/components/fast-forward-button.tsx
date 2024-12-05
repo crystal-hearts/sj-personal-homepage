@@ -1,6 +1,6 @@
-import FastForwardIcon from "../images/fast-forward-svgrepo-com.svg";
+import FastForwardIcon from "@/images/fast-forward-svgrepo-com.svg";
 
-import { Button } from "./button";
+import { Button } from "@/components/button";
 
 export function FastForwardButton() {
   function handleMouseDown() {}
