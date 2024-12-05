@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import { SITE_CONSTANTS } from "../constants/site-constants";
+
 import { Background } from "./background";
 import { FixedFooter } from "./fixed-footer";
 import { Header } from "./header";
@@ -18,7 +20,12 @@ export default function SplashPageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div id="page" className="font-[family-name:var(--font-rubik)]">
+    <div
+      id="page"
+      className="font-[family-name:var(--font-rubik)]"
+      data-theme-color={SITE_CONSTANTS.DEFAULT_SITE_THEME}
+      data-animation-play-state="running"
+    >
       <Background />
       <Header>
         <HeaderMenu>
@@ -29,7 +36,6 @@ export default function SplashPageLayout({
         <SocialIcons />
       </Header>
       {children}
-      {/* <AboutMeModal /> */}
       <SettingsModal />
       <FixedFooter>
         <SettingsButton />

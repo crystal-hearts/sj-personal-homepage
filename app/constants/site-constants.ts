@@ -1,0 +1,18 @@
+export const SITE_CONSTANTS = {
+  ANIMATION_PLAY_STATE_PAUSED: "paused",
+  ANIMATION_PLAY_STATE_RUNNING: "running",
+  BLUESKY_TITLE: "settings-modal",
+  BLUESKY_URL: "https://bsky.app/profile/sarahjacques.bsky.social",
+  DEFAULT_SITE_THEME: "ube",
+  GITHUB_TITLE: "settings-modal",
+  GITHUB_URL: "https://github.com/crystal-hearts/sj-personal-homepage",
+  LINKEDIN_TITLE: "settings-modal",
+  LINKEDIN_URL: "https://www.linkedin.com/in/sarah-c-jacques",
+  PAGE_ID: "page",
+  PAUSE_BUTTON_ID: "pause-button",
+  PAUSE_BUTTON_TITLE: "Play animations",
+  PLAY_BUTTON_ID: "play-button",
+  PLAY_BUTTON_TITLE: "Pause animations",
+  SETTINGS_BUTTON_ID: "settings-button",
+  SETTINGS_MODAL_ID: "settings-modal",
+};

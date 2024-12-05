@@ -9,12 +9,6 @@ const rubik = localFont({
   weight: "100 900",
 });
 
-const rubikMonoOne = localFont({
-  src: "./fonts/RubikMonoOne-Regular.ttf",
-  variable: "--font-rubik-mono-one",
-  weight: "100 900",
-});
-
 export const metadata: Metadata = {
   title: "Sarah Jacques Personal Site",
   description: "Description",
@@ -27,11 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${rubik.variable} ${rubikMonoOne.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${rubik.variable} antialiased`}>{children}</body>
     </html>
   );
 }
