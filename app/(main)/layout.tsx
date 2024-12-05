@@ -14,7 +14,7 @@ import { SettingsButton } from "./settings-button";
 import { SettingsModal } from "./settings-modal";
 import { SocialIcons } from "./social-icons";
 
-export default function SplashPageLayout({
+export default function MainPageLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -30,16 +30,16 @@ export default function SplashPageLayout({
       <Header>
         <HeaderMenu>
           <HeaderMenuItem
-            itemID={SITE_CONSTANTS.ABOUT_ME_ID}
             itemLabel={SITE_CONSTANTS.ABOUT_ME_TITLE}
+            href="/about-me"
           />
           <HeaderMenuItem
-            itemID={SITE_CONSTANTS.CONTACT_ID}
             itemLabel={SITE_CONSTANTS.CONTACT_TITLE}
+            href="/contact"
           />
           <HeaderMenuItem
-            itemID={SITE_CONSTANTS.ABOUT_MY_CAT_ID}
             itemLabel={SITE_CONSTANTS.ABOUT_MY_CAT_TITLE}
+            href="/about-my-cat"
           />
         </HeaderMenu>
         <SocialIcons />

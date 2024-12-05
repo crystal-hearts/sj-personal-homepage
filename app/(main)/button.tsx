@@ -1,11 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
 export function Button({
   buttonID = "",
   buttonClass = "",
   href = "",
   title = "",
-  isLink = false,
   target = "",
   flavor = "theme-color",
   smallShadow = false,
@@ -20,7 +20,6 @@ export function Button({
   buttonClass?: string;
   title?: string;
   href?: string;
-  isLink?: boolean;
   target?: string;
   flavor?: string;
   smallShadow?: boolean;
@@ -50,18 +49,19 @@ export function Button({
     displayHidden ? "hidden" : "",
   ];
 
-  if (isLink) {
+  // If the href attribute is set, this is a link and should be displayed as such
+  // If not, it's a button
+  if (href) {
     return (
-      <a
+      <Link
         id={buttonID}
         title={title}
         className={classNames.join(" ")}
         href={href}
         target={target}
-        onClick={clickHandler}
       >
         {children}
-      </a>
+      </Link>
     );
   } else {
     return (

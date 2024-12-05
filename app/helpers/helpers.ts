@@ -1,5 +1,3 @@
-"use client";
-
 export function openModal(modalID: string) {
   const modalElement = document.getElementById(modalID);
   document.querySelectorAll("[data-modal-active]").forEach((element) => {

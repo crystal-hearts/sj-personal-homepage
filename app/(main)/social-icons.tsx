@@ -11,7 +11,6 @@ export function SocialIcons() {
     <div className="social-icons flex space-x-2">
       <Button
         title={SITE_CONSTANTS.LINKEDIN_TITLE}
-        isLink={true}
         iconButton={true}
         target="_"
         href={SITE_CONSTANTS.LINKEDIN_URL}
@@ -20,7 +19,6 @@ export function SocialIcons() {
       </Button>
       <Button
         title={SITE_CONSTANTS.BLUESKY_TITLE}
-        isLink={true}
         iconButton={true}
         target="_"
         href={SITE_CONSTANTS.BLUESKY_URL}
@@ -29,7 +27,6 @@ export function SocialIcons() {
       </Button>
       <Button
         title={SITE_CONSTANTS.GITHUB_TITLE}
-        isLink={true}
         iconButton={true}
         target="_"
         href={SITE_CONSTANTS.GITHUB_URL}
