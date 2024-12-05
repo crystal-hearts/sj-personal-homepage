@@ -29,9 +29,18 @@ export default function SplashPageLayout({
       <Background />
       <Header>
         <HeaderMenu>
-          <HeaderMenuItem itemID="about-me" itemLabel="about me" />
-          <HeaderMenuItem itemID="contact" itemLabel="contact" />
-          <HeaderMenuItem itemID="about-my-cat" itemLabel="about my cat" />
+          <HeaderMenuItem
+            itemID={SITE_CONSTANTS.ABOUT_ME_ID}
+            itemLabel={SITE_CONSTANTS.ABOUT_ME_TITLE}
+          />
+          <HeaderMenuItem
+            itemID={SITE_CONSTANTS.CONTACT_ID}
+            itemLabel={SITE_CONSTANTS.CONTACT_TITLE}
+          />
+          <HeaderMenuItem
+            itemID={SITE_CONSTANTS.ABOUT_MY_CAT_ID}
+            itemLabel={SITE_CONSTANTS.ABOUT_MY_CAT_TITLE}
+          />
         </HeaderMenu>
         <SocialIcons />
       </Header>
