@@ -12,11 +12,11 @@ export function Menu() {
       <MenuItem title={SITE_CONSTANTS.ABOUT_ME_TITLE} href="/about-me">
         {SITE_CONSTANTS.ABOUT_ME_TITLE}
       </MenuItem>
-      <MenuItem title={SITE_CONSTANTS.CONTACT_TITLE} href="/contact">
-        {SITE_CONSTANTS.CONTACT_TITLE}
-      </MenuItem>
       <MenuItem title={SITE_CONSTANTS.ABOUT_MY_CAT_TITLE} href="/about-my-cat">
         {SITE_CONSTANTS.ABOUT_MY_CAT_TITLE}
+      </MenuItem>
+      <MenuItem title={SITE_CONSTANTS.CONTACT_TITLE} href="/contact">
+        {SITE_CONSTANTS.CONTACT_TITLE}
       </MenuItem>
     </div>
   );

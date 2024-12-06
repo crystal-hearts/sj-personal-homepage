@@ -15,8 +15,10 @@ export function TextSection({
             {sectionTitle}
           </h2>
         </div>
-        <div className="modal-contents h-full px-5 py-2">
-          <div className="modal-text-section flex flex-col">{children}</div>
+        <div className="contents h-full">
+          <div className="text-section flex flex-col px-5 pb-4 pt-2">
+            {children}
+          </div>
         </div>
       </div>
     </div>
