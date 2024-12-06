@@ -16,7 +16,7 @@ export function FlavorButton({ flavor }: { flavor: string }) {
         title={flavor}
         smallShadow={true}
         flavor={flavor}
-        clickHandler={() => changeThemeColor(flavor)}
+        onClick={() => changeThemeColor(flavor)}
       />
       <span className="flavor-button-label ml-1 mt-1 w-full text-center text-xs font-semibold">
         {flavor}

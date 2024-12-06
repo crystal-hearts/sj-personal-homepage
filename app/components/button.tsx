@@ -12,7 +12,7 @@ export function Button({
   iconButton = false,
   inverseIcon = false,
   displayHidden = false,
-  clickHandler = () => {
+  onClick = () => {
     return true;
   },
   children,
@@ -27,7 +27,7 @@ export function Button({
   iconButton?: boolean;
   inverseIcon?: boolean;
   displayHidden?: boolean;
-  clickHandler?: () => void;
+  onClick?: () => void;
   children?: React.ReactNode;
 }) {
   let borderClass = flavor
@@ -87,7 +87,7 @@ export function Button({
         id={buttonID}
         title={title}
         className={classNames.join(" ")}
-        onClick={clickHandler}
+        onClick={onClick}
       >
         {children}
       </button>
