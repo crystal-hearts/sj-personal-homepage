@@ -1,42 +1,43 @@
-import { MainSection } from "@/components/main";
-import { Section } from "@/components/section";
+import { SITE_CONSTANTS } from "@/constants/site-constants";
 
-import CloseIcon from "@/images/close-svgrepo-com.svg";
+import { Main } from "@/components/main";
+import { Section } from "@/components/section";
+import { TextSection } from "@/components/text-section";
+
+import MailIcon from "@/images/email-1573-svgrepo-com.svg";
+import LinkedInIcon from "@/images/linkedin.svg";
 
 export default function Page() {
+  const mailTo = "mailto:" + SITE_CONSTANTS.EMAIL;
   return (
-    <MainSection>
+    <Main>
       <Section>
-        <div
-          id="about-me-modal"
-          className="about-me-modal modal w-full overflow-hidden rounded-xl border-1 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-100)] shadow-drop-5 transition-transform duration-500 modal-open:w-48"
-          data-modal-active="closed"
-        >
-          <div className="modal-contents">
-            <div className="modal-header flex flex-row items-center justify-between border-b-2 border-solid border-[var(--theme-color-500)] border-opacity-80 bg-[var(--theme-color-700)] py-1 pl-4 pr-3">
-              <h2
-                className="modal-heading select-none text-base font-bold text-[var(--theme-color-100)]"
-                tabIndex="-1"
-              >
-                contact me
-              </h2>
-              <button className="modal-close h-4 w-4 fill-[var(--theme-color-100)]">
-                <CloseIcon />
-              </button>
-            </div>
-            <div className="modal-contents h-full px-5 py-2">
-              <div className="modal-text-section flex flex-col">
-                <span className="font-semibold">Hi!</span>
-                <span className="mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer faucibus auctor maximus. Donec nec urna rhoncus,
-                  blandit magna eleifend, dictum erat.
+        <div className="min-w-80">
+          <TextSection sectionTitle="contact me">
+            <div className="flex flex-col">
+              <a className="item flex flex-row items-center" href={mailTo}>
+                <span className="mr-1 h-4 w-4">
+                  <MailIcon />
                 </span>
-              </div>
+                <span className="font-semibold underline">
+                  {SITE_CONSTANTS.EMAIL}
+                </span>
+              </a>
+              <a
+                className="item mt-2 flex flex-row items-center"
+                href={SITE_CONSTANTS.LINKEDIN_URL}
+              >
+                <span className="mr-1 h-4 w-4">
+                  <LinkedInIcon />
+                </span>
+                <span className="font-semibold underline">
+                  {SITE_CONSTANTS.LINKEDIN_URL}
+                </span>
+              </a>
             </div>
-          </div>
+          </TextSection>
         </div>
       </Section>
-    </MainSection>
+    </Main>
   );
 }

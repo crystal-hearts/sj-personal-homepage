@@ -7,7 +7,6 @@ import { SITE_CONSTANTS } from "@/constants/site-constants";
 import { Background } from "@/components/background";
 import { FixedFooter } from "@/components/fixed-footer";
 import { Header } from "@/components/header";
-import { Badge } from "@/components/badge";
 import { Menu } from "@/components/menu";
 import { PausePlayButton } from "@/components/pause-play-button";
 import { SettingsButton } from "@/components/settings-button";
@@ -28,7 +27,6 @@ export default function MainPageLayout({
     >
       <Background />
       <Header>
-        <Badge />
         <Menu />
         <SocialLinks />
       </Header>

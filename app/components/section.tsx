@@ -7,7 +7,7 @@ export function Section({
 }>) {
   return (
     <div className="section-container mt-20 w-full">
-      <div className="section-contents mx-auto flex flex-col items-center px-8 sm:px-20">
+      <div className="section-contents mx-auto flex flex-col items-center px-8">
         {children}
       </div>
     </div>

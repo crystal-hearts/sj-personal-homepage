@@ -1,13 +1,13 @@
 import { Logo } from "@/components/logo";
-import { MainSection } from "@/components/main";
+import { Main } from "@/components/main";
 import { Section } from "@/components/section";
 
 export default function Page() {
   return (
-    <MainSection>
+    <Main>
       <Section>
         <Logo />
       </Section>
-    </MainSection>
+    </Main>
   );
 }

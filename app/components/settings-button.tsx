@@ -16,7 +16,7 @@ export function SettingsButton({
       title={SITE_CONSTANTS.SETTINGS_BUTTON_TITLE}
       iconButton={true}
       inverseIcon={inverseIcon}
-      clickHandler={() => openModal(SITE_CONSTANTS.SETTINGS_MODAL_ID)}
+      onClick={() => openModal(SITE_CONSTANTS.SETTINGS_MODAL_ID)}
     >
       <GearIcon />
     </Button>

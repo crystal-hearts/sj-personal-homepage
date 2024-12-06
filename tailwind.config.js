@@ -26,6 +26,7 @@ module.exports = {
         "bg-scrolling-12": "bg-scrolling 12s linear infinite",
         "wave-y-3": "wave-y-3 3s ease-in-out infinite",
         "wave-y-5": "wave-y-5 3s ease-in-out infinite",
+        "fade-in": "fade-in 0.5s ease-in-out 1",
       },
       backgroundImage: {
         "checkerboard-45":
@@ -65,6 +66,14 @@ module.exports = {
           },
           "50%": {
             transform: "translateY(5px)",
+          },
+        },
+        "fade-in": {
+          "0%": {
+            opacity: 0,
+          },
+          "100%": {
+            opacity: 1,
           },
         },
       },

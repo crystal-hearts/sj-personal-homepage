@@ -47,7 +47,7 @@ export function PausePlayButton({
         displayHidden={false}
         iconButton={true}
         inverseIcon={inverseIcon}
-        clickHandler={() =>
+        onClick={() =>
           handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_PAUSED)
         }
       >
@@ -59,7 +59,7 @@ export function PausePlayButton({
         displayHidden={true}
         iconButton={true}
         inverseIcon={inverseIcon}
-        clickHandler={() =>
+        onClick={() =>
           handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_RUNNING)
         }
       >
