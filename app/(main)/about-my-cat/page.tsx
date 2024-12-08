@@ -7,6 +7,7 @@ export default function Page() {
     <Main>
       <Section>
         <AboutMyCatWindow />
+        <AboutMyCatWindow />
       </Section>
     </Main>
   );

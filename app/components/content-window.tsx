@@ -30,14 +30,14 @@ export function ContentWindow({
   ];
   return (
     <div id={windowID} className={classNames.join(" ")}>
-      <div className="window-contents">
-        <ContentWindowHeader
-          windowTitle={windowTitle}
-          windowID={windowID}
-          returnID={returnID}
-          returnLocation={returnLocation}
-        />
-        <div className="window-contents h-full px-1 py-2">{children}</div>
+      <ContentWindowHeader
+        windowTitle={windowTitle}
+        windowID={windowID}
+        returnID={returnID}
+        returnLocation={returnLocation}
+      />
+      <div className="window-contents h-full w-full px-4 pb-4 pt-2">
+        {children}
       </div>
     </div>
   );
