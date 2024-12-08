@@ -11,6 +11,7 @@ export function Button({
   smallShadow = false,
   iconButton = false,
   inverseIcon = false,
+  transparentIcon = false,
   displayHidden = false,
   onClick = () => {
     return true;
@@ -26,10 +27,12 @@ export function Button({
   smallShadow?: boolean;
   iconButton?: boolean;
   inverseIcon?: boolean;
+  transparentIcon?: boolean;
   displayHidden?: boolean;
   onClick?: () => void;
   children?: React.ReactNode;
 }) {
+  const explicitSizeClass = iconButton ? "h-8 w-8" : "";
   let borderClass = flavor
     ? "border-[var(--" + flavor + "-500)]"
     : "border-[var(--theme-color-500)]";
@@ -39,13 +42,17 @@ export function Button({
   let fillClass = flavor
     ? "fill-[var(--" + flavor + "-700)]"
     : "fill-[var(--theme-color-700)]";
-  const shadowClass = smallShadow ? "shadow-drop-3" : "shadow-drop-5";
-  const explicitSizeClass = iconButton ? "h-8 w-8" : "";
+  let shadowClass = smallShadow ? "shadow-drop-3" : "shadow-drop-5";
 
   if (inverseIcon) {
     borderClass = "border-[var(--theme-color-700)]";
     bgClass = "bg-[var(--theme-color-700)]";
     fillClass = "fill-[var(--theme-color-100)]";
+  }
+  if (transparentIcon) {
+    borderClass = "border-transparent";
+    bgClass = "bg-transparent";
+    shadowClass = "";
   }
 
   const classNames = [

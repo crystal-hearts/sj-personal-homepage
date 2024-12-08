@@ -6,6 +6,7 @@ import { SITE_CONSTANTS } from "@/constants/site-constants";
 export function SettingsModal() {
   return (
     <Modal
+      modalTitle={SITE_CONSTANTS.SETTINGS_MODAL_TITLE}
       modalID={SITE_CONSTANTS.SETTINGS_MODAL_ID}
       returnID={SITE_CONSTANTS.SETTINGS_BUTTON_ID}
       modalPosition="bottom-left"

@@ -1,13 +1,15 @@
 import React from "react";
 
-import { ModalHeader } from "@/components/modal-header";
+import { ContentWindow } from "@/components/content-window";
 
 export function Modal({
+  modalTitle,
   modalID,
   returnID,
   modalPosition,
   children,
 }: {
+  modalTitle: string;
   modalID: string;
   returnID: string;
   modalPosition?: string;
@@ -20,12 +22,6 @@ export function Modal({
       : "",
     "fixed",
     "z-20",
-    "overflow-hidden",
-    "rounded-t-xl",
-    "border-solid",
-    "border-[var(--theme-color-500)]",
-    "border-opacity-80",
-    "bg-[var(--theme-color-100)]",
     "shadow-drop-5",
     "transition-transform",
     "duration-500",
@@ -36,10 +32,13 @@ export function Modal({
       className={classNames.join(" ")}
       data-modal-active="closed"
     >
-      <div className="modal-contents">
-        <ModalHeader modalID={modalID} returnID={returnID} />
-        <div className="modal-contents h-full px-1 py-2">{children}</div>
-      </div>
+      <ContentWindow
+        windowTitle={modalTitle}
+        windowID={modalID}
+        returnID={returnID}
+      >
+        {children}
+      </ContentWindow>
     </div>
   );
 }

@@ -5,11 +5,11 @@ export function openModal(modalID: string) {
   });
   if (modalElement) {
     modalElement.setAttribute("data-modal-active", "open");
-    modalElement.getElementsByClassName("modal-heading")[0].focus();
+    modalElement.getElementsByClassName("window-heading")[0].focus();
   }
 }
 
-export function closeModal(modalID: string, returnID: string) {
+export function closeModalOrWindow(modalID: string, returnID: string) {
   const modalElement = document.getElementById(modalID);
   const returnElement = document.getElementById(returnID);
   if (modalElement) {
