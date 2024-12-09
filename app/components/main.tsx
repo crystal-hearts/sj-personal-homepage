@@ -6,6 +6,8 @@ export function Main({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="relative mb-8 w-full animate-fade-in">{children}</main>
+    <main className="fixed bottom-0 left-0 right-0 top-0 animate-fade-in">
+      {children}
+    </main>
   );
 }

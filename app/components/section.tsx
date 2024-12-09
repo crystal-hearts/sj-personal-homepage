@@ -6,10 +6,8 @@ export function Section({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="section-container mt-20 w-full">
-      <div className="section-contents mx-auto flex flex-col items-center px-8">
-        {children}
-      </div>
+    <div className="section-container flex h-full w-full flex-wrap items-center justify-center overflow-auto px-8 py-20">
+      {children}
     </div>
   );
 }

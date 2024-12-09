@@ -7,10 +7,11 @@ export function Button({
   href,
   title,
   target,
-  flavor,
+  bgColor,
   smallShadow = false,
   iconButton = false,
   inverseIcon = false,
+  transparentIcon = false,
   displayHidden = false,
   onClick = () => {
     return true;
@@ -22,30 +23,36 @@ export function Button({
   title?: string;
   href?: string;
   target?: string;
-  flavor?: string;
+  bgColor?: string;
   smallShadow?: boolean;
   iconButton?: boolean;
   inverseIcon?: boolean;
+  transparentIcon?: boolean;
   displayHidden?: boolean;
   onClick?: () => void;
   children?: React.ReactNode;
 }) {
-  let borderClass = flavor
-    ? "border-[var(--" + flavor + "-500)]"
-    : "border-[var(--theme-color-500)]";
-  let bgClass = flavor
-    ? "bg-[var(--" + flavor + "-500)]"
-    : "bg-[var(--theme-color-100)]";
-  let fillClass = flavor
-    ? "fill-[var(--" + flavor + "-700)]"
-    : "fill-[var(--theme-color-700)]";
-  const shadowClass = smallShadow ? "shadow-drop-3" : "shadow-drop-5";
   const explicitSizeClass = iconButton ? "h-8 w-8" : "";
+  let borderClass = bgColor
+    ? "border-[var(--" + bgColor + "-500)]"
+    : "border-[var(--theme-color-500)]";
+  let bgClass = bgColor
+    ? "bg-[var(--" + bgColor + "-500)]"
+    : "bg-[var(--theme-color-200)]";
+  let fillClass = bgColor
+    ? "fill-[var(--" + bgColor + "-700)]"
+    : "fill-[var(--theme-color-700)]";
+  let shadowClass = smallShadow ? "shadow-drop-3" : "shadow-drop-5";
 
   if (inverseIcon) {
     borderClass = "border-[var(--theme-color-700)]";
     bgClass = "bg-[var(--theme-color-700)]";
-    fillClass = "fill-[var(--theme-color-100)]";
+    fillClass = "fill-[var(--theme-color-200)]";
+  }
+  if (transparentIcon) {
+    borderClass = "border-transparent";
+    bgClass = "bg-transparent";
+    shadowClass = "";
   }
 
   const classNames = [

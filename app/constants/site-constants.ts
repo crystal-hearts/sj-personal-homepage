@@ -22,4 +22,5 @@ export const SITE_CONSTANTS = {
   SETTINGS_BUTTON_ID: "settings-button",
   SETTINGS_BUTTON_TITLE: "Settings",
   SETTINGS_MODAL_ID: "settings-modal",
+  SETTINGS_MODAL_TITLE: "site flavor",
 };
