@@ -10,6 +10,7 @@ export function SettingsModal() {
       modalID={SITE_CONSTANTS.SETTINGS_MODAL_ID}
       returnID={SITE_CONSTANTS.SETTINGS_BUTTON_ID}
       modalPosition="bottom-left"
+      roundedTopOnly={true}
     >
       <div className="flavor-buttons flex flex-row flex-wrap">
         <FlavorButton flavor="ube" />

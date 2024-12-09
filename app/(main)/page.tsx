@@ -6,7 +6,9 @@ export default function Page() {
   return (
     <Main>
       <Section>
-        <Logo />
+        <div className="flex flex-col">
+          <Logo />
+        </div>
       </Section>
     </Main>
   );

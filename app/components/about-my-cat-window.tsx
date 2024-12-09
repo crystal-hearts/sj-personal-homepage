@@ -1,9 +1,10 @@
 import { ContentWindow } from "@/components/content-window";
+import { WinterWindow } from "@/components/winter-window";
 
 export function AboutMyCatWindow() {
   return (
     <ContentWindow windowTitle="about my cat" returnLocation="/">
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center sm:flex-row">
         <span>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -13,6 +14,7 @@ export function AboutMyCatWindow() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </span>
+        <WinterWindow />
       </div>
     </ContentWindow>
   );

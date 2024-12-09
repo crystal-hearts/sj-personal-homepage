@@ -7,17 +7,19 @@ export function Modal({
   modalID,
   returnID,
   modalPosition,
+  roundedTopOnly,
   children,
 }: {
   modalTitle: string;
   modalID: string;
   returnID: string;
   modalPosition?: string;
+  roundedTopOnly?: boolean;
   children: React.ReactNode;
 }) {
   const classNames = [
     "modal",
-    modalPosition === "bottom-left"
+    modalPosition && modalPosition === "bottom-left"
       ? "left-4 top-full modal-open:-translate-y-full"
       : "",
     "fixed",
@@ -36,6 +38,7 @@ export function Modal({
         windowTitle={modalTitle}
         windowID={modalID}
         returnID={returnID}
+        roundedTopOnly={roundedTopOnly}
       >
         {children}
       </ContentWindow>

@@ -6,7 +6,9 @@ export default function Page() {
   return (
     <Main>
       <Section>
-        <ContactMeWindow />
+        <div className="flex flex-row">
+          <ContactMeWindow />
+        </div>
       </Section>
     </Main>
   );

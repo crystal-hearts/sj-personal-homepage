@@ -6,7 +6,9 @@ export default function Page() {
   return (
     <Main>
       <Section>
-        <AboutMeWindow />
+        <div className="flex max-w-xl flex-col">
+          <AboutMeWindow />
+        </div>
       </Section>
     </Main>
   );

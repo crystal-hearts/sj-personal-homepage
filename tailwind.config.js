@@ -54,18 +54,18 @@ module.exports = {
         },
         "wave-y-3": {
           "0%,100%": {
-            transform: "translateY(-3px)",
+            transform: "translateY(3px)",
           },
           "50%": {
-            transform: "translateY(3px)",
+            transform: "translateY(-3px)",
           },
         },
         "wave-y-5": {
           "0%,100%": {
-            transform: "translateY(-5px)",
+            transform: "translateY(5px)",
           },
           "50%": {
-            transform: "translateY(5px)",
+            transform: "translateY(-5px)",
           },
         },
         "fade-in": {

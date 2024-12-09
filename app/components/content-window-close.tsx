@@ -10,12 +10,16 @@ export function ContentWindowClose({
   windowID,
   returnID,
   returnLocation,
+  noClose,
 }: {
   windowID?: string;
   returnID?: string;
   returnLocation?: string;
+  noClose?: boolean;
 }) {
-  if (returnLocation) {
+  if (noClose) {
+    return <div />;
+  } else if (returnLocation) {
     return (
       <Button
         className="window-close"
