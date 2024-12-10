@@ -29,8 +29,7 @@ module.exports = {
         "fade-in": "fade-in 0.5s ease-in-out 1",
       },
       backgroundImage: {
-        "checkerboard-45":
-          "linear-gradient(135deg, var(--black) 25%, transparent 25%), linear-gradient(45deg, var(--black) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, var(--black) 75%), linear-gradient(135deg, transparent 75%, var(--black) 75%)",
+        "checkerboard-45": "var(--diamond)",
       },
       backgroundSize: {
         50: "50px 50px",

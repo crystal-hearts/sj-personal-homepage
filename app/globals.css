@@ -43,6 +43,9 @@
   --mint-500: #89b0b0;
   --mint-700: #244a4a;
   --mint-900: #0f2525;
+
+  /* SVGs in CSS are defined as variables as well */
+  --diamond: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -.01 32.001 32.001"><path d="M0 16.293 16.302-.009l15.699 15.698-16.303 16.303z" paint-order="stroke fill markers"/></svg>');
 }
 
 @layer utilities {
