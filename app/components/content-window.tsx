@@ -31,7 +31,7 @@ export function ContentWindow({
   const classNames = [
     "window",
     "overflow-hidden",
-    "max-h-80vh",
+    "max-h-75vh",
     roundedClass,
     "border-2",
     "border-solid",
