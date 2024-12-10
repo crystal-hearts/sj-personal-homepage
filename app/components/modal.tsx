@@ -36,7 +36,7 @@ export function Modal({
     >
       <ContentWindow
         windowTitle={modalTitle}
-        windowID={modalID}
+        id={modalID}
         returnID={returnID}
         roundedTopOnly={roundedTopOnly}
       >

@@ -8,7 +8,6 @@ export const SITE_CONSTANTS = {
   CONTACT_TITLE: "contact me",
   DEFAULT_SITE_THEME: "ube",
   DEFAULT_ANIMATION_PLAY_STATE: "running",
-  EMAIL: "sarah@placeholder.com",
   GITHUB_TITLE: "GitHub",
   GITHUB_URL: "https://github.com/crystal-hearts/sj-personal-homepage",
   HOME_TITLE: "home",
@@ -23,4 +22,5 @@ export const SITE_CONSTANTS = {
   SETTINGS_BUTTON_TITLE: "Settings",
   SETTINGS_MODAL_ID: "settings-modal",
   SETTINGS_MODAL_TITLE: "site flavor",
+  ABOUT_SITE_TITLE: "about this site",
 };

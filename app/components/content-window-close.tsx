@@ -7,52 +7,27 @@ import { closeModalOrWindow } from "@/helpers/helpers";
 import CloseIcon from "@/images/close-svgrepo-com.svg";
 
 export function ContentWindowClose({
-  windowID,
-  returnID,
-  returnLocation,
+  id = "",
+  returnID = "",
+  href,
   noClose,
 }: {
-  windowID?: string;
-  returnID?: string;
-  returnLocation?: string;
+  id: string;
+  returnID: string;
+  href?: string;
   noClose?: boolean;
 }) {
   if (noClose) {
     return <div />;
-  } else if (returnLocation) {
-    return (
-      <Button
-        className="window-close"
-        title="Close window"
-        iconButton={true}
-        inverseIcon={true}
-        transparentIcon={true}
-        href={returnLocation}
-      >
-        <CloseIcon />
-      </Button>
-    );
-  } else if (windowID && returnID) {
-    return (
-      <Button
-        className="window-close"
-        title="Close window"
-        iconButton={true}
-        inverseIcon={true}
-        transparentIcon={true}
-        onClick={() => closeModalOrWindow(windowID, returnID)}
-      >
-        <CloseIcon />
-      </Button>
-    );
   } else {
     return (
       <Button
         className="window-close"
         title="Close window"
         iconButton={true}
-        inverseIcon={true}
         transparentIcon={true}
+        href={href}
+        onClick={() => closeModalOrWindow(id, returnID)}
       >
         <CloseIcon />
       </Button>

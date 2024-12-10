@@ -13,12 +13,12 @@ module.exports = {
     "bg-[var(--lemon-500)]",
     "bg-[var(--lime-500)]",
     "bg-[var(--mint-500)]",
-    "border-[var(--ube-500)]",
-    "border-[var(--raspberry-500)]",
-    "border-[var(--strawberry-500)]",
-    "border-[var(--lemon-500)]",
-    "border-[var(--lime-500)]",
-    "border-[var(--mint-500)]",
+    "border-[var(--ube-700)]",
+    "border-[var(--raspberry-700)]",
+    "border-[var(--strawberry-700)]",
+    "border-[var(--lemon-700)]",
+    "border-[var(--lime-700)]",
+    "border-[var(--mint-700)]",
   ],
   theme: {
     extend: {
@@ -42,6 +42,11 @@ module.exports = {
       boxShadow: {
         "drop-3": "3px 3px 3px 0px rgba(0, 0, 0.5, 0.5)",
         "drop-5": "5px 5px 5px 0px rgba(0, 0, 0.5, 0.5)",
+      },
+      height: {
+        "60vh": "60vh",
+        "75vh": "75vh",
+        "80vh": "80vh",
       },
       keyframes: {
         "bg-scrolling": {
@@ -77,9 +82,14 @@ module.exports = {
           },
         },
       },
+      maxHeight: {
+        "60vh": "60vh",
+        "75vh": "75vh",
+        "80vh": "80vh",
+      },
       width: {
-        "75-vw": "75vw",
-        "80-vw": "80vw",
+        "75vw": "75vw",
+        "80vw": "80vw",
       },
     },
   },

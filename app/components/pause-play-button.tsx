@@ -5,11 +5,7 @@ import { SITE_CONSTANTS } from "@/constants/site-constants";
 import PauseIcon from "@/images/pause-svgrepo-com.svg";
 import PlayIcon from "@/images/play-svgrepo-com.svg";
 
-export function PausePlayButton({
-  inverseIcon = false,
-}: {
-  inverseIcon?: boolean;
-}) {
+export function PausePlayButton() {
   function handlePlayPauseButton(playState: string) {
     toggleAnimationPlayState(playState);
     togglePlayPauseButtons(playState);
@@ -42,11 +38,10 @@ export function PausePlayButton({
   return (
     <div className="pause-play-button">
       <Button
-        buttonID={SITE_CONSTANTS.PAUSE_BUTTON_ID}
+        id={SITE_CONSTANTS.PAUSE_BUTTON_ID}
         title={SITE_CONSTANTS.PAUSE_BUTTON_TITLE}
         displayHidden={false}
         iconButton={true}
-        inverseIcon={inverseIcon}
         onClick={() =>
           handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_PAUSED)
         }
@@ -54,11 +49,10 @@ export function PausePlayButton({
         <PauseIcon />
       </Button>
       <Button
-        buttonID={SITE_CONSTANTS.PLAY_BUTTON_ID}
+        id={SITE_CONSTANTS.PLAY_BUTTON_ID}
         title={SITE_CONSTANTS.PLAY_BUTTON_TITLE}
         displayHidden={true}
         iconButton={true}
-        inverseIcon={inverseIcon}
         onClick={() =>
           handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_RUNNING)
         }
