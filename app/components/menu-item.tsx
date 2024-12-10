@@ -7,24 +7,16 @@ export function MenuItem({
   title,
   href,
   iconButton,
-  inverseIcon,
   children,
 }: {
   id: string;
   title: string;
   href: string;
   iconButton?: boolean;
-  inverseIcon?: boolean;
   children: React.ReactNode;
 }) {
   return (
-    <Button
-      id={id}
-      title={title}
-      href={href}
-      iconButton={iconButton}
-      inverseIcon={inverseIcon}
-    >
+    <Button id={id} title={title} href={href} iconButton={iconButton}>
       <div className="flex h-full w-full flex-row items-center">{children}</div>
     </Button>
   );

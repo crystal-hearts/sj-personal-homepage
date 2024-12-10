@@ -25,7 +25,6 @@ export function ContentWindowClose({
         className="window-close"
         title="Close window"
         iconButton={true}
-        inverseIcon={true}
         transparentIcon={true}
         href={href}
         onClick={() => closeModalOrWindow(id, returnID)}

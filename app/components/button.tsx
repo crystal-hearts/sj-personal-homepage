@@ -10,7 +10,6 @@ export function Button({
   bgColor,
   smallShadow = false,
   iconButton = false,
-  inverseIcon = false,
   transparentIcon = false,
   displayHidden = false,
   onClick = () => {
@@ -26,36 +25,35 @@ export function Button({
   bgColor?: string;
   smallShadow?: boolean;
   iconButton?: boolean;
-  inverseIcon?: boolean;
   transparentIcon?: boolean;
   displayHidden?: boolean;
   onClick?: () => void;
   children?: React.ReactNode;
 }) {
   const explicitSizeClass = iconButton ? "h-8 w-8" : "";
-  let borderClass = bgColor
-    ? "border-[var(--" + bgColor + "-700)]"
-    : "border-[var(--theme-color-700)]";
-  let bgClass = bgColor
-    ? "bg-[var(--" + bgColor + "-500)]"
-    : "bg-[var(--theme-color-200)]";
-  let fillClass = bgColor
-    ? "fill-[var(--" + bgColor + "-700)]"
-    : "fill-[var(--theme-color-700)]";
+  const transformClass = iconButton
+    ? "transition duration-150 hover:scale-110 active:scale-110"
+    : "transition duration-150 hover:scale-105 active:scale-105";
+  let borderClass = "border-[var(--theme-color-700)]";
+  let bgClass = "bg-[var(--theme-color-200)]";
+  let fillClass = "fill-[var(--theme-color-700)]";
   let shadowClass = smallShadow ? "shadow-drop-3" : "shadow-drop-5";
 
-  if (inverseIcon) {
-    borderClass = "border-[var(--theme-color-700)]";
-    bgClass = "bg-[var(--theme-color-700)]";
-    fillClass = "fill-[var(--theme-color-200)]";
+  if (bgColor) {
+    borderClass = "border-[var(--" + bgColor + "-700)]";
+    bgClass = "bg-[var(--" + bgColor + "-500)]";
+    fillClass = "fill-[var(--" + bgColor + "-200)]";
   }
+
   if (transparentIcon) {
     borderClass = "border-transparent";
     bgClass = "bg-transparent";
     shadowClass = "";
+    fillClass = "fill-[var(--theme-color-200)]";
   }
 
   const classNames = [
+    "p-1",
     "rounded",
     "border-2",
     "border-solid",
@@ -63,12 +61,8 @@ export function Button({
     borderClass,
     bgClass,
     fillClass,
-    "p-1",
     shadowClass,
-    "transition",
-    "duration-150",
-    "hover:scale-110",
-    "active:scale-110",
+    transformClass,
     explicitSizeClass,
     displayHidden ? "hidden" : "",
     className,

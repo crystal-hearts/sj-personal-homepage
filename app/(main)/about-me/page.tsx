@@ -19,7 +19,7 @@ export default function Page() {
         >
           <p className="text-center">
             <span>
-              <strong>Hi!</strong> Thanks for checking out my homepage!
+              <strong>Hi! Thanks for checking out my homepage!</strong>
             </span>
           </p>
           <div className="flex justify-center">
@@ -30,9 +30,17 @@ export default function Page() {
           <p className="text-center">
             <span>
               I&lsquo;m Sarah Jacques, an eCommerce consultant, full-stack web
-              developer, and UX specialist living in Vancouver, BC on the
-              unceded territory of the xʷməθkʷəy̓əm, Sḵwx̱wú7mesh, and səlilwətaɬ
-              Nations.
+              developer, and UX specialist.{" "}
+              <strong>
+                I build accessible and fun experiences for the web
+              </strong>
+              !
+            </span>
+          </p>
+          <p className="text-center">
+            <span>
+              I&lsquo;m based in Vancouver, BC on the unceded territory of the
+              xʷməθkʷəy̓əm, Sḵwx̱wú7mesh, and səlilwətaɬ nations.
             </span>
           </p>
           {/* <p className="text-center">

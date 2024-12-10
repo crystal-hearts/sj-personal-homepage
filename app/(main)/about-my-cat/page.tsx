@@ -6,7 +6,6 @@ import { ContentWindow } from "@/components/content-window";
 import { InlineImageContainer } from "@/components/inline-image-container";
 
 import winterImage from "@/images/winter.jpg";
-import winterImage2 from "@/images/winter2.png";
 
 export default function Page() {
   return (
@@ -26,7 +25,7 @@ export default function Page() {
             </span>
           </p>
           <div className="flex justify-center">
-            <InlineImageContainer title="winter">
+            <InlineImageContainer title="the boy">
               <Image src={winterImage} alt="cat" />
             </InlineImageContainer>
           </div>
@@ -34,14 +33,9 @@ export default function Page() {
             <span>
               His interests include <strong>yelling</strong>,{" "}
               <strong>watching the neighbourhood crows</strong>, and for some
-              reason, <strong>cow videos</strong>.
+              reason, <strong>videos of cows</strong>.
             </span>
           </p>
-          <div className="flex justify-center">
-            <InlineImageContainer title="he loves them">
-              <Image src={winterImage2} alt="cat watching cows" />
-            </InlineImageContainer>
-          </div>
         </ContentWindow>
       </Section>
     </Main>
