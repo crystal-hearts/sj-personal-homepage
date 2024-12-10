@@ -43,14 +43,6 @@ export default function Page() {
               xʷməθkʷəy̓əm, Sḵwx̱wú7mesh, and səlilwətaɬ nations.
             </span>
           </p>
-          {/* <p className="text-center">
-            <span>
-              I have a wide-ranging, varied career in eCommerce that
-              includes full-stack development, and managing an eCommerce
-              Fulfillment warehouse. You can check out more about my career on
-              my LinkedIn profile!
-            </span>
-          </p> */}
         </ContentWindow>
       </Section>
     </Main>
