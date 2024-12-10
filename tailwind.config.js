@@ -13,12 +13,12 @@ module.exports = {
     "bg-[var(--lemon-500)]",
     "bg-[var(--lime-500)]",
     "bg-[var(--mint-500)]",
-    "border-[var(--ube-500)]",
-    "border-[var(--raspberry-500)]",
-    "border-[var(--strawberry-500)]",
-    "border-[var(--lemon-500)]",
-    "border-[var(--lime-500)]",
-    "border-[var(--mint-500)]",
+    "border-[var(--ube-700)]",
+    "border-[var(--raspberry-700)]",
+    "border-[var(--strawberry-700)]",
+    "border-[var(--lemon-700)]",
+    "border-[var(--lime-700)]",
+    "border-[var(--mint-700)]",
   ],
   theme: {
     extend: {
