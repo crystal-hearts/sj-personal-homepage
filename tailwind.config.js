@@ -43,6 +43,11 @@ module.exports = {
         "drop-3": "3px 3px 3px 0px rgba(0, 0, 0.5, 0.5)",
         "drop-5": "5px 5px 5px 0px rgba(0, 0, 0.5, 0.5)",
       },
+      height: {
+        "60vh": "60vh",
+        "75vh": "75vh",
+        "80vh": "80vh",
+      },
       keyframes: {
         "bg-scrolling": {
           "0%": {
@@ -77,9 +82,14 @@ module.exports = {
           },
         },
       },
+      maxHeight: {
+        "60vh": "60vh",
+        "75vh": "75vh",
+        "80vh": "80vh",
+      },
       width: {
-        "75-vw": "75vw",
-        "80-vw": "80vw",
+        "75vw": "75vw",
+        "80vw": "80vw",
       },
     },
   },

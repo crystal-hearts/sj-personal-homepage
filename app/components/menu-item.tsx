@@ -3,12 +3,14 @@ import React from "react";
 import { Button } from "@/components/button";
 
 export function MenuItem({
+  id,
   title,
   href,
   iconButton,
   inverseIcon,
   children,
 }: {
+  id: string;
   title: string;
   href: string;
   iconButton?: boolean;
@@ -17,6 +19,7 @@ export function MenuItem({
 }) {
   return (
     <Button
+      id={id}
       title={title}
       href={href}
       iconButton={iconButton}

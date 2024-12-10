@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 export function Button({
-  buttonID,
+  id,
   className,
   href,
   title,
@@ -18,7 +18,7 @@ export function Button({
   },
   children,
 }: {
-  buttonID?: string;
+  id?: string;
   className?: string;
   title?: string;
   href?: string;
@@ -34,8 +34,8 @@ export function Button({
 }) {
   const explicitSizeClass = iconButton ? "h-8 w-8" : "";
   let borderClass = bgColor
-    ? "border-[var(--" + bgColor + "-500)]"
-    : "border-[var(--theme-color-500)]";
+    ? "border-[var(--" + bgColor + "-700)]"
+    : "border-[var(--theme-color-700)]";
   let bgClass = bgColor
     ? "bg-[var(--" + bgColor + "-500)]"
     : "bg-[var(--theme-color-200)]";
@@ -57,7 +57,7 @@ export function Button({
 
   const classNames = [
     "rounded",
-    "border-1",
+    "border-2",
     "border-solid",
     "border-opacity-80",
     borderClass,
@@ -79,11 +79,12 @@ export function Button({
   if (href) {
     return (
       <Link
-        id={buttonID}
+        id={id}
         title={title}
         className={classNames.join(" ")}
         href={href}
         target={target}
+        onClick={onClick}
       >
         {children}
       </Link>
@@ -91,7 +92,7 @@ export function Button({
   } else {
     return (
       <button
-        id={buttonID}
+        id={id}
         title={title}
         className={classNames.join(" ")}
         onClick={onClick}

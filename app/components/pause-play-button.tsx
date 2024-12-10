@@ -42,7 +42,7 @@ export function PausePlayButton({
   return (
     <div className="pause-play-button">
       <Button
-        buttonID={SITE_CONSTANTS.PAUSE_BUTTON_ID}
+        id={SITE_CONSTANTS.PAUSE_BUTTON_ID}
         title={SITE_CONSTANTS.PAUSE_BUTTON_TITLE}
         displayHidden={false}
         iconButton={true}
@@ -54,7 +54,7 @@ export function PausePlayButton({
         <PauseIcon />
       </Button>
       <Button
-        buttonID={SITE_CONSTANTS.PLAY_BUTTON_ID}
+        id={SITE_CONSTANTS.PLAY_BUTTON_ID}
         title={SITE_CONSTANTS.PLAY_BUTTON_TITLE}
         displayHidden={true}
         iconButton={true}

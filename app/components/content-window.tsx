@@ -1,14 +1,15 @@
 import React from "react";
 
-import { ContentWindowHeader } from "@/components/content-window-header";
+import { ContentWindowBody } from "@/components/content-window-body";
 import { ContentWindowClose } from "@/components/content-window-close";
+import { ContentWindowHeader } from "@/components/content-window-header";
 import { ContentWindowTitle } from "@/components/content-window-title";
 
 export function ContentWindow({
   windowTitle,
-  windowID,
-  returnID,
-  returnLocation,
+  id = "",
+  returnID = "",
+  href,
   noClose,
   noPadding,
   roundedTopOnly,
@@ -16,49 +17,43 @@ export function ContentWindow({
   children,
 }: {
   windowTitle: string;
-  windowID?: string;
+  id?: string;
   returnID?: string;
-  returnLocation?: string;
+  href?: string;
   noClose?: boolean;
   noPadding?: boolean;
   roundedTopOnly?: boolean;
   className?: string;
   children: React.ReactNode;
 }) {
-  const paddingClass = noPadding ? "p-0" : "px-4 pb-4 pt-2";
   const roundedClass = roundedTopOnly ? "rounded-t-xl" : "rounded-xl";
 
-  const windowClassNames = [
+  const classNames = [
     "window",
     "overflow-hidden",
+    "max-h-80vh",
     roundedClass,
+    "border-2",
     "border-solid",
-    "border-[var(--theme-color-500)]",
+    "border-[var(--theme-color-700)]",
     "border-opacity-80",
     "bg-[var(--theme-color-200)]",
     "shadow-drop-5",
     className,
   ];
 
-  const contentClassNames = [
-    "window-contents",
-    "h-full",
-    "w-full",
-    paddingClass,
-  ];
-
   return (
-    <div id={windowID} className={windowClassNames.join(" ")}>
+    <div id={id} className={classNames.join(" ")}>
       <ContentWindowHeader>
         <ContentWindowTitle>{windowTitle}</ContentWindowTitle>
         <ContentWindowClose
-          windowID={windowID}
+          id={id}
           returnID={returnID}
-          returnLocation={returnLocation}
+          href={href}
           noClose={noClose}
         />
       </ContentWindowHeader>
-      <div className={contentClassNames.join(" ")}>{children}</div>
+      <ContentWindowBody noPadding={noPadding}>{children}</ContentWindowBody>
     </div>
   );
 }

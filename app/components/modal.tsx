@@ -22,6 +22,7 @@ export function Modal({
     modalPosition && modalPosition === "bottom-left"
       ? "left-4 top-full modal-open:-translate-y-full"
       : "",
+    // "invisible modal-open:visible",
     "fixed",
     "z-20",
     "shadow-drop-5",
@@ -36,7 +37,7 @@ export function Modal({
     >
       <ContentWindow
         windowTitle={modalTitle}
-        windowID={modalID}
+        id={modalID}
         returnID={returnID}
         roundedTopOnly={roundedTopOnly}
       >
