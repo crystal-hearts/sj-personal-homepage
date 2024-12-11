@@ -12,7 +12,7 @@ export function AboutMyCat({ className }: { className?: string }) {
         <span>
           <strong>Winter</strong> is my beautiful little cat adopted on July
           10th, 2024. He&lsquo;s a grey and white tabby and was born sometime in
-          2023.
+          2023
         </span>
       </p>
       <div className="flex justify-center">
@@ -23,8 +23,8 @@ export function AboutMyCat({ className }: { className?: string }) {
       <p className="text-center">
         <span>
           His interests include <strong>yelling</strong>,{" "}
-          <strong>watching the neighbourhood crows</strong>, and for some
-          reason, <strong>videos of cows</strong>.
+          <strong>watching the neighbourhood crows</strong>, and an unknown
+          reason, <strong>videos of cows</strong>
         </span>
       </p>
     </ContentContainer>

@@ -5,7 +5,7 @@ export function openModal(modalID: string) {
   });
   if (modalElement) {
     modalElement.setAttribute("data-modal-active", "open");
-    modalElement.getElementsByClassName("window-heading")[0].focus();
+    modalElement.getElementsByClassName("window-title")[0].focus();
   }
 }
 

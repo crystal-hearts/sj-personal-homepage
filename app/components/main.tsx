@@ -5,5 +5,5 @@ export function Main({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main className="relative z-10 animate-fade-in">{children}</main>;
+  return <main className="relative animate-fade-in">{children}</main>;
 }

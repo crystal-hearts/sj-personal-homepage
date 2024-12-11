@@ -4,8 +4,8 @@ import { CurvedContainer } from "@/components/curved-container";
 
 import { Logo } from "@/components/logo";
 import { AboutMe } from "@/components/about-me";
-import { AboutSite } from "@/components/about-site";
 import { AboutMyCat } from "@/components/about-my-cat";
+import { Experience } from "@/components/experience";
 import { ContactMe } from "@/components/contact-me";
 
 import { ContentWindow } from "@/components/content-window";
@@ -13,32 +13,35 @@ import { ContentWindow } from "@/components/content-window";
 export default function Page() {
   return (
     <Main>
-      <Section className="h-96 pt-40">
+      <Section className="h-96 py-20">
         <Logo />
       </Section>
-      <Section fullBleed={true}>
-        <CurvedContainer>
-          <AboutMe className="w-2/5" />
-          <AboutSite className="w-3/5" />
-        </CurvedContainer>
-      </Section>
-      <Section>
-        <ContentWindow windowTitle="why this site?" noClose={true}>
-          <AboutSite />
+      <Section id="about-me">
+        <ContentWindow
+          className="md:w-3/5"
+          windowTitle="about me"
+          noClose={true}
+        >
+          <AboutMe />
         </ContentWindow>
       </Section>
-      <Section>
+      <Section id="about-site" fullBleed={true}>
+        <CurvedContainer>
+          <Experience />
+        </CurvedContainer>
+      </Section>
+      <Section id="about-my-cat">
         <ContentWindow
-          className="w-1/2"
+          className="md:w-1/2"
           windowTitle="about my cat"
           noClose={true}
         >
           <AboutMyCat />
         </ContentWindow>
       </Section>
-      <Section fullBleed={true}>
+      <Section id="contact" fullBleed={true}>
         <CurvedContainer displayBottomCurve={false}>
-          <ContactMe className="pb-6" />
+          <ContactMe className="self-center pb-6 md:w-2/3" />
         </CurvedContainer>
       </Section>
     </Main>

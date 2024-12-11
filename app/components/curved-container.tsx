@@ -17,7 +17,7 @@ export function CurvedContainer({
   const classNames = [
     "curved-container",
     "w-full",
-    "drop-shadow-border",
+    "drop-shadow-border-2",
     className,
   ];
 
@@ -28,13 +28,13 @@ export function CurvedContainer({
 
   return (
     <div className={classNames.join(" ")}>
-      <div className="relative top-2 w-full fill-[var(--theme-color-200)]">
+      <div className="relative top-2 w-full fill-[var(--theme-color-100)]">
         <CurveTop className={topCurveClasses} />
       </div>
-      <div className="curved-container-body relative z-10 flex justify-center space-x-6 bg-[var(--theme-color-200)] px-6 py-4 sm:py-0">
+      <div className="curved-container-body relative z-10 flex flex-col space-y-6 bg-[var(--theme-color-100)] px-6">
         {children}
       </div>
-      <div className="relative bottom-2 w-full fill-[var(--theme-color-200)]">
+      <div className="relative w-full fill-[var(--theme-color-100)]">
         <CurveBottom className={bottomCurveClasses} />
       </div>
     </div>

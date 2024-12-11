@@ -8,6 +8,11 @@ const rubik = localFont({
   variable: "--font-rubik",
   weight: "100 900",
 });
+const inter = localFont({
+  src: "./fonts/Inter-VariableFont_opsz,wght.ttf",
+  variable: "--font-inter",
+  weight: "100 900",
+});
 
 export const metadata: Metadata = {
   title: "Sarah Jacques Personal Site",
@@ -21,7 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable} antialiased`}>{children}</body>
+      <body
+        className={`${rubik.variable} antialiased ${inter.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

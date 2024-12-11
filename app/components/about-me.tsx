@@ -10,8 +10,8 @@ export function AboutMe({ className }: { className?: string }) {
   return (
     <ContentContainer className={className}>
       <p className="text-center">
-        <span>
-          <strong>Hi! Thanks for checking out my homepage!</strong>
+        <span className="font-bold">
+          Hi! Thanks for checking out my homepage!
         </span>
       </p>
       <div className="flex justify-center">
@@ -19,17 +19,19 @@ export function AboutMe({ className }: { className?: string }) {
           <Image src={sarahImage} alt="sarah" />
         </InlineImageContainer>
       </div>
-      <p className="text-center">
+      <p className="flex flex-col text-center">
         <span>
-          I&lsquo;m Sarah Jacques, an eCommerce consultant, full-stack web
-          developer, and UX specialist.{" "}
-          <strong>I build accessible and fun experiences for the web</strong>!
+          I&lsquo;m Sarah Jacques, a full-stack web developer, eCommerce
+          consultant, and UX specialist
+        </span>
+        <span className="text-center font-bold">
+          I build accessible and fun experiences for the web!
         </span>
       </p>
       <p className="text-center">
         <span>
           I&lsquo;m based in Vancouver, BC on the unceded territory of the
-          xʷməθkʷəy̓əm, Sḵwx̱wú7mesh, and səlilwətaɬ nations.
+          xʷməθkʷəy̓əm, Sḵwx̱wú7mesh, and səlilwətaɬ nations
         </span>
       </p>
     </ContentContainer>

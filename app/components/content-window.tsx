@@ -13,6 +13,7 @@ export function ContentWindow({
   noClose,
   noPadding,
   roundedTopOnly,
+  smallTitle,
   className,
   children,
 }: {
@@ -23,6 +24,7 @@ export function ContentWindow({
   noClose?: boolean;
   noPadding?: boolean;
   roundedTopOnly?: boolean;
+  smallTitle?: boolean;
   className?: string;
   children: React.ReactNode;
 }) {
@@ -36,7 +38,7 @@ export function ContentWindow({
     "border-solid",
     "border-[var(--theme-color-700)]",
     "border-opacity-80",
-    "bg-[var(--theme-color-200)]",
+    "bg-[var(--theme-color-100)]",
     "shadow-5",
     className,
   ];
@@ -44,7 +46,9 @@ export function ContentWindow({
   return (
     <div id={id} className={classNames.join(" ")}>
       <ContentWindowHeader>
-        <ContentWindowTitle>{windowTitle}</ContentWindowTitle>
+        <ContentWindowTitle smallTitle={smallTitle}>
+          {windowTitle}
+        </ContentWindowTitle>
         <ContentWindowClose
           id={id}
           returnID={returnID}

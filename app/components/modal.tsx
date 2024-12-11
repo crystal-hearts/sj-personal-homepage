@@ -8,6 +8,7 @@ export function Modal({
   returnID,
   modalPosition,
   roundedTopOnly,
+  smallTitle,
   children,
 }: {
   modalTitle: string;
@@ -15,6 +16,7 @@ export function Modal({
   returnID: string;
   modalPosition?: string;
   roundedTopOnly?: boolean;
+  smallTitle?: boolean;
   children: React.ReactNode;
 }) {
   const classNames = [
@@ -39,6 +41,7 @@ export function Modal({
         id={modalID}
         returnID={returnID}
         roundedTopOnly={roundedTopOnly}
+        smallTitle={smallTitle}
       >
         {children}
       </ContentWindow>

@@ -4,9 +4,17 @@ export function ContentContainer({
   className,
   children,
 }: Readonly<{
+  id?: string;
   className?: string;
   children: React.ReactNode;
 }>) {
-  const classNames = ["content-container", "flex-row", "space-y-2", className];
+  const classNames = [
+    "content-container",
+    "flex",
+    "flex-col",
+    "justify-center",
+    "space-y-3",
+    className,
+  ];
   return <div className={classNames.join(" ")}>{children}</div>;
 }
