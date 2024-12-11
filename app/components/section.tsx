@@ -1,13 +1,23 @@
 import React from "react";
 
 export function Section({
+  fullBleed,
+  className,
   children,
 }: Readonly<{
+  fullBleed?: boolean;
+  className?: string;
   children: React.ReactNode;
 }>) {
-  return (
-    <div className="section-container flex h-screen flex-wrap items-center justify-center px-8">
-      {children}
-    </div>
-  );
+  const paddingClass = fullBleed ? "pt-8" : "px-8 py-8";
+  const classNames = [
+    "section",
+    "flex",
+    "flex-row",
+    "justify-center",
+    "space-x-4",
+    paddingClass,
+    className,
+  ];
+  return <div className={classNames.join(" ")}>{children}</div>;
 }

@@ -37,7 +37,7 @@ export function Button({
   let borderClass = "border-[var(--theme-color-700)]";
   let bgClass = "bg-[var(--theme-color-200)]";
   let fillClass = "fill-[var(--theme-color-700)]";
-  let shadowClass = smallShadow ? "shadow-drop-3" : "shadow-drop-5";
+  let shadowClass = smallShadow ? "shadow-3" : "shadow-5";
 
   if (bgColor) {
     borderClass = "border-[var(--" + bgColor + "-700)]";

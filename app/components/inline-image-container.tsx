@@ -20,7 +20,7 @@ export function InlineImageContainer({
     "border-2",
     "border-[var(--theme-color-700)]",
     "bg-[var(--theme-color-200)]",
-    "shadow-drop-3",
+    "shadow-3",
     roundingClass,
   ];
 

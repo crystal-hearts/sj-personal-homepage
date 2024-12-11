@@ -39,8 +39,17 @@ module.exports = {
         16: "16px",
       },
       boxShadow: {
-        "drop-3": "3px 3px 3px 0px rgba(0, 0, 0.5, 0.5)",
-        "drop-5": "5px 5px 5px 0px rgba(0, 0, 0.5, 0.5)",
+        3: "3px 3px 3px 0px rgba(0, 0, 0.5, 0.5)",
+        5: "5px 5px 5px 0px rgba(0, 0, 0.5, 0.5)",
+      },
+      dropShadow: {
+        border: [
+          "2px 2px 0 var(--theme-color-700)",
+          "0px 2px 0 var(--theme-color-700)",
+          "-2px 0 0 var(--theme-color-700)",
+          "0 -2px 0 var(--theme-color-700)",
+        ],
+        bottom: "0 2px 3px rgba(0, 0, 0.5, 0.5)",
       },
       height: {
         "60vh": "60vh",

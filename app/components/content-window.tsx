@@ -7,8 +7,8 @@ import { ContentWindowTitle } from "@/components/content-window-title";
 
 export function ContentWindow({
   windowTitle,
-  id = "",
-  returnID = "",
+  id,
+  returnID,
   href,
   noClose,
   noPadding,
@@ -31,14 +31,13 @@ export function ContentWindow({
   const classNames = [
     "window",
     "overflow-hidden",
-    "max-h-75vh",
     roundedClass,
     "border-2",
     "border-solid",
     "border-[var(--theme-color-700)]",
     "border-opacity-80",
     "bg-[var(--theme-color-200)]",
-    "shadow-drop-5",
+    "shadow-5",
     className,
   ];
 

@@ -24,7 +24,7 @@ export function Modal({
       : "",
     "fixed",
     "z-20",
-    "shadow-drop-5",
+    "shadow-5",
     "transition-transform",
     "duration-500",
   ];

@@ -15,7 +15,6 @@ export function ContentWindowBody({
     "window-contents",
     "w-full",
     "h-full",
-    "max-h-60vh",
     "overflow-y-auto",
     paddingClass,
     className,
