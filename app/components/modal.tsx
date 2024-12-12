@@ -34,6 +34,7 @@ export function Modal({
     <div
       id={modalID}
       className={classNames.join(" ")}
+      role="dialog"
       data-modal-state="closed"
       tabIndex={-1}
     >
