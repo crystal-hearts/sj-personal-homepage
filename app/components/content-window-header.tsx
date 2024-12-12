@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ * Header section for ContentWindow component
+ * @param {string} id The ID for the containing window
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function ContentWindowHeader({
   noTitle,
   children,

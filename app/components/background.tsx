@@ -1,3 +1,6 @@
+/**
+ * Fixed background component
+ */
 export function Background() {
   return (
     <div className="background fixed h-screen w-full bg-[var(--theme-color-500)] transition-colors duration-500">

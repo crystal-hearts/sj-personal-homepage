@@ -12,6 +12,10 @@ import { ControlButtons } from "@/components/control-buttons";
 import { SettingsModal } from "@/components/settings-modal";
 import { SocialLinks } from "@/components/social-links";
 
+/**
+ * Layout component for (main). Contains all page navigation
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export default function MainPageLayout({
   children,
 }: {

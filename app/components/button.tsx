@@ -1,11 +1,26 @@
 import React from "react";
 import Link from "next/link";
 
+/**
+ * Generic button component, wraps both <button> and Next <Link> elements with consistent styling
+ * @param {string} id The button's ID
+ * @param {string} className Any custom class names passed to the component
+ * @param {string} title The button's title
+ * @param {string} href The location for a <Link> element
+ * @param {string} target The target for a <Link> element, ie "_"
+ * @param {string} bgColor The explicit background color of button. Uses theme-color if not set
+ * @param {boolean} smallShadow If the button's drop shadow should be displayed as smaller
+ * @param {boolean} iconButton If the button should have explicit height and width to support an SVG icon
+ * @param {boolean} transparentIcon If the button should display with a transparent background and border
+ * @param {boolean} displayHIdden If the button should be initially displayed as hidden
+ * @param {Function} onClick Any onClick functions that should fire when the button is clicked
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function Button({
   id,
   className,
-  href,
   title,
+  href,
   target,
   bgColor,
   smallShadow = false,

@@ -5,18 +5,33 @@ import { ContentWindowClose } from "@/components/content-window-close";
 import { ContentWindowHeader } from "@/components/content-window-header";
 import { ContentWindowTitle } from "@/components/content-window-title";
 
+/**
+ * The ContentWindow component. Contains other components in a nice faux window
+ * @param {string} id The window's ID
+ * @param {string} returnID The ID of the component that the window's close button should direct focus to
+ * @param {string} className Any custom class names passed to the component
+ * @param {string} href The location the window's close button should redirect to
+ * @param {string} windowTitle The window's title
+ * @param {boolean} noClose If no close button should be displayed
+ * @param {boolean} noPadding If the body section should display without padding
+ * @param {boolean} roundedTopOnly If the window should have rounding on the top only
+ * @param {boolean} smallTitle If the window title should display with small text
+ * @param {boolean} noTitle If the window title should display no text
+ * @param {boolean} inverseWindow If the window should have inverted colors
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function ContentWindow({
-  windowTitle,
   id,
   returnID,
   href,
+  className,
+  windowTitle,
   noClose,
   noPadding,
   roundedTopOnly,
   smallTitle,
   noTitle,
   inverseWindow,
-  className,
   children,
 }: {
   windowTitle?: string;

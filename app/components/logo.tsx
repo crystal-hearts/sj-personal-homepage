@@ -3,6 +3,10 @@ import { ContentContainer } from "@/components/content-container";
 import LogoDesktop from "@/images/logo-desktop.svg";
 import LogoMobile from "@/images/logo-mobile.svg";
 
+/**
+ * The site's logo. Displays different images for desktop and mobile
+ * @param {string} className Any custom class names passed to the component
+ */
 export function Logo({ className }: { className?: string }) {
   return (
     <ContentContainer className={className}>

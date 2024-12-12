@@ -3,15 +3,22 @@ import React from "react";
 import CurveTop from "@/images/curve-top.svg";
 import CurveBottom from "@/images/curve-bottom.svg";
 
+/**
+ * The CurvedContainer component. Contains other componenets in nice curved sections
+ * @param {string} className Any custom class names passed to the component
+ * @param {boolean} displayTopCurve If the section's top curve should be displayed. Defaults to true
+ * @param {boolean} displayBottomCurve If the section's bottom curve should be displayed. Defaults to true
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function CurvedContainer({
+  className,
   displayTopCurve = true,
   displayBottomCurve = true,
-  className,
   children,
 }: Readonly<{
+  className?: string;
   displayTopCurve?: boolean;
   displayBottomCurve?: boolean;
-  className?: string;
   children?: React.ReactNode;
 }>) {
   const classNames = [

@@ -6,6 +6,10 @@ import { Paragraph } from "@/components/paragraph";
 
 import winterImage from "@/images/winter.jpg";
 
+/**
+ * "About My Cat" section content
+ * @param {string} className Any custom class names passed to the component
+ */
 export function AboutMyCat({ className }: { className?: string }) {
   return (
     <ContentContainer className={className}>
