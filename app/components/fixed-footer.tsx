@@ -1,6 +1,6 @@
 import React from "react";
 
-export function FixedFooter({ children }: { children: React.ReactNode }) {
+export function FixedFooter({ children }: { children?: React.ReactNode }) {
   return (
     <footer
       id="footer"

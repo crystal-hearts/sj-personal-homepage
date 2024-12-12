@@ -12,7 +12,7 @@ export function CurvedContainer({
   displayTopCurve?: boolean;
   displayBottomCurve?: boolean;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }>) {
   const classNames = [
     "curved-container",

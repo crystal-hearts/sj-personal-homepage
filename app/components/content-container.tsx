@@ -6,7 +6,7 @@ export function ContentContainer({
 }: Readonly<{
   id?: string;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }>) {
   const classNames = [
     "content-container",

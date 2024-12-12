@@ -14,10 +14,12 @@ export function ContentWindow({
   noPadding,
   roundedTopOnly,
   smallTitle,
+  noTitle,
+  inverseWindow,
   className,
   children,
 }: {
-  windowTitle: string;
+  windowTitle?: string;
   id?: string;
   returnID?: string;
   href?: string;
@@ -25,10 +27,15 @@ export function ContentWindow({
   noPadding?: boolean;
   roundedTopOnly?: boolean;
   smallTitle?: boolean;
+  noTitle?: boolean;
+  inverseWindow?: boolean;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const roundedClass = roundedTopOnly ? "rounded-t-xl" : "rounded-xl";
+  const colorClasses = inverseWindow
+    ? "bg-[var(--theme-color-700)] text-[var(--theme-color-200)]"
+    : "bg-[var(--theme-color-100)]";
 
   const classNames = [
     "window",
@@ -37,16 +44,15 @@ export function ContentWindow({
     "border-2",
     "border-solid",
     "border-[var(--theme-color-700)]",
-    "border-opacity-80",
-    "bg-[var(--theme-color-100)]",
+    colorClasses,
     "shadow-5",
     className,
   ];
 
   return (
     <div className={classNames.join(" ")}>
-      <ContentWindowHeader>
-        <ContentWindowTitle smallTitle={smallTitle}>
+      <ContentWindowHeader noTitle={noTitle}>
+        <ContentWindowTitle smallTitle={smallTitle} noTitle={noTitle}>
           {windowTitle}
         </ContentWindowTitle>
         <ContentWindowClose

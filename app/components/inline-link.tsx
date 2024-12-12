@@ -12,7 +12,7 @@ export function InlineLink({
   target?: string;
   className?: string;
   tabIndex?: number;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const classNames = [
     "inline-link",

@@ -17,7 +17,7 @@ export function Modal({
   modalPosition?: string;
   roundedTopOnly?: boolean;
   smallTitle?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const classNames = [
     "modal",

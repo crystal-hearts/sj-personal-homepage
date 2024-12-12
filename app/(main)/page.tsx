@@ -3,6 +3,7 @@ import { AboutMyCat } from "@/components/about-my-cat";
 import { ContactMe } from "@/components/contact-me";
 import { ContentWindow } from "@/components/content-window";
 import { CurvedContainer } from "@/components/curved-container";
+import { AboutSite } from "@/components/about-site";
 import { Experience } from "@/components/experience";
 import { Logo } from "@/components/logo";
 import { Main } from "@/components/main";
@@ -23,14 +24,17 @@ export default function Page() {
           <AboutMe />
         </ContentWindow>
       </Section>
+      <Section id="experience">
+        <Experience />
+      </Section>
       <Section id="about-site" fullBleed={true}>
         <CurvedContainer>
-          <Experience />
+          <AboutSite />
         </CurvedContainer>
       </Section>
       <Section id="about-my-cat">
         <ContentWindow
-          className="md:w-1/2"
+          className="md:w-96"
           windowTitle="about my cat"
           noClose={true}
         >
@@ -39,7 +43,7 @@ export default function Page() {
       </Section>
       <Section id="contact" noPaddingBottom={true} fullBleed={true}>
         <CurvedContainer displayBottomCurve={false}>
-          <ContactMe className="self-center pb-12 md:w-xl md:pb-6" />
+          <ContactMe className="self-center pb-6 md:w-xl" />
         </CurvedContainer>
       </Section>
     </Main>

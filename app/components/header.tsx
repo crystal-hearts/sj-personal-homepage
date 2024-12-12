@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Header({ children }: { children: React.ReactNode }) {
+export function Header({ children }: { children?: React.ReactNode }) {
   return (
     <header id="header" className="fixed-header fixed top-0 z-10 h-20 w-full">
       <div className="header-container w-full">

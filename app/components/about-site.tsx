@@ -1,41 +1,52 @@
 import { ContentContainer } from "@/components/content-container";
-import { InlineLink } from "@/components/inline-link";
+import { Paragraph } from "@/components/paragraph";
+import { TextColumns } from "@/components/text-column";
+import { TextHeading } from "@/components/text-heading";
 
 export function AboutSite({ className }: { className?: string }) {
   return (
     <ContentContainer className={className}>
-      <p>
-        <span>
-          Influences include the perfect simplicity of{" "}
-          <InlineLink href="https://www.milk.com" target="_">
-            Dan Bornstein&lsquo;s milk.com
-          </InlineLink>
-          , the incredible breadth of{" "}
-          <InlineLink href="https://www.jenniverse.com/" target="_">
-            Jennifer Diane Reitz&lsquo; many projects
-          </InlineLink>
-          , the flourishing ecosystem of Macromedia Flash sites before the
-          launch of the iPhone, the tight and effective CSS effects in the New
-          York Times Games app built by the{" "}
-          <InlineLink href="https://nytimesguild.org/">
-            NYT Tech Guild
-          </InlineLink>
-          , and the groovy 90s-does-60s psychedelia of EarthBound and the Sega
-          Dreamcast.
-        </span>
-      </p>
-      <p>
-        <span>
-          It&lsquo;s best viewed while listening to{" "}
-          <InlineLink
-            href="https://archive.org/details/jet-set-radio-ost-flac"
-            target="_"
-          >
-            Hideki Naganuma&lsquo;s soundtrack to Jet Set Radio (2000)
-          </InlineLink>
-          .
-        </span>
-      </p>
+      <TextHeading>Why this site?</TextHeading>
+      <TextColumns>
+        <Paragraph className="md:w-3/5">
+          <span>
+            I wanted to step outside the style of the typical developer
+            portfolio site and evoke the spirit of late-1990s personal homepages
+            by building an{" "}
+            <strong>
+              intentionally retro-styled site using contemporary tools and
+              frameworks
+            </strong>
+            .
+          </span>
+          <span>
+            I have a lot of love for the do-it-yourself ethos that drove a lot
+            of the early Internet and wanted to capture that feeling in a way
+            that also{" "}
+            <strong>
+              communicates something about who I am and what I care about
+            </strong>
+            .
+          </span>
+        </Paragraph>
+        <Paragraph className="md:w-3/5">
+          <span>
+            A big part of what I care about is fun! Effective UI/UX design
+            isn&lsquo;t just be clear and seamless for the user, it should also
+            be <strong>fun to use</strong>! Even the most sober and serious Web
+            applications should be fun to use if they&lsquo;re built
+            thoughtfully.
+          </span>
+          <span>
+            While I wanted to evoke a late-90s aesthetic, I also wanted to{" "}
+            <strong>
+              meet design standards that didn&lsquo;t exist in 1998
+            </strong>
+            . In addition to being responsive, this site also meets W3
+            accessibility guidelines.
+          </span>
+        </Paragraph>
+      </TextColumns>
     </ContentContainer>
   );
 }

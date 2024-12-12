@@ -13,7 +13,7 @@ export function MenuItem({
   title: string;
   href: string;
   iconButton?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <Button id={id} title={title} href={href} iconButton={iconButton}>

@@ -5,7 +5,7 @@ export function ContentWindowTitle({
   children,
 }: {
   smallTitle?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const textSizeClass = smallTitle ? "text-sm" : "text-base";
   const classNames = [

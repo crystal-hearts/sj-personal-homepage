@@ -11,16 +11,19 @@ export function Section({
   fullBleed?: boolean;
   noPaddingBottom?: boolean;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }>) {
   const xPaddingClass = fullBleed ? "" : "px-8";
   const yPaddingClass = noPaddingBottom ? "" : "py-12 md:py-6";
   const classNames = [
     "section",
     "flex",
-    "flex-row",
+    "flex-col",
+    "md:flex-row",
     "justify-center",
-    "space-x-4",
+    "space-y-12",
+    "md:space-x-4",
+    "md:space-y-0",
     xPaddingClass,
     yPaddingClass,
     className,

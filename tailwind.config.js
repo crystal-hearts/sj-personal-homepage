@@ -44,7 +44,9 @@ module.exports = {
       },
       dropShadow: {
         "border-2": [
+          "2px 0px 0 var(--theme-color-700)",
           "0px 2px 0 var(--theme-color-700)",
+          "-2px 0px 0 var(--theme-color-700)",
           "0 -2px 0 var(--theme-color-700)",
           "0 4px 4px var(--theme-color-900)",
         ],
