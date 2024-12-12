@@ -9,10 +9,10 @@ export function Logo({ className }: { className?: string }) {
       <h1>
         <div className="logo w-75vw max-w-3xl">
           <div className="logo-desktop hidden md:block">
-            <LogoDesktop />
+            <LogoDesktop className="stroke-1.5" />
           </div>
           <div className="logo-mobile block md:hidden">
-            <LogoMobile />
+            <LogoMobile className="stroke-1.5" />
           </div>
         </div>
       </h1>

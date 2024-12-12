@@ -50,6 +50,7 @@ module.exports = {
         ],
       },
       height: {
+        xl: "36rem",
         "60vh": "60vh",
         "75vh": "75vh",
         "80vh": "80vh",
@@ -93,7 +94,11 @@ module.exports = {
         "75vh": "75vh",
         "80vh": "80vh",
       },
+      strokeWidth: {
+        1.5: "1.5px",
+      },
       width: {
+        xl: "36rem",
         "75vw": "75vw",
         "80vw": "80vw",
       },
@@ -101,7 +106,7 @@ module.exports = {
   },
   plugins: [
     plugin(({ addVariant }) => {
-      addVariant("modal-open", '&[data-modal-active="open"]');
+      addVariant("modal-open", '&[data-modal-state="open"]');
     }),
   ],
 };

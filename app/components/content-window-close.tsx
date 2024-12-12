@@ -12,8 +12,8 @@ export function ContentWindowClose({
   href,
   noClose,
 }: {
-  id: string;
-  returnID: string;
+  id?: string;
+  returnID?: string;
   href?: string;
   noClose?: boolean;
 }) {

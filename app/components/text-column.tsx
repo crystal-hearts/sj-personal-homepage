@@ -1,20 +1,19 @@
 import React from "react";
 
-export function ContentContainer({
+export function TextColumns({
   className,
   children,
-}: Readonly<{
-  id?: string;
+}: {
   className?: string;
-  children: React.ReactNode;
-}>) {
+  children?: React.ReactNode;
+}) {
   const classNames = [
-    "content-container",
     "flex",
     "flex-col",
-    "items-center",
-    "justify-center",
     "space-y-3",
+    "md:flex-row",
+    "md:space-x-3",
+    "md:space-y-0",
     className,
   ];
   return <div className={classNames.join(" ")}>{children}</div>;

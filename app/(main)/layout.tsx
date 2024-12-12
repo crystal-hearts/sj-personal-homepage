@@ -8,8 +8,7 @@ import { Background } from "@/components/background";
 import { FixedFooter } from "@/components/fixed-footer";
 import { Header } from "@/components/header";
 import { Menu } from "@/components/menu";
-import { PausePlayButton } from "@/components/pause-play-button";
-import { SettingsButton } from "@/components/settings-button";
+import { ControlButtons } from "@/components/control-buttons";
 import { SettingsModal } from "@/components/settings-modal";
 import { SocialLinks } from "@/components/social-links";
 
@@ -30,12 +29,11 @@ export default function MainPageLayout({
         <Menu />
         <SocialLinks />
       </Header>
-      {children}
-      <SettingsModal />
       <FixedFooter>
-        <SettingsButton />
-        <PausePlayButton />
+        <SettingsModal />
+        <ControlButtons />
       </FixedFooter>
+      {children}
     </div>
   );
 }

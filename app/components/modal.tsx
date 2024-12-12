@@ -22,7 +22,7 @@ export function Modal({
   const classNames = [
     "modal",
     modalPosition && modalPosition === "bottom-left"
-      ? "left-4 top-full modal-open:-translate-y-full"
+      ? "left-4 top-full invisible modal-open:visible modal-open:-translate-y-full"
       : "",
     "fixed",
     "z-20",
@@ -34,7 +34,8 @@ export function Modal({
     <div
       id={modalID}
       className={classNames.join(" ")}
-      data-modal-active="closed"
+      data-modal-state="closed"
+      tabIndex={-1}
     >
       <ContentWindow
         windowTitle={modalTitle}

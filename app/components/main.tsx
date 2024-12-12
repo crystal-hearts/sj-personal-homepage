@@ -5,5 +5,6 @@ export function Main({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main className="relative animate-fade-in">{children}</main>;
+  // padding-top of pt-20 = 5rem matches explicit height of floating header
+  return <main className="relative animate-fade-in pt-20">{children}</main>;
 }

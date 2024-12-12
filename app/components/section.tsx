@@ -11,7 +11,7 @@ export function Section({
   className?: string;
   children: React.ReactNode;
 }>) {
-  const xPaddingClass = fullBleed ? "pt-12" : "px-8 pt-12";
+  const xPaddingClass = fullBleed ? "" : "px-8";
   const classNames = [
     "section",
     "flex",

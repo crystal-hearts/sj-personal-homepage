@@ -19,11 +19,11 @@ export function PausePlayButton() {
       if (playState === SITE_CONSTANTS.ANIMATION_PLAY_STATE_RUNNING) {
         playButton.classList.add("hidden");
         pauseButton.classList.remove("hidden");
-        playButton.focus();
+        pauseButton.focus();
       } else if (playState === SITE_CONSTANTS.ANIMATION_PLAY_STATE_PAUSED) {
         pauseButton.classList.add("hidden");
         playButton.classList.remove("hidden");
-        pauseButton.focus();
+        playButton.focus();
       }
     }
   }

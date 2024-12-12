@@ -44,7 +44,7 @@ export function ContentWindow({
   ];
 
   return (
-    <div id={id} className={classNames.join(" ")}>
+    <div className={classNames.join(" ")}>
       <ContentWindowHeader>
         <ContentWindowTitle smallTitle={smallTitle}>
           {windowTitle}
