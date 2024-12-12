@@ -94,6 +94,9 @@ module.exports = {
           },
         },
       },
+      maxWidth: {
+        "75vw": "75vw",
+      },
       maxHeight: {
         "60vh": "60vh",
         "75vh": "75vh",
