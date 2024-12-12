@@ -23,5 +23,5 @@ export const SITE_CONSTANTS = {
   SETTINGS_MODAL_ID: "settings-modal",
   SETTINGS_MODAL_TITLE: "site flavor",
   ABOUT_SITE_TITLE: "about this site",
-  BASE_URL: "https://sj-personal-homepage-8kwb.vercel.app",
+  BASE_URL: "https://sj-personal-homepage.vercel.app",
 };
