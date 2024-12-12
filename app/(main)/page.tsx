@@ -11,7 +11,7 @@ import { Section } from "@/components/section";
 export default function Page() {
   return (
     <Main>
-      <Section className="h-96 pt-0">
+      <Section className="md:h-96">
         <Logo />
       </Section>
       <Section id="about-me">
@@ -37,9 +37,9 @@ export default function Page() {
           <AboutMyCat />
         </ContentWindow>
       </Section>
-      <Section id="contact" fullBleed={true}>
+      <Section id="contact" noPaddingBottom={true} fullBleed={true}>
         <CurvedContainer displayBottomCurve={false}>
-          <ContactMe className="self-center pb-6 md:w-xl" />
+          <ContactMe className="self-center pb-12 md:w-xl md:pb-6" />
         </CurvedContainer>
       </Section>
     </Main>
