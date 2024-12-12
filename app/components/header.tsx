@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * Floating header
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function Header({ children }: { children?: React.ReactNode }) {
   return (
     <header id="header" className="fixed-header fixed top-0 z-10 h-20 w-full">

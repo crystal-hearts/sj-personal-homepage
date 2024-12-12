@@ -9,6 +9,9 @@ import { Logo } from "@/components/logo";
 import { Main } from "@/components/main";
 import { Section } from "@/components/section";
 
+/**
+ * Main content page component for (main). Contains all page content
+ */
 export default function Page() {
   return (
     <Main>

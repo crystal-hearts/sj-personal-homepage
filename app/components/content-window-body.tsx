@@ -1,12 +1,18 @@
 import React from "react";
 
+/**
+ * Body section for ContentWindow component
+ * @param {string} className Any custom class names passed to the component
+ * @param {boolean} noPadding If the section should display without padding
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function ContentWindowBody({
-  noPadding,
   className,
+  noPadding,
   children,
 }: {
-  noPadding?: boolean;
   className?: string;
+  noPadding?: boolean;
   children?: React.ReactNode;
 }) {
   const paddingClass = noPadding ? "p-0" : "px-4 pb-4 pt-2";

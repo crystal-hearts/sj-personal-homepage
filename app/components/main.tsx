@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * The <main> component
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function Main({
   children,
 }: Readonly<{

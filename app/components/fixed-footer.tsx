@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * The site's floating footer
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function FixedFooter({ children }: { children?: React.ReactNode }) {
   return (
     <footer

@@ -2,18 +2,27 @@ import React from "react";
 
 import { ContentWindow } from "@/components/content-window";
 
+/**
+ * Generic modal component. Currently wraps the ContentWindow component
+ * @param {string} modalID The modal's ID
+ * @param {string} returnID The element that should be focused on when the modal is closed
+ * @param {string} modalPosition The modal's position
+ * @param {boolean} roundedTopOnly If only the top of the modal should be displayed as rounded
+ * @param {boolean} smallTitle If the modal should be rendered with a small-text title
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function Modal({
-  modalTitle,
   modalID,
   returnID,
+  modalTitle,
   modalPosition,
   roundedTopOnly,
   smallTitle,
   children,
 }: {
-  modalTitle: string;
   modalID: string;
   returnID: string;
+  modalTitle: string;
   modalPosition?: string;
   roundedTopOnly?: boolean;
   smallTitle?: boolean;

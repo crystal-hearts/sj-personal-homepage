@@ -1,5 +1,9 @@
 import { TicketContainer } from "@/components/ticket-container";
 
+/**
+ * "Experience" section content
+ * @param {string} className Any custom class names passed to the component
+ */
 export function Experience() {
   return (
     <div className="ticket-containers flex w-full flex-col flex-wrap items-center justify-center md:flex-row">

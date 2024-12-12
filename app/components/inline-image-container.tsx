@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * Container for displaying nice inline images. The image is passed as a child of the component
+ * @param {string} title The title of the image, displays below it
+ * @param {boolean} displayCircle If the image should be displayed as a cirlce
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function InlineImageContainer({
   title,
   displayCircle = false,

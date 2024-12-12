@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ * Title section for ContentWindow component
+ * @param {boolean} smallTitle If the title should display with small text
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function ContentWindowTitle({
   smallTitle,
   children,

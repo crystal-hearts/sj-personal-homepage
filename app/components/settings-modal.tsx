@@ -3,6 +3,9 @@ import { FlavorButton } from "@/components/flavor-button";
 
 import { SITE_CONSTANTS } from "@/constants/site-constants";
 
+/**
+ * Modal for controlling the page's settings
+ */
 export function SettingsModal() {
   return (
     <Modal

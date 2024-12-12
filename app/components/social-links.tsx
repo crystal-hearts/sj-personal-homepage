@@ -6,6 +6,9 @@ import GithubIcon from "@/images/github.svg";
 import LinkedInIcon from "@/images/linkedin.svg";
 import BlueskyIcon from "@/images/bluesky.svg";
 
+/**
+ * Social media links
+ */
 export function SocialLinks() {
   return (
     <div className="social-links flex space-x-2">

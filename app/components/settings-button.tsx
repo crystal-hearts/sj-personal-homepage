@@ -5,6 +5,9 @@ import { SITE_CONSTANTS } from "@/constants/site-constants";
 
 import GearIcon from "@/images/gear-svgrepo-com.svg";
 
+/**
+ * Button for controlling the page's settings
+ */
 export function SettingsButton() {
   return (
     <Button

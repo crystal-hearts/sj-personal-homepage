@@ -3,6 +3,10 @@ import { Paragraph } from "@/components/paragraph";
 import { TextColumns } from "@/components/text-column";
 import { TextHeading } from "@/components/text-heading";
 
+/**
+ * "About Site" section content
+ * @param {string} className Any custom class names passed to the component
+ */
 export function AboutSite({ className }: { className?: string }) {
   return (
     <ContentContainer className={className}>

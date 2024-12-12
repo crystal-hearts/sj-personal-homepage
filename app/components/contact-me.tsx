@@ -6,6 +6,10 @@ import { Paragraph } from "@/components/paragraph";
 
 import LinkedInIcon from "@/images/linkedin.svg";
 
+/**
+ * "Contact me" section content
+ * @param {string} className Any custom class names passed to the component
+ */
 export function ContactMe({ className }: { className?: string }) {
   return (
     <ContentContainer className={className}>

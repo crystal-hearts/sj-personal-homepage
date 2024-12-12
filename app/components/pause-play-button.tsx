@@ -5,12 +5,25 @@ import { SITE_CONSTANTS } from "@/constants/site-constants";
 import PauseIcon from "@/images/pause-svgrepo-com.svg";
 import PlayIcon from "@/images/play-svgrepo-com.svg";
 
+/**
+ * Component for controlling page animations. Includes its own logic
+ */
 export function PausePlayButton() {
+  /**
+   * Method called when handling either Play or Pause buttons.
+   * Both the site's animation play state and the button status are toggled
+   * @param {string} playState The new animation state. "running" and "paused" are expected
+   */
   function handlePlayPauseButton(playState: string) {
     toggleAnimationPlayState(playState);
     togglePlayPauseButtons(playState);
   }
 
+  /**
+   * Toggle button. The button pressed is hidden and replaced with the other button
+   * Note that focus is moved appropriately to the new button
+   * @param {string} playState The new animation state. "running" and "paused" are expected
+   */
   function togglePlayPauseButtons(playState: string) {
     const playButton = document.getElementById(SITE_CONSTANTS.PLAY_BUTTON_ID);
     const pauseButton = document.getElementById(SITE_CONSTANTS.PAUSE_BUTTON_ID);
@@ -28,6 +41,10 @@ export function PausePlayButton() {
     }
   }
 
+  /**
+   * Adjust animation play state, which is handled as an attribute on the main page component
+   * @param {string} playState The new animation state. "running" and "paused" are expected
+   */
   function toggleAnimationPlayState(playState: string) {
     const pageElement = document.getElementById(SITE_CONSTANTS.PAGE_ID);
     if (pageElement && playState) {

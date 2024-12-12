@@ -3,6 +3,12 @@ import React from "react";
 import TicketEdgeLeft from "@/images/ticket-edge-2-left.svg";
 import TicketEdge from "@/images/ticket-edge-2.svg";
 
+/**
+ * Component for displaying contents within stylized "ticket" sections
+ * Implementation is similar to CurvedContainer component
+ * @param {string} className Any custom class names passed to the component
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function TicketContainer({
   className,
   children,

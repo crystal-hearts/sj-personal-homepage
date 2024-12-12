@@ -1,6 +1,10 @@
 import { ContentContainer } from "@/components/content-container";
 import { InlineLink } from "@/components/inline-link";
 
+/**
+ * "Influences" section content. Currently unused
+ * @param {string} className Any custom class names passed to the component
+ */
 export function Influences({ className }: { className?: string }) {
   return (
     <ContentContainer className={className}>

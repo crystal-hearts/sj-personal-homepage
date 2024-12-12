@@ -1,10 +1,18 @@
 import React from "react";
 
+/**
+ * Generic section component. These are the main navigable sections of the page
+ * @param {string} id The section's ID
+ * @param {string} className Any custom class names passed to the component
+ * @param {boolean} fullBleed If the section should bleed to the edge of the page
+ * @param {boolean} noPaddingBottom If the section shouldn't have any bottom padding
+ * @param {React.ReactNode} children Any children passed to the component
+ */
 export function Section({
   id,
+  className,
   fullBleed,
   noPaddingBottom,
-  className,
   children,
 }: Readonly<{
   id?: string;
