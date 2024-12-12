@@ -35,21 +35,21 @@ export function Button({
     ? "transition duration-150 hover:scale-110 active:scale-110"
     : "transition duration-150 hover:scale-105 active:scale-105";
   let borderClass = "border-[var(--theme-color-700)]";
-  let bgClass = "bg-[var(--theme-color-200)]";
+  let bgClass = "bg-[var(--theme-color-100)]";
   let fillClass = "fill-[var(--theme-color-700)]";
-  let shadowClass = smallShadow ? "shadow-drop-3" : "shadow-drop-5";
+  let shadowClass = smallShadow ? "shadow-3" : "shadow-5";
 
   if (bgColor) {
     borderClass = "border-[var(--" + bgColor + "-700)]";
     bgClass = "bg-[var(--" + bgColor + "-500)]";
-    fillClass = "fill-[var(--" + bgColor + "-200)]";
+    fillClass = "fill-[var(--" + bgColor + "-100)]";
   }
 
   if (transparentIcon) {
     borderClass = "border-transparent";
     bgClass = "bg-transparent";
     shadowClass = "";
-    fillClass = "fill-[var(--theme-color-200)]";
+    fillClass = "fill-[var(--theme-color-100)]";
   }
 
   const classNames = [

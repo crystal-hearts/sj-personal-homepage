@@ -7,7 +7,7 @@ export function ContentWindowBody({
 }: {
   noPadding?: boolean;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const paddingClass = noPadding ? "p-0" : "px-4 pb-4 pt-2";
 
@@ -15,7 +15,6 @@ export function ContentWindowBody({
     "window-contents",
     "w-full",
     "h-full",
-    "max-h-60vh",
     "overflow-y-auto",
     paddingClass,
     className,

@@ -1,14 +1,14 @@
 import React from "react";
 
-export function FixedFooter({ children }: { children: React.ReactNode }) {
+export function FixedFooter({ children }: { children?: React.ReactNode }) {
   return (
     <footer
       id="footer"
-      className="fixed-footer fixed bottom-0 left-0 z-10 w-full"
+      className="fixed-footer fixed right-0 z-10 h-20 md:bottom-0 md:left-0"
     >
-      <div className="footer-container w-full">
-        <nav className="footer-buttons flex flex-row justify-between px-6 py-6">
-          <div className="footer-items flex space-x-2">{children}</div>
+      <div className="footer-container">
+        <nav className="footer-items flex flex-row justify-between px-6 py-6">
+          {children}
         </nav>
       </div>
     </footer>

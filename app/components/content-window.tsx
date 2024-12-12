@@ -7,45 +7,54 @@ import { ContentWindowTitle } from "@/components/content-window-title";
 
 export function ContentWindow({
   windowTitle,
-  id = "",
-  returnID = "",
+  id,
+  returnID,
   href,
   noClose,
   noPadding,
   roundedTopOnly,
+  smallTitle,
+  noTitle,
+  inverseWindow,
   className,
   children,
 }: {
-  windowTitle: string;
+  windowTitle?: string;
   id?: string;
   returnID?: string;
   href?: string;
   noClose?: boolean;
   noPadding?: boolean;
   roundedTopOnly?: boolean;
+  smallTitle?: boolean;
+  noTitle?: boolean;
+  inverseWindow?: boolean;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const roundedClass = roundedTopOnly ? "rounded-t-xl" : "rounded-xl";
+  const colorClasses = inverseWindow
+    ? "bg-[var(--theme-color-700)] text-[var(--theme-color-200)]"
+    : "bg-[var(--theme-color-100)]";
 
   const classNames = [
     "window",
     "overflow-hidden",
-    "max-h-75vh",
     roundedClass,
     "border-2",
     "border-solid",
     "border-[var(--theme-color-700)]",
-    "border-opacity-80",
-    "bg-[var(--theme-color-200)]",
-    "shadow-drop-5",
+    colorClasses,
+    "shadow-5",
     className,
   ];
 
   return (
-    <div id={id} className={classNames.join(" ")}>
-      <ContentWindowHeader>
-        <ContentWindowTitle>{windowTitle}</ContentWindowTitle>
+    <div className={classNames.join(" ")}>
+      <ContentWindowHeader noTitle={noTitle}>
+        <ContentWindowTitle smallTitle={smallTitle} noTitle={noTitle}>
+          {windowTitle}
+        </ContentWindowTitle>
         <ContentWindowClose
           id={id}
           returnID={returnID}

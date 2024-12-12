@@ -8,6 +8,7 @@ export function Modal({
   returnID,
   modalPosition,
   roundedTopOnly,
+  smallTitle,
   children,
 }: {
   modalTitle: string;
@@ -15,16 +16,17 @@ export function Modal({
   returnID: string;
   modalPosition?: string;
   roundedTopOnly?: boolean;
-  children: React.ReactNode;
+  smallTitle?: boolean;
+  children?: React.ReactNode;
 }) {
   const classNames = [
     "modal",
     modalPosition && modalPosition === "bottom-left"
-      ? "left-4 top-full modal-open:-translate-y-full"
+      ? "left-4 top-full invisible modal-open:visible modal-open:-translate-y-full"
       : "",
     "fixed",
     "z-20",
-    "shadow-drop-5",
+    "shadow-5",
     "transition-transform",
     "duration-500",
   ];
@@ -32,13 +34,15 @@ export function Modal({
     <div
       id={modalID}
       className={classNames.join(" ")}
-      data-modal-active="closed"
+      data-modal-state="closed"
+      tabIndex={-1}
     >
       <ContentWindow
         windowTitle={modalTitle}
         id={modalID}
         returnID={returnID}
         roundedTopOnly={roundedTopOnly}
+        smallTitle={smallTitle}
       >
         {children}
       </ContentWindow>

@@ -7,7 +7,7 @@ export function InlineImageContainer({
 }: {
   title: string;
   displayCircle?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const roundingClass = displayCircle ? "rounded-full" : "rounded";
 
@@ -19,8 +19,8 @@ export function InlineImageContainer({
     "border-solid",
     "border-2",
     "border-[var(--theme-color-700)]",
-    "bg-[var(--theme-color-200)]",
-    "shadow-drop-3",
+    "bg-[var(--theme-color-100)]",
+    "shadow-3",
     roundingClass,
   ];
 

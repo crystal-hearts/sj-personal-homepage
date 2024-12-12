@@ -12,8 +12,8 @@ export function ContentWindowClose({
   href,
   noClose,
 }: {
-  id: string;
-  returnID: string;
+  id?: string;
+  returnID?: string;
   href?: string;
   noClose?: boolean;
 }) {
@@ -22,7 +22,7 @@ export function ContentWindowClose({
   } else {
     return (
       <Button
-        className="window-close"
+        className="window-close h-7 w-7"
         title="Close window"
         iconButton={true}
         transparentIcon={true}

@@ -29,8 +29,7 @@ module.exports = {
         "fade-in": "fade-in 0.5s ease-in-out 1",
       },
       backgroundImage: {
-        "checkerboard-45":
-          "linear-gradient(135deg, var(--black) 25%, transparent 25%), linear-gradient(45deg, var(--black) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, var(--black) 75%), linear-gradient(135deg, transparent 75%, var(--black) 75%)",
+        "checkerboard-45": "var(--diamond)",
       },
       backgroundSize: {
         50: "50px 50px",
@@ -40,13 +39,26 @@ module.exports = {
         16: "16px",
       },
       boxShadow: {
-        "drop-3": "3px 3px 3px 0px rgba(0, 0, 0.5, 0.5)",
-        "drop-5": "5px 5px 5px 0px rgba(0, 0, 0.5, 0.5)",
+        3: "3px 3px 3px 0px var(--theme-color-900)",
+        5: "5px 5px 5px 0px var(--theme-color-900)",
+      },
+      dropShadow: {
+        "border-2": [
+          "2px 0px 0 var(--theme-color-700)",
+          "0px 2px 0 var(--theme-color-700)",
+          "-2px 0px 0 var(--theme-color-700)",
+          "0 -2px 0 var(--theme-color-700)",
+          "0 4px 4px var(--theme-color-900)",
+        ],
       },
       height: {
+        xl: "36rem",
         "60vh": "60vh",
         "75vh": "75vh",
         "80vh": "80vh",
+      },
+      hueRotate: {
+        120: "120deg",
       },
       keyframes: {
         "bg-scrolling": {
@@ -87,7 +99,12 @@ module.exports = {
         "75vh": "75vh",
         "80vh": "80vh",
       },
+      strokeWidth: {
+        1.5: "1.5px",
+      },
       width: {
+        xl: "36rem",
+        "3xl": "48rem",
         "75vw": "75vw",
         "80vw": "80vw",
       },
@@ -95,7 +112,7 @@ module.exports = {
   },
   plugins: [
     plugin(({ addVariant }) => {
-      addVariant("modal-open", '&[data-modal-active="open"]');
+      addVariant("modal-open", '&[data-modal-state="open"]');
     }),
   ],
 };
