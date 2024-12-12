@@ -41,8 +41,8 @@ export function AboutSite({ className }: { className?: string }) {
             <strong>
               meet design standards that didn&lsquo;t exist in 1998
             </strong>
-            . In addition to being responsive, this site also meets W3
-            accessibility guidelines.
+            . In addition to being responsive, this site is also designed to
+            meet WCAG 2.1 AA accessibility guidelines.
           </span>
         </Paragraph>
       </TextColumns>

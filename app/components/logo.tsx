@@ -6,7 +6,7 @@ import LogoMobile from "@/images/logo-mobile.svg";
 export function Logo({ className }: { className?: string }) {
   return (
     <ContentContainer className={className}>
-      <h1>
+      <h1 aria-label="Sarah Jacques">
         <div className="logo w-screen max-w-xl md:w-3xl md:max-w-3xl">
           <div className="logo-desktop hidden md:block">
             <LogoDesktop className="stroke-1.5" />

@@ -23,7 +23,7 @@ export function ContentWindowClose({
     return (
       <Button
         className="window-close h-7 w-7"
-        title="Close window"
+        title="Close dialog"
         iconButton={true}
         transparentIcon={true}
         href={href}
