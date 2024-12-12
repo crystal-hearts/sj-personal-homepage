@@ -3,6 +3,10 @@ import localFont from "next/font/local";
 import React from "react";
 import "./globals.css";
 
+import { SITE_CONSTANTS } from "@/constants/site-constants";
+
+import previewImage from "@/images/preview.png";
+
 const rubik = localFont({
   src: "./fonts/Rubik-VariableFont_wght.ttf",
   variable: "--font-rubik",
@@ -17,6 +21,9 @@ const inter = localFont({
 export const metadata: Metadata = {
   title: "Sarah Jacques - Web Developer, eCommerce Consultant",
   description: "Description",
+  openGraph: {
+    images: SITE_CONSTANTS.BASE_URL + previewImage.src,
+  },
 };
 
 export default function RootLayout({
