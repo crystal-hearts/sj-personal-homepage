@@ -17,7 +17,7 @@ export function openModal(modalID: string) {
         ? windowTitleElements[0]
         : null;
     if (windowTitleElement) {
-      windowTitleElement.focus();
+      (windowTitleElement as HTMLElement).focus();
     }
   }
 }
