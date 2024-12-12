@@ -6,13 +6,15 @@ import { TextHeading } from "@/components/text-heading";
 export function AboutSite({ className }: { className?: string }) {
   return (
     <ContentContainer className={className}>
-      <TextHeading>Why this site?</TextHeading>
+      <TextHeading>
+        Hey Sarah, why&lsquo;d you build your site like this?
+      </TextHeading>
       <TextColumns>
         <Paragraph className="md:w-3/5">
           <span>
-            I wanted to step outside the style of the typical developer
-            portfolio site and evoke the spirit of late-1990s personal homepages
-            by building an{" "}
+            Well, I&lsquo;m glad you asked! I wanted to step outside the look of
+            a typical developer portfolio site and evoke the spirit of
+            late-1990s personal homepages by building an{" "}
             <strong>
               intentionally retro-styled site using contemporary tools and
               frameworks
@@ -22,23 +24,20 @@ export function AboutSite({ className }: { className?: string }) {
           <span>
             I have a lot of love for the do-it-yourself ethos that drove a lot
             of the early Internet and wanted to capture that feeling in a way
-            that also{" "}
-            <strong>
-              communicates something about who I am and what I care about
-            </strong>
-            .
+            that also communicates something about who I am and what I care
+            about.
           </span>
         </Paragraph>
         <Paragraph className="md:w-3/5">
           <span>
             A big part of what I care about is fun! Effective UI/UX design
-            isn&lsquo;t just be clear and seamless for the user, it should also
-            be <strong>fun to use</strong>! Even the most sober and serious Web
+            isn&lsquo;t just clear and seamless for the user, it should also be{" "}
+            <strong>fun to use</strong>! Even the most sober and serious Web
             applications should be fun to use if they&lsquo;re built
             thoughtfully.
           </span>
           <span>
-            While I wanted to evoke a late-90s aesthetic, I also wanted to{" "}
+            While I wanted to evoke a playful Y2K aesthetic, I also wanted to{" "}
             <strong>
               meet design standards that didn&lsquo;t exist in 1998
             </strong>

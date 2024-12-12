@@ -19,13 +19,15 @@ export function TicketContainer({
   ];
   return (
     <div className={classNames.join(" ")}>
-      <div className="ticket-edge-left relative left-1 max-h-full w-4 fill-[var(--theme-color-100)]">
+      <div className="ticket-edge-left max-h-full w-4 fill-[var(--theme-color-200)]">
         <TicketEdgeLeft className="h-full" />
       </div>
-      <div className="ticket-body bg-[var(--theme-color-100)] p-4 py-6 md:max-w-xl">
-        {children}
+      <div className="ticket-body z-10 max-w-72 bg-[var(--theme-color-200)] p-4 py-6 sm:max-w-sm md:max-w-lg">
+        <div className="ticket-body-interior flex flex-col space-y-3 rounded border-2 border-solid border-[var(--theme-color-900)] p-4">
+          {children}
+        </div>
       </div>
-      <div className="ticket-edge-right relative right-1 max-h-full w-4 fill-[var(--theme-color-100)]">
+      <div className="ticket-edge-right max-h-full w-4 fill-[var(--theme-color-200)]">
         <TicketEdge className="h-full" />
       </div>
     </div>

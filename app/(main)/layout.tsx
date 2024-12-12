@@ -20,7 +20,7 @@ export default function MainPageLayout({
   return (
     <div
       id={SITE_CONSTANTS.PAGE_ID}
-      className="font-[family-name:var(--font-inter)] text-sm"
+      className="font-[family-name:var(--font-inter)] text-sm text-[var(--theme-color-1000)]"
       data-theme-color={SITE_CONSTANTS.DEFAULT_SITE_THEME}
       data-animation-play-state={SITE_CONSTANTS.DEFAULT_ANIMATION_PLAY_STATE}
     >

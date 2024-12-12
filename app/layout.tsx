@@ -15,7 +15,7 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Sarah Jacques Personal Site",
+  title: "Sarah Jacques - Web Developer, eCommerce Consultant",
   description: "Description",
 };
 

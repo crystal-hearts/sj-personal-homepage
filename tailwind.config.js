@@ -57,6 +57,9 @@ module.exports = {
         "75vh": "75vh",
         "80vh": "80vh",
       },
+      hueRotate: {
+        120: "120deg",
+      },
       keyframes: {
         "bg-scrolling": {
           "0%": {
@@ -101,6 +104,7 @@ module.exports = {
       },
       width: {
         xl: "36rem",
+        "3xl": "48rem",
         "75vw": "75vw",
         "80vw": "80vw",
       },

@@ -21,8 +21,8 @@ export function AboutMe({ className }: { className?: string }) {
       </div>
       <Paragraph className="text-center">
         <span>
-          I&lsquo;m Sarah Jacques, a full-stack web developer, eCommerce
-          consultant, and UX specialist
+          I&lsquo;m Sarah Jacques, a full-stack web developer and eCommerce
+          consultant
         </span>
         <span className="text-center">
           <strong>I build accessible and fun experiences for the web!</strong>

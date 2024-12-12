@@ -12,7 +12,7 @@ export function SettingsModal() {
       modalPosition="bottom-left"
       roundedTopOnly={true}
     >
-      <div className="flavor-buttons flex flex-row flex-wrap">
+      <div className="flavor-buttons grid grid-flow-row grid-cols-3 grid-rows-2 gap-x-2 gap-y-2 md:grid-cols-6 md:grid-rows-1">
         <FlavorButton flavor="ube" />
         <FlavorButton flavor="raspberry" />
         <FlavorButton flavor="strawberry" />
