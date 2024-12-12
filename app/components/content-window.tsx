@@ -67,7 +67,7 @@ export function ContentWindow({
   return (
     <div className={classNames.join(" ")}>
       <ContentWindowHeader noTitle={noTitle}>
-        <ContentWindowTitle smallTitle={smallTitle} noTitle={noTitle}>
+        <ContentWindowTitle smallTitle={smallTitle}>
           {windowTitle}
         </ContentWindowTitle>
         <ContentWindowClose
