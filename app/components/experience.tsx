@@ -11,6 +11,7 @@ export function Experience() {
         <TicketContainer className="-rotate-2">
           <div className="flex flex-col font-semibold">
             <span>Crystalheart Digital - Founder</span>
+            <hr className="mb-1 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs uppercase text-[var(--theme-color-700)]">
               July 2022 - Present
             </span>
@@ -27,6 +28,7 @@ export function Experience() {
         <TicketContainer className="rotate-2">
           <div className="flex flex-col font-semibold">
             <span>Lush Cosmetics North America - Web Developer</span>
+            <hr className="mb-1 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs uppercase text-[var(--theme-color-700)]">
               2018 - 2022
             </span>
@@ -44,6 +46,7 @@ export function Experience() {
         <TicketContainer className="-rotate-2">
           <div className="flex flex-col font-semibold">
             <span>Lush Cosmetics North America - Systems Developer</span>
+            <hr className="mb-1 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs text-[var(--theme-color-700)]">
               2014 - 2018
             </span>
@@ -62,6 +65,7 @@ export function Experience() {
         <TicketContainer className="rotate-2">
           <div className="flex flex-col font-semibold">
             <span>Lush Cosmetics North America - Fulfillment Manager</span>
+            <hr className="mb-1 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs text-[var(--theme-color-700)]">
               2016 - 2018
             </span>

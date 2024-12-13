@@ -1,10 +1,8 @@
 import React from "react";
 
-import TicketEdgeLeft from "@/images/ticket-edge-2-left.svg";
-import TicketEdge from "@/images/ticket-edge-2.svg";
-
 /**
- * Component for displaying contents within stylized "ticket" sections
+ * Component for displaying contents within "ticket" sections
+ * These previously had stylized scalloped edges. Right now, thye're simple containers.
  * Implementation is similar to CurvedContainer component
  * @param {string} className Any custom class names passed to the component
  * @param {React.ReactNode} children Any children passed to the component
@@ -25,16 +23,10 @@ export function TicketContainer({
   ];
   return (
     <div className={classNames.join(" ")}>
-      <div className="ticket-edge-left max-h-full w-4 fill-[var(--theme-color-200)]">
-        <TicketEdgeLeft className="h-full" />
-      </div>
       <div className="ticket-body z-10 max-w-75vw bg-[var(--theme-color-200)] p-2 py-4 sm:max-w-sm md:max-w-lg">
-        <div className="ticket-body-interior flex flex-col space-y-3 rounded border-2 border-solid border-[var(--theme-color-900)] p-2">
+        <div className="ticket-body-interior flex flex-col space-y-3 rounded p-2">
           {children}
         </div>
-      </div>
-      <div className="ticket-edge-right max-h-full w-4 fill-[var(--theme-color-200)]">
-        <TicketEdge className="h-full" />
       </div>
     </div>
   );
