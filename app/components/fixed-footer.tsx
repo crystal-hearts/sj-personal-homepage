@@ -8,7 +8,7 @@ export function FixedFooter({ children }: { children?: React.ReactNode }) {
   return (
     <footer
       id="footer"
-      className="fixed-footer fixed right-0 z-10 h-20 md:bottom-0 md:left-0"
+      className="fixed-footer fixed right-0 z-10 h-20 md:bottom-0 md:left-0 md:w-0"
     >
       <div className="footer-container">
         <nav

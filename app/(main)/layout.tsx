@@ -34,9 +34,9 @@ export default function MainPageLayout({
         <SocialLinks />
       </Header>
       <FixedFooter>
-        <SettingsModal />
         <ControlButtons />
       </FixedFooter>
+      <SettingsModal />
       {children}
     </div>
   );

@@ -2,6 +2,7 @@ import { TicketContainer } from "@/components/ticket-container";
 
 /**
  * "Experience" section content
+ * The pieces here should be reworked into their own components at a later date to adhere to DRY principles
  * @param {string} className Any custom class names passed to the component
  */
 export function Experience() {
@@ -10,7 +11,12 @@ export function Experience() {
       <div data-theme-color="strawberry">
         <TicketContainer className="-rotate-2">
           <div className="flex flex-col font-semibold">
-            <span>Crystalheart Digital - Founder</span>
+            <div className="flex flex-col md:flex-row md:space-x-1">
+              <span>Crystalheart Digital</span>
+              <span className="hidden md:inline">-</span>
+              <span>Founder</span>
+            </div>
+            <hr className="mb-0.5 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs uppercase text-[var(--theme-color-700)]">
               July 2022 - Present
             </span>
@@ -26,7 +32,12 @@ export function Experience() {
       <div data-theme-color="mint">
         <TicketContainer className="rotate-2">
           <div className="flex flex-col font-semibold">
-            <span>Lush Cosmetics North America - Web Developer</span>
+            <div className="flex flex-col md:flex-row md:space-x-1">
+              <span>Lush Cosmetics North America</span>
+              <span className="hidden md:inline">-</span>
+              <span>Web Developer</span>
+            </div>
+            <hr className="mb-0.5 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs uppercase text-[var(--theme-color-700)]">
               2018 - 2022
             </span>
@@ -43,7 +54,12 @@ export function Experience() {
       <div data-theme-color="lime">
         <TicketContainer className="-rotate-2">
           <div className="flex flex-col font-semibold">
-            <span>Lush Cosmetics North America - Systems Developer</span>
+            <div className="flex flex-col md:flex-row md:space-x-1">
+              <span>Lush Cosmetics North America</span>
+              <span className="hidden md:inline">-</span>
+              <span>Systems Developer</span>
+            </div>
+            <hr className="mb-0.5 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs text-[var(--theme-color-700)]">
               2014 - 2018
             </span>
@@ -61,7 +77,12 @@ export function Experience() {
       <div data-theme-color="ube">
         <TicketContainer className="rotate-2">
           <div className="flex flex-col font-semibold">
-            <span>Lush Cosmetics North America - Fulfillment Manager</span>
+            <div className="flex flex-col md:flex-row md:space-x-1">
+              <span>Lush Cosmetics North America</span>
+              <span className="hidden md:inline">-</span>
+              <span>Fulfillment Manager</span>
+            </div>
+            <hr className="my-0.5 h-px border-0 bg-[var(--theme-color-500)] md:mt-0" />
             <span className="text-xs text-[var(--theme-color-700)]">
               2016 - 2018
             </span>
