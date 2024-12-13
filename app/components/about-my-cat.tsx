@@ -28,7 +28,7 @@ export function AboutMyCat({ className }: { className?: string }) {
       <Paragraph className="text-center">
         <span>
           His interests include <strong>yelling</strong>,{" "}
-          <strong>watching the neighbourhood crows</strong>, and an unknown
+          <strong>watching the neighbourhood crows</strong>, and for an unknown
           reason, <strong>videos of cows</strong>
         </span>
       </Paragraph>

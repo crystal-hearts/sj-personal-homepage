@@ -16,10 +16,10 @@ export function Experience() {
             </span>
           </div>
           <span className="text-sm">
-            In July 2022 I set out on my own! As Crystalheart Digital,
-            I&lsquo;ve assisted large eCommerce clients with their Salesforce
-            Commerce Cloud deployments and advised small business and nonprofits
-            on best practices for their online stores.
+            In July 2022 I set out on my own! As Crystalheart Digital I&lsquo;ve
+            assisted large eCommerce clients with their Salesforce Commerce
+            Cloud deployments and advised small business and nonprofits on best
+            practices for their online stores.
           </span>
         </TicketContainer>
       </div>
@@ -32,11 +32,11 @@ export function Experience() {
             </span>
           </div>
           <span>
-            In this role, I worked in an Agile team to develop and maintain Lush
+            In this role I worked on an Agile team to develop and maintain Lush
             North America&lsquo;s webstore using Salesforce Commerce Cloud.
             Highlights include building and launching buy-online
             pick-up-in-store functionality, same-day courier shipping from
-            stores, and a subscription box service.
+            stores, and a monthly subscription box service.
           </span>
         </TicketContainer>
       </div>
@@ -49,10 +49,10 @@ export function Experience() {
             </span>
           </div>
           <span>
-            Before worked on Lush North America&lsquo;s webstore, I was
-            responsible for the internal systems for their eCommerce
-            fulfillment. This included building integrations to carriers and
-            internal financial systems, but also time-saving tools for warehouse
+            Before I worked on Lush North America&lsquo;s webstore, I was
+            responsible for the internal systems for their eCommerce fulfillment
+            operation. This included building integrations to carriers and
+            internal financial systems, and also time-saving tools for warehouse
             staff. I&lsquo;m really proud of a lot of the improvements I made
             that made their lives easier!
           </span>
@@ -67,8 +67,8 @@ export function Experience() {
             </span>
           </div>
           <span>
-            I also managed that eCommerce fulfillment facility! I managed a team
-            of about thirty people, which grew seasonally to about 100.
+            I also managed that eCommerce fulfillment operation! I managed a
+            team of about thirty people, which grew seasonally to about 100.
           </span>
         </TicketContainer>
       </div>

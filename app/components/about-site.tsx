@@ -35,9 +35,9 @@ export function AboutSite({ className }: { className?: string }) {
         <Paragraph className="md:w-3/5">
           <span>
             A big part of what I care about is fun! Effective UI/UX design
-            isn&lsquo;t just clear and seamless for the user, it should also be{" "}
-            <strong>fun to use</strong>! Even the most sober and serious Web
-            applications should be fun to use if they&lsquo;re built
+            shouldn&lsquo;t just be clear and seamless for the user, it should
+            also be <strong>fun to use</strong>! Even the most sober and serious
+            Web applications should be fun to use if they&lsquo;re built
             thoughtfully.
           </span>
           <span>
@@ -45,8 +45,8 @@ export function AboutSite({ className }: { className?: string }) {
             <strong>
               meet design standards that didn&lsquo;t exist in 1998
             </strong>
-            . In addition to being responsive, this site is also designed to
-            meet WCAG 2.1 AA accessibility guidelines.
+            . In addition to being responsive, this site is designed to meet
+            WCAG 2.1 AA accessibility guidelines.
           </span>
         </Paragraph>
       </TextColumns>
