@@ -29,7 +29,7 @@ export function AboutMe({ className }: { className?: string }) {
           consultant
         </span>
         <span className="text-center">
-          <strong>I build accessible and fun experiences for the web!</strong>
+          <strong>I build fun and accessible experiences for the web!</strong>
         </span>
       </Paragraph>
       <Paragraph className="text-center">
