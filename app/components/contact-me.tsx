@@ -24,7 +24,7 @@ export function ContactMe({ className }: { className?: string }) {
         target="_"
       >
         <div className="icon mr-1 inline-block h-4 w-4 pt-0.5">
-          <LinkedInIcon />
+          <LinkedInIcon title="LinkedIn icon" />
         </div>
         {SITE_CONSTANTS.LINKEDIN_URL}
       </InlineLink>

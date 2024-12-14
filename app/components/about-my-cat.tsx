@@ -4,7 +4,7 @@ import { ContentContainer } from "@/components/content-container";
 import { InlineImageContainer } from "@/components/inline-image-container";
 import { Paragraph } from "@/components/paragraph";
 
-import winterImage from "@/images/winter.jpg";
+import winterImage from "@/images/winter.webp";
 
 /**
  * "About My Cat" section content

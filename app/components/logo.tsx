@@ -13,10 +13,10 @@ export function Logo({ className }: { className?: string }) {
       <h1 aria-label="Sarah Jacques">
         <div className="logo w-screen max-w-xl md:w-3xl md:max-w-3xl">
           <div className="logo-desktop hidden md:block">
-            <LogoDesktop className="stroke-1.5" />
+            <LogoDesktop className="stroke-1.5" title="Sarah Jacques logo" />
           </div>
           <div className="logo-mobile block md:hidden">
-            <LogoMobile className="stroke-1.5" />
+            <LogoMobile className="stroke-1.5" title="Sarah Jacques logo" />
           </div>
         </div>
       </h1>

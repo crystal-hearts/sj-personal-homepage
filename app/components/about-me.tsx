@@ -4,7 +4,7 @@ import { ContentContainer } from "@/components/content-container";
 import { InlineImageContainer } from "@/components/inline-image-container";
 import { Paragraph } from "@/components/paragraph";
 
-import sarahImage from "@/images/sarah.jpg";
+import sarahImage from "@/images/sarah.webp";
 
 /**
  * "About Me" section content

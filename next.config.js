@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack(config) {
+    /* SVGR config  to import SVG file as React components */
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.(".svg"),
@@ -20,8 +21,8 @@ const nextConfig = {
         resourceQuery: { not: /url/ }, // exclude if *.svg?url
         loader: "@svgr/webpack",
         options: {
-          dimensions: false,
-          titleProp: true,
+          dimensions: false, // Ignore explicit dimensions
+          titleProp: true, // Allow us to fall back on <title> element in SVG files instead of being stripped out
         },
       },
     );
