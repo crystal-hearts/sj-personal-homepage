@@ -63,7 +63,7 @@ export function PausePlayButton() {
           handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_PAUSED)
         }
       >
-        <PauseIcon />
+        <PauseIcon title="Pause icon" />
       </Button>
       <Button
         id={SITE_CONSTANTS.PLAY_BUTTON_ID}
@@ -74,7 +74,7 @@ export function PausePlayButton() {
           handlePlayPauseButton(SITE_CONSTANTS.ANIMATION_PLAY_STATE_RUNNING)
         }
       >
-        <PlayIcon />
+        <PlayIcon title="Play icon" />
       </Button>
     </div>
   );

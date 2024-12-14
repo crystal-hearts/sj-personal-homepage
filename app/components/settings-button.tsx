@@ -16,7 +16,7 @@ export function SettingsButton() {
       iconButton={true}
       onClick={() => openModal(SITE_CONSTANTS.SETTINGS_MODAL_ID)}
     >
-      <GearIcon />
+      <GearIcon title="Gear icon" />
     </Button>
   );
 }

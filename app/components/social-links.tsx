@@ -18,7 +18,7 @@ export function SocialLinks() {
         target="_"
         href={SITE_CONSTANTS.LINKEDIN_URL}
       >
-        <LinkedInIcon />
+        <LinkedInIcon title="LinkedIn icon" />
       </Button>
       <Button
         title={SITE_CONSTANTS.BLUESKY_TITLE}
@@ -26,7 +26,7 @@ export function SocialLinks() {
         target="_"
         href={SITE_CONSTANTS.BLUESKY_URL}
       >
-        <BlueskyIcon />
+        <BlueskyIcon title="Bluesky icon" />
       </Button>
       <Button
         title={SITE_CONSTANTS.GITHUB_TITLE}
@@ -34,7 +34,7 @@ export function SocialLinks() {
         target="_"
         href={SITE_CONSTANTS.GITHUB_URL}
       >
-        <GithubIcon />
+        <GithubIcon title="Github icon" />
       </Button>
     </div>
   );
