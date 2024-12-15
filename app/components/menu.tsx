@@ -8,7 +8,7 @@ import { MenuItem } from "@/components/menu-item";
  */
 export function Menu() {
   return (
-    <div className="menu hidden flex-row space-x-2 text-sm font-black text-[var(--theme-color-700)] md:flex">
+    <div className="menu flex flex-row space-x-2 text-sm font-black text-[var(--theme-color-700)]">
       <MenuItem id="about-me-button" href="#about-me">
         {SITE_CONSTANTS.ABOUT_ME_TITLE}
       </MenuItem>

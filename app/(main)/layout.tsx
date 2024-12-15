@@ -5,8 +5,8 @@ import React from "react";
 import { SITE_CONSTANTS } from "@/constants/site-constants";
 
 import { Background } from "@/components/background";
-import { FixedFooter } from "@/components/fixed-footer";
 import { Header } from "@/components/header";
+import { HeaderNav } from "@/components/header-nav";
 import { Menu } from "@/components/menu";
 import { ControlButtons } from "@/components/control-buttons";
 import { SettingsModal } from "@/components/settings-modal";
@@ -30,12 +30,19 @@ export default function MainPageLayout({
     >
       <Background />
       <Header>
-        <Menu />
-        <SocialLinks />
+        <HeaderNav label="Menu" className="invisible fixed left-0 md:visible">
+          <Menu />
+        </HeaderNav>
+        <HeaderNav label="Social media links" className="fixed md:right-0">
+          <SocialLinks />
+        </HeaderNav>
+        <HeaderNav
+          label="Site controls"
+          className="fixed right-0 md:bottom-0 md:left-0"
+        >
+          <ControlButtons />
+        </HeaderNav>
       </Header>
-      <FixedFooter>
-        <ControlButtons />
-      </FixedFooter>
       <SettingsModal />
       {children}
     </div>
