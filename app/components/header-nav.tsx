@@ -1,7 +1,7 @@
 import React from "react";
 
 /**
- * Individual nav section
+ * Individual nav section. Positioning is intended to be defined by passed classNames
  * @param {React.ReactNode} children Any children passed to the component
  */
 export function HeaderNav({
