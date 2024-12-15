@@ -179,6 +179,10 @@
     --delay-step-increment: 0.25s;
     --animation-length: 3s;
     animation: wave-y-5 var(--animation-length) ease-in-out infinite;
+    /* Special more gentle animation for users with prefers-reduced-motion set */
+    @media (prefers-reduced-motion) {
+      animation: wave-y-3 var(--animation-length) ease-in-out infinite;
+    }
     animation-delay: calc(
       var(--delay-step-increment) * (var(--nth-child-index) * -1)
     );
