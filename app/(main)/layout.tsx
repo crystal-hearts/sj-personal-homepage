@@ -30,13 +30,16 @@ export default function MainPageLayout({
     >
       <Background />
       <Header>
-        <HeaderNav className="invisible fixed left-0 md:visible">
+        <HeaderNav label="Menu" className="invisible fixed left-0 md:visible">
           <Menu />
         </HeaderNav>
-        <HeaderNav className="fixed md:right-0">
+        <HeaderNav label="Social media links" className="fixed md:right-0">
           <SocialLinks />
         </HeaderNav>
-        <HeaderNav className="fixed right-0 md:bottom-0 md:left-0">
+        <HeaderNav
+          label="Site controls"
+          className="fixed right-0 md:bottom-0 md:left-0"
+        >
           <ControlButtons />
         </HeaderNav>
       </Header>
