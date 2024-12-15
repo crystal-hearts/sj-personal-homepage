@@ -37,7 +37,8 @@ export function Modal({
     "z-20",
     "shadow-5",
     "transition-transform",
-    "duration-500",
+    "duration-0", // If reduced motion is preferred, instant transition
+    "motion-safe:duration-500", // If no preference for reduced motion, 500ms
   ];
   return (
     <div

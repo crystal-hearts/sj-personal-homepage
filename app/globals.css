@@ -178,10 +178,12 @@
   [class*="logo-letter-animated"] {
     --delay-step-increment: 0.25s;
     --animation-length: 3s;
-    animation: wave-y-5 var(--animation-length) ease-in-out infinite;
     /* Special more gentle animation for users with prefers-reduced-motion set */
-    @media (prefers-reduced-motion) {
-      animation: wave-y-3 var(--animation-length) ease-in-out infinite;
+    animation: wave-y-3 var(--animation-length) ease-in-out infinite;
+    /* If no preference is expressed, the full animation is displayed */
+    /* In general we write the motion-reduced variant as the default, much as xs screen size is the default */
+    @media (prefers-reduced-motion: no-preference) {
+      animation: wave-y-5 var(--animation-length) ease-in-out infinite;
     }
     animation-delay: calc(
       var(--delay-step-increment) * (var(--nth-child-index) * -1)
