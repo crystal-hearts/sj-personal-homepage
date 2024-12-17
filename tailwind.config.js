@@ -102,6 +102,9 @@ module.exports = {
         "75vh": "75vh",
         "80vh": "80vh",
       },
+      spacing: {
+        unset: "unset",
+      },
       strokeWidth: {
         1.5: "1.5px",
       },
