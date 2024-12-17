@@ -38,7 +38,7 @@ export default function MainPageLayout({
         </HeaderNav>
         <HeaderNav
           label="Site controls"
-          className="fixed right-0 md:bottom-0 md:left-0"
+          className="fixed right-0 md:bottom-0 md:left-0 md:right-unset"
         >
           <ControlButtons />
         </HeaderNav>
