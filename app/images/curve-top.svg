@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 200 15">
-  <title>Smooth curved section</title>
-  <path d="M309.684 2.014c-32.314-.125-70.892.591-111.61 3.203C92.306 12 .04 4.916.04 4.916L0 12v3h400V4.766s-36.46-2.545-90.316-2.752z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 200 6"><title>Smooth curved section</title><path d="M0 0v6h200V.31C118.172 5.956 45.611 3.195 0 0Z"/></svg>
