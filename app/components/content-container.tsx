@@ -20,6 +20,7 @@ export function ContentContainer({
     "items-center",
     "justify-center",
     "space-y-3",
+    "max-w-7xl", // Upper limit for very large screen widths
     className,
   ];
   return <div className={classNames.join(" ")}>{children}</div>;

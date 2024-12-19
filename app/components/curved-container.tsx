@@ -35,14 +35,28 @@ export function CurvedContainer({
     ? "drop-shadow-bottom"
     : "hidden";
 
+  const bodyTopPadding = displayTopCurve ? "pt-6" : "";
+  const bodyBottomPadding = displayBottomCurve ? "pb-6" : "";
+  const bodyClasses = [
+    "curved-container-body",
+    "relative",
+    "z-10",
+    "flex",
+    "flex-col",
+    "space-y-6",
+    "items-center",
+    "bg-[var(--theme-color-100)]",
+    "px-6",
+    bodyTopPadding,
+    bodyBottomPadding,
+  ];
+
   return (
     <div className={classNames.join(" ")}>
       <div className="relative top-1 w-full fill-[var(--theme-color-100)]">
         <CurveTop className={topCurveClasses} role="img" title="Top curve" />
       </div>
-      <div className="curved-container-body relative z-10 flex flex-col space-y-6 bg-[var(--theme-color-100)] px-6 py-2 md:py-0">
-        {children}
-      </div>
+      <div className={bodyClasses.join(" ")}>{children}</div>
       <div className="relative bottom-1 w-full fill-[var(--theme-color-100)]">
         <CurveBottom
           className={bottomCurveClasses}
