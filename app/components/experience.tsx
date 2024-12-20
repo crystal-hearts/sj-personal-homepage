@@ -13,12 +13,12 @@ export function Experience() {
           <div className="flex flex-col font-semibold">
             <div className="flex flex-col md:flex-row md:space-x-1">
               <span>Crystalheart Digital</span>
-              <span className="hidden md:inline">-</span>
+              <span className="hidden md:inline">–</span>
               <span>Founder</span>
             </div>
             <hr className="mb-0.5 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs uppercase text-[var(--theme-color-700)]">
-              July 2022 - Present
+              July 2022 – Present
             </span>
           </div>
           <span className="text-sm">
@@ -34,12 +34,12 @@ export function Experience() {
           <div className="flex flex-col font-semibold">
             <div className="flex flex-col md:flex-row md:space-x-1">
               <span>Lush Cosmetics North America</span>
-              <span className="hidden md:inline">-</span>
+              <span className="hidden md:inline">–</span>
               <span>Web Developer</span>
             </div>
             <hr className="mb-0.5 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs uppercase text-[var(--theme-color-700)]">
-              2018 - 2022
+              2018 – 2022
             </span>
           </div>
           <span>
@@ -56,12 +56,12 @@ export function Experience() {
           <div className="flex flex-col font-semibold">
             <div className="flex flex-col md:flex-row md:space-x-1">
               <span>Lush Cosmetics North America</span>
-              <span className="hidden md:inline">-</span>
+              <span className="hidden md:inline">–</span>
               <span>Systems Developer</span>
             </div>
             <hr className="mb-0.5 h-px border-0 bg-[var(--theme-color-500)]" />
             <span className="text-xs text-[var(--theme-color-700)]">
-              2014 - 2018
+              2014 – 2018
             </span>
           </div>
           <span>
@@ -79,12 +79,12 @@ export function Experience() {
           <div className="flex flex-col font-semibold">
             <div className="flex flex-col md:flex-row md:space-x-1">
               <span>Lush Cosmetics North America</span>
-              <span className="hidden md:inline">-</span>
+              <span className="hidden md:inline">–</span>
               <span>Fulfillment Manager</span>
             </div>
             <hr className="my-0.5 h-px border-0 bg-[var(--theme-color-500)] md:mt-0" />
             <span className="text-xs text-[var(--theme-color-700)]">
-              2016 - 2018
+              2016 – 2018
             </span>
           </div>
           <span>
