@@ -34,10 +34,6 @@ module.exports = {
       backgroundSize: {
         50: "50px 50px",
       },
-      borderWidth: {
-        1: "1px",
-        16: "16px",
-      },
       boxShadow: {
         3: "3px 3px 3px 0px var(--theme-color-900)",
         5: "5px 5px 5px 0px var(--theme-color-900)",
@@ -50,12 +46,6 @@ module.exports = {
           "0 -2px 0 var(--theme-color-700)",
           "0 4px 4px var(--theme-color-900)",
         ],
-      },
-      height: {
-        xl: "36rem",
-        "60vh": "60vh",
-        "75vh": "75vh",
-        "80vh": "80vh",
       },
       hueRotate: {
         120: "120deg",
@@ -96,11 +86,7 @@ module.exports = {
       },
       maxWidth: {
         "75vw": "75vw",
-      },
-      maxHeight: {
-        "60vh": "60vh",
-        "75vh": "75vh",
-        "80vh": "80vh",
+        "10xl": "104rem", // Base Tailwind ends at 7xl, 80rem. Increments are by 8rem
       },
       spacing: {
         unset: "unset",
@@ -111,8 +97,6 @@ module.exports = {
       width: {
         xl: "36rem",
         "3xl": "48rem",
-        "75vw": "75vw",
-        "80vw": "80vw",
       },
     },
   },
