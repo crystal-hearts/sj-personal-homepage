@@ -38,7 +38,7 @@ export function Experience() {
               QA analysts to develop and maintain Lush North America&lsquo;s
               webstore using Salesforce Commerce Cloud! Highlights include
               planning and launching a same-day courier shipping service from
-              stores and a monthly subscription box service.
+              stores as well as a monthly subscription box service.
             </span>
           </JobListing>
         </TicketContainer>
